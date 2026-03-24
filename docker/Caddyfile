@@ -1,0 +1,27 @@
+minsys.xyz, www.minsys.xyz {
+    # Serve files from the /srv directory
+    root * /srv
+    
+    # Enable gzip compression for faster load times
+    encode gzip
+    
+    # Enable static file serving
+    file_server
+
+    # Security Headers
+    header {
+        # Prevent site from being embedded in frames
+        X-Frame-Options "DENY"
+        # Prevent MIME type sniffing
+        X-Content-Type-Options "nosniff"
+        # Enable HSTS (1 year)
+        Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
+        # Control referrer information
+        Referrer-Policy "no-referrer-when-downgrade"
+        # Permissions Policy
+        Permissions-Policy "accelerometer=(), camera=(), geolocation=(), gyroscope=(), magnetometer=(), microphone=(), payment=(), usb=()"
+    }
+    
+    # SPA Routing: If a file/route isn't found, fallback to index.html
+    try_files {path} /index.html
+}

@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&family=Georgia:ital,wght@0,400;0,700;1,400&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-solarAmber: #FD5E53;
+  --color-darkGraphite: #1A1A17;
+  --color-lightGray: #F7F7F7;
+  --color-mutedText: #666666;
+  --font-serif: "Georgia", serif;
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+}
+
+.shadow-soft {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+.display-serif {
+  font-family: var(--font-serif);
+}

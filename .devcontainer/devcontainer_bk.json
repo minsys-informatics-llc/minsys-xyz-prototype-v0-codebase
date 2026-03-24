@@ -1,0 +1,32 @@
+{
+  "name": "Minsys Storefront Containerized Dev Environment (Next.js)",
+  "dockerComposeFile": "/Users/lvi/Documents/Minsys/Github/codebase-minsys-storefront/docker-compose-dev.yml",
+  "service": "frontend-storefront",
+  "workspaceFolder": "/app",
+  "shutdownAction": "stopCompose",
+  "portsAttributes": {
+    "3000": {
+      "label": "Next.js Dev Server",
+      "onAutoForward": "notify"
+    }
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "dbaeumer.vscode-eslint",
+        "esbenp.prettier-vscode",
+        "vscode.typescript-language-features",
+        "ms-vscode-remote.remote-containers",
+        "continue.continue",
+        "davidanson.vscode-markdownlint"
+      ],
+      "settings": {
+        "terminal.integrated.defaultProfile.linux": "sh",
+        "terminal.integrated.defaultProfile.osx": "sh",
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": null
+      }
+    }
+  },
+  "postCreateCommand": "npm install"
+}

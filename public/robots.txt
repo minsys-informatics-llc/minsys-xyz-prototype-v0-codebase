@@ -1,0 +1,27 @@
+# Welcome all standard web crawlers (Google, Bing, Brave, etc.)
+User-agent: *
+Allow: /
+
+# Explicitly welcoming AI Crawlers
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: OmgiliBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+Sitemap: https://minsys.xyz/sitemap.xml
