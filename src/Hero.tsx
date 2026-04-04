@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import * as THREE from 'three';
 // @ts-ignore
 import NET from 'vanta/dist/vanta.net.min';
@@ -36,25 +36,24 @@ export const Hero = () => {
   return (
     <section ref={myRef} id="hero" className="relative flex items-center justify-center overflow-hidden min-h-[70vh] pt-12 pb-32">
       <div className="relative z-10 max-w-5xl mx-auto px-6 text-center w-full">
-        {/* Glassmorphism Overlay for text block only */}
         <div
           className="absolute inset-0 backdrop-blur-md -m-6 p-6 rounded-2xl -z-10 pointer-events-none"
           style={{ backgroundColor: 'rgba(24, 22, 16, 0.1)' }}
         ></div>
 
-        <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl text-white font-black leading-tight mb-6">We Bootstrap Ventures</h1>
-        <p className="text-[#F8F9FA] max-w-4xl mx-auto mb-10 leading-tight font-light text-2xl md:text-3xl">
-          <strong>We don't deliver projects.<br />Together, we engineer <span style={{ color: '#FD5E53', fontWeight: 'bold' }}>Your</span> next revenue stream as a <span style={{ color: '#FD5E53', fontWeight: 'bold' }}>Venture</span></strong>
+        <h1 className="display-serif text-3xl md:text-4xl lg:text-5xl text-white font-black leading-tight mb-6">Ultimately, We Bootstrap Ventures</h1>
+        <p className="text-[#F8F9FA] max-w-4xl mx-auto mb-10 leading-tight font-light text-xl md:text-2xl">
+          <strong>We partner with cash-flowing Main Street businesses,<br />To transform them into high-multiple <span className="text-solarAmber font-bold">Digital &amp; AI-Enabled Ventures</span>.</strong>
         </p>
         <p className="text-[#F8F9FA] text-base md:text-lg max-w-3xl mx-auto mb-10 leading-relaxed font-light italic opacity-90">
-          Augmenting Human Ingenuity via Technology, Rather than Automating People Away.
+          Closing the valuation gap through corporate venturing and operational excellence.
         </p>
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-          <a href="#vaas" className="bg-[#FD5E53] text-[#181610] px-10 py-4 text-base font-bold rounded-lg hover:scale-105 transition-transform text-center">Venture-as-a-Service</a>
-          <a href="#portfolio" className="border border-white/20 text-white px-10 py-4 text-base font-bold rounded-lg hover:bg-white/5 transition-colors text-center">Minsys Ventures</a>
+          <a href="#model" className="bg-solarAmber text-darkGraphite px-10 py-4 text-base font-bold rounded-lg hover:scale-105 transition-transform text-center">Our Model</a>
+          <a href="#capabilities" className="border border-white/20 text-white px-10 py-4 text-base font-bold rounded-lg hover:bg-white/5 transition-colors text-center">Digital &amp; AI Capabilities</a>
         </div>
       </div>
-      <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-[#FD5E53]/50 to-transparent z-10"></div>
+      <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-solarAmber/50 to-transparent z-10"></div>
     </section>
   );
 };
