@@ -1,27 +1,87 @@
-# Welcome all standard web crawlers (Google, Bing, Brave, etc.)
-User-agent: *
+# Standard Web Crawlers
+User-agent: Googlebot
 Allow: /
 
-# Explicitly welcoming AI Crawlers
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+User-agent: Baiduspider
+Allow: /
+
+User-agent: YandexBot
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+# AI Crawlers — OpenAI / ChatGPT
 User-agent: GPTBot
 Allow: /
 
 User-agent: ChatGPT-User
 Allow: /
 
+# AI Crawlers — Anthropic / Claude
 User-agent: ClaudeBot
-Allow: /
-
-User-agent: PerplexityBot
-Allow: /
-
-User-agent: Google-Extended
-Allow: /
-
-User-agent: OmgiliBot
 Allow: /
 
 User-agent: anthropic-ai
 Allow: /
 
+# AI Crawlers — Google AI (Gemini, Google-Extended)
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Gemini-Crawler
+Allow: /
+
+# AI Crawlers — Perplexity
+User-agent: PerplexityBot
+Allow: /
+
+# AI Crawlers — Meta AI
+User-agent: Meta-ExternalAgent
+Allow: /
+
+User-agent: Meta-ExternalFetcher
+Allow: /
+
+# AI Crawlers — xAI / Grok
+User-agent: xAI-Crawler
+Allow: /
+
+# AI Crawlers — Cohere
+User-agent: cohere-ai
+Allow: /
+
+# AI Crawlers — Allen Institute for AI
+User-agent: AI2Bot
+Allow: /
+
+# AI Crawlers — DuckDuckGo AI Answers
+User-agent: DuckAssistBot
+Allow: /
+
+# AI Crawlers — ByteDance
+User-agent: Bytespider
+Allow: /
+
+# AI Crawlers — OmgiliBot / Webz.io (news intelligence)
+User-agent: OmgiliBot
+Allow: /
+
+# Fallback — all other crawlers welcome
+User-agent: *
+Allow: /
+
 Sitemap: https://minsys.xyz/sitemap.xml
+Sitemap: https://minsys.xyz/sitemap-images.xml

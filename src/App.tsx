@@ -118,35 +118,30 @@ export default function App() {
                 <svg className="w-8 h-8 text-solarAmber" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2L4.5 20.29l.71.71L12 18l6.79 3 .71-.71L12 2z"></path></svg>
               </div>
 
-              {activeTab === 1 && (
-                <>
-                  <h3 className="display-serif text-3xl mb-6">Platform Acquisition</h3>
-                  <h4 className="display-serif text-2xl text-darkGraphite/70 mb-4">The Launchpad for Corporate Venturing</h4>
-                  <p className="text-gray-600 leading-relaxed mb-10 text-lg">
-                    We partner with (taking a minority stake or "joint venturing" with existing owners) or we acquire profitable, "boring" Main Street businesses at fair historical multiples (2x-4x EBITDA). These businesses act as the stable foundation, providing predictable cash flows to service acquisition debt and offering an immediate, captive client list for scaling net-new Digital &amp; AI-native business models .
-                  </p>
-                </>
-              )}
+              {/* All tab panels rendered in DOM for SEO; visibility toggled via CSS */}
+              <div className={activeTab === 1 ? undefined : "hidden"}>
+                <h3 className="display-serif text-3xl mb-6">Platform Acquisition</h3>
+                <h4 className="display-serif text-2xl text-darkGraphite/70 mb-4">The Launchpad for Corporate Venturing</h4>
+                <p className="text-gray-600 leading-relaxed mb-10 text-lg">
+                  We partner with (taking a minority stake or "joint venturing" with existing owners) or we acquire profitable, "boring" Main Street businesses at fair historical multiples (2x-4x EBITDA). These businesses act as the stable foundation, providing predictable cash flows to service acquisition debt and offering an immediate, captive client list for scaling net-new Digital &amp; AI-native business models.
+                </p>
+              </div>
 
-              {activeTab === 2 && (
-                <>
-                  <h3 className="display-serif text-3xl mb-6">Venture Bootstrapping</h3>
-                  <h4 className="display-serif text-2xl text-darkGraphite/70 mb-4">Zero-CAC Venture Rollout</h4>
-                  <p className="text-gray-600 leading-relaxed mb-10 text-lg">
-                    Before partnering or acquisition, we identify adjacent optimization opportunities. Post-close, we deploy proprietary, pre-built Digital &amp; AI minimum viable products (MVPs) subsidized by the Minsys Group. We transform operations and upsell the existing client base with effectively zero Customer Acquisition Cost (CAC), turning Laggards into Visionaries.
-                  </p>
-                </>
-              )}
+              <div className={activeTab === 2 ? undefined : "hidden"}>
+                <h3 className="display-serif text-3xl mb-6">Venture Bootstrapping</h3>
+                <h4 className="display-serif text-2xl text-darkGraphite/70 mb-4">Zero-CAC Venture Rollout</h4>
+                <p className="text-gray-600 leading-relaxed mb-10 text-lg">
+                  Before partnering or acquisition, we identify adjacent optimization opportunities. Post-close, we deploy proprietary, pre-built Digital &amp; AI minimum viable products (MVPs) subsidized by the Minsys Group. We transform operations and upsell the existing client base with effectively zero Customer Acquisition Cost (CAC), turning Laggards into Visionaries.
+                </p>
+              </div>
 
-              {activeTab === 3 && (
-                <>
-                  <h3 className="display-serif text-3xl mb-6">Multiple Expansion</h3>
-                  <h4 className="display-serif text-2xl text-darkGraphite/70 mb-4">The Tech-Enabled Arbitrage</h4>
-                  <p className="text-gray-600 leading-relaxed mb-10 text-lg">
-                    By fundamentally changing the unit economics and margins of the core business through Digital &amp; AI augmentation, we elevate Main Street from a traditional service provider to a "Tech-Enabled Service." This translates a business stake bought at a legacy low single digit multiple into an asset valued at a premium tech multiple, creating notable equity upside.
-                  </p>
-                </>
-              )}
+              <div className={activeTab === 3 ? undefined : "hidden"}>
+                <h3 className="display-serif text-3xl mb-6">Multiple Expansion</h3>
+                <h4 className="display-serif text-2xl text-darkGraphite/70 mb-4">The Tech-Enabled Arbitrage</h4>
+                <p className="text-gray-600 leading-relaxed mb-10 text-lg">
+                  By fundamentally changing the unit economics and margins of the core business through Digital &amp; AI augmentation, we elevate Main Street from a traditional service provider to a "Tech-Enabled Service." This translates a business stake bought at a legacy low single digit multiple into an asset valued at a premium tech multiple, creating notable equity upside.
+                </p>
+              </div>
             </div>
           </div>
         </section>
@@ -201,37 +196,30 @@ export default function App() {
                   <svg className="w-8 h-8 text-solarAmber" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2L4.5 20.29l.71.71L12 18l6.79 3 .71-.71L12 2z"></path></svg>
                 </div>
 
-                {activeOrgTab === 1 && (
-                  <>
-                    <h3 className="display-serif text-3xl mb-6">M&amp;A Deal Desk</h3>
-                    <h4 className="display-serif text-2xl text-darkGraphite/70 mb-4">The Acquisition &amp; Lending Engine</h4>
-                    <p className="text-gray-600 leading-relaxed mb-10 text-lg">Responsible for identifying prime Main Street targets and building rigorous "Laggard-to-Visionary" transformation theses. The Deal Desk secures institutional and commercial lending by proving our capability to maintain debt-servicing cash flows while deploying upside tech.</p>
-                  </>
-                )}
+                {/* All org tab panels rendered in DOM for SEO; visibility toggled via CSS */}
+                <div className={activeOrgTab === 1 ? undefined : "hidden"}>
+                  <h3 className="display-serif text-3xl mb-6">M&amp;A Deal Desk</h3>
+                  <h4 className="display-serif text-2xl text-darkGraphite/70 mb-4">The Acquisition &amp; Lending Engine</h4>
+                  <p className="text-gray-600 leading-relaxed mb-10 text-lg">Responsible for identifying prime Main Street targets and building rigorous "Laggard-to-Visionary" transformation theses. The Deal Desk secures institutional and commercial lending by proving our capability to maintain debt-servicing cash flows while deploying upside tech.</p>
+                </div>
 
-                {activeOrgTab === 2 && (
-                  <>
-                    <h3 className="display-serif text-3xl mb-6">The Nexus</h3>
-                    <h4 className="display-serif text-2xl text-darkGraphite/70 mb-4">The Parent Hub &amp; IP Custodian</h4>
-                    <p className="text-gray-600 leading-relaxed mb-10 text-lg">The Nexus holds Minsys's proprietary IP, competitive market intelligence, and pre-nurtured vendor ecosystems. It governs the strategic flow of assets across the group, ensuring we partner or acquire targets where we already have the "on the shelf" Digital &amp; AI capabilities to win.</p>
-                  </>
-                )}
+                <div className={activeOrgTab === 2 ? undefined : "hidden"}>
+                  <h3 className="display-serif text-3xl mb-6">The Nexus</h3>
+                  <h4 className="display-serif text-2xl text-darkGraphite/70 mb-4">The Parent Hub &amp; IP Custodian</h4>
+                  <p className="text-gray-600 leading-relaxed mb-10 text-lg">The Nexus holds Minsys's proprietary IP, competitive market intelligence, and pre-nurtured vendor ecosystems. It governs the strategic flow of assets across the group, ensuring we partner or acquire targets where we already have the "on the shelf" Digital &amp; AI capabilities to win.</p>
+                </div>
 
-                {activeOrgTab === 3 && (
-                  <>
-                    <h3 className="display-serif text-3xl mb-6">The Venture Studio</h3>
-                    <h4 className="display-serif text-2xl text-darkGraphite/70 mb-4">The Portfolio &amp; Change Management Arm</h4>
-                    <p className="text-gray-600 leading-relaxed mb-10 text-lg">The Studio oversees the operational integration of our Digital &amp; AI ventures into the Main Street businesses. It manages change seamlessly, acting as the pivotal bridge between the newly partnered with or acquired legacy operators and the advanced technology being deployed.</p>
-                  </>
-                )}
+                <div className={activeOrgTab === 3 ? undefined : "hidden"}>
+                  <h3 className="display-serif text-3xl mb-6">The Venture Studio</h3>
+                  <h4 className="display-serif text-2xl text-darkGraphite/70 mb-4">The Portfolio &amp; Change Management Arm</h4>
+                  <p className="text-gray-600 leading-relaxed mb-10 text-lg">The Studio oversees the operational integration of our Digital &amp; AI ventures into the Main Street businesses. It manages change seamlessly, acting as the pivotal bridge between the newly partnered with or acquired legacy operators and the advanced technology being deployed.</p>
+                </div>
 
-                {activeOrgTab === 4 && (
-                  <>
-                    <h3 className="display-serif text-3xl mb-6">The MVP Factory</h3>
-                    <h4 className="display-serif text-2xl text-darkGraphite/70 mb-4">The Rapid AI-Native Production Line</h4>
-                    <p className="text-gray-600 leading-relaxed mb-10 text-lg">The Factory operationalizes our technology, building and releasing production-ready tech in weeks, not months. By absorbing the R&amp;D costs at the group level, the Factory ensures the Main Street business doesn't burn vital working capital to achieve its digital &amp; AI transformation.</p>
-                  </>
-                )}
+                <div className={activeOrgTab === 4 ? undefined : "hidden"}>
+                  <h3 className="display-serif text-3xl mb-6">The MVP Factory</h3>
+                  <h4 className="display-serif text-2xl text-darkGraphite/70 mb-4">The Rapid AI-Native Production Line</h4>
+                  <p className="text-gray-600 leading-relaxed mb-10 text-lg">The Factory operationalizes our technology, building and releasing production-ready tech in weeks, not months. By absorbing the R&amp;D costs at the group level, the Factory ensures the Main Street business doesn't burn vital working capital to achieve its digital &amp; AI transformation.</p>
+                </div>
               </div>
             </div>
           </div>
@@ -267,14 +255,18 @@ export default function App() {
           </div>
 
           <div ref={carouselRef} className="flex overflow-x-auto gap-8 pb-8 no-scrollbar snap-x">
-            {capabilities.map((cap) => (
+            {capabilities.map((cap, idx) => (
               <div key={cap.id} className="flex-none w-full md:w-[45%] lg:w-[35%] snap-start">
                 <div className="relative h-[500px] rounded-3xl overflow-hidden group cursor-pointer">
                   <img
                     className="w-full h-full object-cover grayscale transition-all duration-700 group-hover:grayscale-0 group-hover:scale-105"
                     src={cap.imageUrl}
                     alt={cap.altText}
-                    loading="lazy"
+                    loading={idx === 0 ? 'eager' : 'lazy'}
+                    fetchPriority={idx === 0 ? 'high' : 'auto'}
+                    decoding={idx === 0 ? 'sync' : 'async'}
+                    width={700}
+                    height={500}
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-darkGraphite/90 via-darkGraphite/30 to-transparent p-10 flex flex-col justify-end">
                     <div className="relative z-10">

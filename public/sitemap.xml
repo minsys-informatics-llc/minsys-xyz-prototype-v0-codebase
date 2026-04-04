@@ -1,9 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset
+  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://minsys.xyz/</loc>
-    <lastmod>2026-03-19</lastmod>
+    <lastmod>2026-04-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://minsys.xyz/assets/logo.png</image:loc>
+      <image:title>Minsys Logo</image:title>
+      <image:caption>Minsys — Venture-Led Micro-PE Group</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://minsys.xyz/assets/og-image.png</image:loc>
+      <image:title>Minsys — Venture-Led Micro-PE Group</image:title>
+      <image:caption>We partner with cash-flowing Main Street businesses to transform them into high-multiple Digital &amp; AI-Enabled Ventures.</image:caption>
+    </image:image>
   </url>
 </urlset>
