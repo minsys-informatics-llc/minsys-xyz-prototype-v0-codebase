@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Minsys | Venture-Led Micro-PE</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&family=Georgia:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
+
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+
+    <style type="text/tailwindcss">
+        @theme {
+      --color-solarAmber: #FD5E53;
+      --color-darkGraphite: #1A1A17;
+      --font-serif: "Georgia", serif;
+      --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+    }
+    .shadow-soft { box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05); }
+    .display-serif { font-family: var(--font-serif); }
+    html { scroll-behavior: smooth; }
+    body { font-family: var(--font-sans); background-color: white; color: var(--color-darkGraphite); }
+    
+    /* Hide scrollbar for portfolio but keep functionality */
+    .no-scrollbar::-webkit-scrollbar { display: none; }
+    .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+  </style>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js"></script>
+</head>
+
+<body class="antialiased">
+
+    <header
+        class="bg-darkGraphite border-b border-white/10 sticky top-0 z-50 px-8 py-4 flex items-center justify-between">
+        <div class="flex items-center gap-2">
+            <div class="w-8 h-8 bg-solarAmber rounded-sm flex items-center justify-center">
+                <span class="text-darkGraphite font-bold text-xs">M</span>
+            </div>
+            <span class="text-white font-bold tracking-tight text-xl">Minsys</span>
+        </div>
+        <nav class="hidden md:flex items-center gap-8 text-white/80 text-sm font-medium">
+            <a class="hover:text-solarAmber transition-colors" href="#model">Model</a>
+            <a class="hover:text-solarAmber transition-colors" href="#organization">Organization</a>
+            <a class="hover:text-solarAmber transition-colors" href="#capabilities">Capabilities</a>
+        </nav>
+        <a class="bg-solarAmber text-darkGraphite px-6 py-2 rounded-md font-bold text-sm hover:brightness-110 transition-all cursor-pointer"
+            href="#getintouch">
+            Partner with Us
+        </a>
+    </header>
+
+    <main>
+        <section id="hero" class="relative flex items-center justify-center overflow-hidden min-h-[70vh] pt-12 pb-32">
+            <div class="relative z-10 max-w-5xl mx-auto px-6 text-center w-full">
+                <div class="absolute inset-0 backdrop-blur-md -m-6 p-6 rounded-2xl -z-10 pointer-events-none"
+                    style="background-color: rgba(24, 22, 16, 0.1)"></div>
+                <h1 class="display-serif text-3xl md:text-4xl lg:text-5xl text-white font-black leading-tight mb-6">
+                    Ultimately, We Bootstrap Ventures</h1>
+                <p class="text-[#F8F9FA] max-w-4xl mx-auto mb-10 leading-tight font-light text-xl md:text-2xl">
+                    <strong>We partner with cash-flowing Main Street businesses,<br />To transform them into
+                        high-multiple
+                        <span class="text-solarAmber font-bold">Digital & AI-Enabled Ventures</span>.</strong>
+                </p>
+                <p
+                    class="text-[#F8F9FA] text-base md:text-lg max-w-3xl mx-auto mb-10 leading-relaxed font-light italic opacity-90">
+                    Closing the valuation gap through corporate venturing and operational excellence.
+                </p>
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                    <a href="#model"
+                        class="bg-solarAmber text-darkGraphite px-10 py-4 text-base font-bold rounded-lg hover:scale-105 transition-transform text-center">Our
+                        Model</a>
+                    <a href="#capabilities"
+                        class="border border-white/20 text-white px-10 py-4 text-base font-bold rounded-lg hover:bg-white/5 transition-colors text-center">Digital
+                        & AI Capabilities</a>
+                </div>
+            </div>
+            <div
+                class="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-solarAmber/50 to-transparent z-10">
+            </div>
+        </section>
+
+        <section id="proposition"
+            class="max-w-7xl mx-auto px-4 relative z-10 grid md:grid-cols-2 gap-6 -translate-y-12">
+            <div class="bg-white p-8 rounded-xl shadow-soft border border-gray-100 flex gap-6">
+                <div class="shrink-0">
+                    <div class="w-12 h-12 bg-solarAmber/10 rounded-lg flex items-center justify-center">
+                        <svg class="w-6 h-6 text-solarAmber" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" stroke-linecap="round"
+                                stroke-linejoin="round" stroke-width="2"></path>
+                        </svg>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold text-solarAmber tracking-widest uppercase mb-2">Why Now?</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        The valuation gap between Main Street and tech-enabled businesses has never been wider.
+                        While aging Main Street businesses offer <span class="text-solarAmber font-medium">stable cash
+                            flows and captive audiences</span>, they lack the DNA to digitalize and embrace the AI
+                        revolution, leaving massive enterprise value on the table.
+                    </p>
+                </div>
+            </div>
+            <div class="bg-white p-8 rounded-xl shadow-soft border border-gray-100 flex gap-6">
+                <div class="shrink-0">
+                    <div class="w-12 h-12 bg-solarAmber/10 rounded-lg flex items-center justify-center">
+                        <svg class="w-6 h-6 text-solarAmber" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.364-5.364l-.707-.707M6.343 17.657l-.707.707m12.728 0l-.707-.707M12 21V3"
+                                stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+                        </svg>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold text-solarAmber tracking-widest uppercase mb-2">What we do</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Minsys engineers asymmetric returns through a <span
+                            class="text-solarAmber font-medium">Venture-Led Micro-PE Model</span>. We partner or acquire
+                        profitable
+                        Main Street businesses at traditional multiples and deploy on-the-shelf Digital & AI
+                        capabilities to fundamentally expand their margins, market share, and exit valuations.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section id="model" class="max-w-7xl mx-auto px-4 py-24">
+            <div class="grid lg:grid-cols-12 gap-12">
+                <div class="lg:col-span-4">
+                    <h3 class="text-[10px] font-bold text-solarAmber tracking-widest uppercase mb-4">How We Operate</h3>
+                    <h2 class="display-serif text-3xl mb-12">Venture-led Micro-PE Model</h2>
+                    <nav class="space-y-6">
+                        <div onclick="switchTab('model', 1)" id="tab-model-1"
+                            class="tab-btn active flex items-center justify-between p-4 bg-white shadow-sm border border-gray-100 rounded-lg text-solarAmber font-bold cursor-pointer transition-colors">
+                            <span>1. Platform Acquisition</span>
+                            <svg class="w-5 h-5 indicator block" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path d="M17 8l4 4m0 0l-4 4m4-4H3" stroke-linecap="round" stroke-linejoin="round"
+                                    stroke-width="2"></path>
+                            </svg>
+                        </div>
+                        <div onclick="switchTab('model', 2)" id="tab-model-2"
+                            class="tab-btn flex items-center justify-between p-4 text-gray-400 font-medium cursor-pointer hover:text-darkGraphite hover:bg-gray-50 hover:rounded-lg transition-colors">
+                            <span>2. Venture Bootstrapping</span>
+                            <svg class="w-5 h-5 indicator hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path d="M17 8l4 4m0 0l-4 4m4-4H3" stroke-linecap="round" stroke-linejoin="round"
+                                    stroke-width="2"></path>
+                            </svg>
+                        </div>
+                        <div onclick="switchTab('model', 3)" id="tab-model-3"
+                            class="tab-btn flex items-center justify-between p-4 text-gray-400 font-medium cursor-pointer hover:text-darkGraphite hover:bg-gray-50 hover:rounded-lg transition-colors">
+                            <span>3. Multiple Expansion</span>
+                            <svg class="w-5 h-5 indicator hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path d="M17 8l4 4m0 0l-4 4m4-4H3" stroke-linecap="round" stroke-linejoin="round"
+                                    stroke-width="2"></path>
+                            </svg>
+                        </div>
+                    </nav>
+                </div>
+
+                <div class="lg:col-span-8 bg-white p-12 rounded-2xl shadow-soft border border-gray-50">
+                    <div class="w-16 h-16 bg-solarAmber/10 rounded-2xl flex items-center justify-center mb-8">
+                        <svg class="w-8 h-8 text-solarAmber" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2L4.5 20.29l.71.71L12 18l6.79 3 .71-.71L12 2z"></path>
+                        </svg>
+                    </div>
+
+                    <div id="content-model-1" class="tab-content block">
+                        <h3 class="display-serif text-3xl mb-6">Acquiring the Platform</h3>
+                        <p class="text-gray-600 leading-relaxed mb-10 text-lg">
+                            We partner with (taking a minority stake or "joint venturing" with existing owners) or we
+                            acquire profitable, "boring" Main Street businesses at fair historical multiples (2x-4x
+                            EBITDA). These businesses act as the stable foundation, providing predictable cash flows to
+                            service acquisition debt and offering an immediate, captive client list for scaling net-new
+                            Digital & AI-native business models .
+                        </p>
+                    </div>
+                    <div id="content-model-2" class="tab-content hidden">
+                        <h3 class="display-serif text-3xl mb-6">Zero-CAC Venture Rollout</h3>
+                        <p class="text-gray-600 leading-relaxed mb-10 text-lg">
+                            Before partnering or acquisition, we identify adjacent optimization opportunities.
+                            Post-close, we deploy
+                            proprietary, pre-built Digital & AI minimum viable products (MVPs) subsidized by the Minsys
+                            Group. We transform operations and upsell the existing client base with effectively zero
+                            Customer Acquisition Cost (CAC), turning Laggards into Visionaries.
+                        </p>
+                    </div>
+                    <div id="content-model-3" class="tab-content hidden">
+                        <h3 class="display-serif text-3xl mb-6">The Tech-Enabled Arbitrage</h3>
+                        <p class="text-gray-600 leading-relaxed mb-10 text-lg">
+                            By fundamentally changing the unit economics and margins of the core business through
+                            Digital & AI
+                            augmentation, we elevate Main Street from a traditional service provider to a "Tech-Enabled
+                            Service." This translates a business stake bought at a legacy low single digit multiple into
+                            an asset valued at a premium tech multiple, creating notable equity upside.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="organization" class="bg-gray-50 py-24 px-4 overflow-hidden">
+            <div class="max-w-7xl mx-auto">
+                <div class="text-center mb-16">
+                    <div
+                        class="w-full bg-white p-10 rounded-2xl shadow-soft border border-gray-100 flex flex-col md:flex-row items-start gap-8 text-left">
+                        <div class="shrink-0 w-12 h-12 bg-solarAmber/10 rounded-lg flex items-center justify-center">
+                            <svg class="w-6 h-6 text-solarAmber" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 3L2 12h3v8h14v-8h3L12 3zm0 4.84L16.16 11H7.84L12 7.84zM7 18v-5h10v5H7z">
+                                </path>
+                            </svg>
+                        </div>
+                        <div>
+                            <h4 class="text-[10px] font-bold text-solarAmber tracking-widest uppercase mb-2">Operational
+                                Engine</h4>
+                            <h5 class="font-bold text-xl mb-3">Minsys Group Organization</h5>
+                            <p class="text-gray-600 leading-relaxed text-sm">
+                                Our model is derisked by a highly specialized <span
+                                    class="text-solarAmber font-medium">four-pillar organization</span>. Minsys handles
+                                the entire lifecycle in-house—from securing commercial lending based on solid M&A
+                                theses, to deploying subsidized, rapid AI innovation into legacy operations without
+                                disrupting their cash-flowing core.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid lg:grid-cols-12 gap-12">
+                    <div class="lg:col-span-4">
+                        <h3 class="text-[10px] font-bold text-solarAmber tracking-widest uppercase mb-4">Minsys Core
+                            Structure</h3>
+                        <h2 class="display-serif text-4xl mb-12">The Four Pillars</h2>
+                        <nav class="space-y-6">
+                            <div onclick="switchTab('org', 1)" id="tab-org-1"
+                                class="tab-btn-org active flex items-center justify-between p-4 bg-white shadow-sm border border-gray-100 rounded-lg text-solarAmber font-bold cursor-pointer transition-colors">
+                                <span>M&A Deal Desk</span>
+                                <svg class="w-5 h-5 indicator-org block" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path d="M17 8l4 4m0 0l-4 4m4-4H3" stroke-linecap="round" stroke-linejoin="round"
+                                        stroke-width="2"></path>
+                                </svg>
+                            </div>
+                            <div onclick="switchTab('org', 2)" id="tab-org-2"
+                                class="tab-btn-org flex items-center justify-between p-4 text-gray-400 font-medium cursor-pointer hover:text-darkGraphite hover:bg-gray-50 hover:rounded-lg transition-colors">
+                                <span>The Nexus</span>
+                                <svg class="w-5 h-5 indicator-org hidden" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path d="M17 8l4 4m0 0l-4 4m4-4H3" stroke-linecap="round" stroke-linejoin="round"
+                                        stroke-width="2"></path>
+                                </svg>
+                            </div>
+                            <div onclick="switchTab('org', 3)" id="tab-org-3"
+                                class="tab-btn-org flex items-center justify-between p-4 text-gray-400 font-medium cursor-pointer hover:text-darkGraphite hover:bg-gray-50 hover:rounded-lg transition-colors">
+                                <span>The Venture Studio</span>
+                                <svg class="w-5 h-5 indicator-org hidden" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path d="M17 8l4 4m0 0l-4 4m4-4H3" stroke-linecap="round" stroke-linejoin="round"
+                                        stroke-width="2"></path>
+                                </svg>
+                            </div>
+                            <div onclick="switchTab('org', 4)" id="tab-org-4"
+                                class="tab-btn-org flex items-center justify-between p-4 text-gray-400 font-medium cursor-pointer hover:text-darkGraphite hover:bg-gray-50 hover:rounded-lg transition-colors">
+                                <span>The MVP Factory</span>
+                                <svg class="w-5 h-5 indicator-org hidden" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path d="M17 8l4 4m0 0l-4 4m4-4H3" stroke-linecap="round" stroke-linejoin="round"
+                                        stroke-width="2"></path>
+                                </svg>
+                            </div>
+                        </nav>
+                    </div>
+
+                    <div class="lg:col-span-8 bg-white p-12 rounded-2xl shadow-soft border border-gray-50">
+                        <div class="w-16 h-16 bg-solarAmber/10 rounded-2xl flex items-center justify-center mb-8">
+                            <svg class="w-8 h-8 text-solarAmber" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 2L4.5 20.29l.71.71L12 18l6.79 3 .71-.71L12 2z"></path>
+                            </svg>
+                        </div>
+
+                        <div id="content-org-1" class="tab-content-org block">
+                            <h3 class="display-serif text-3xl mb-6">M&A Deal Desk</h3>
+                            <h4 class="display-serif text-2xl text-darkGraphite/70 mb-4">The Acquisition & Lending
+                                Engine</h4>
+                            <p class="text-gray-600 leading-relaxed mb-10 text-lg">Responsible for identifying prime
+                                Main Street targets and building rigorous "Laggard-to-Visionary" transformation theses.
+                                The Deal Desk secures institutional and commercial lending by proving our capability to
+                                maintain debt-servicing cash flows while deploying upside tech.</p>
+                        </div>
+                        <div id="content-org-2" class="tab-content-org hidden">
+                            <h3 class="display-serif text-3xl mb-6">The Nexus</h3>
+                            <h4 class="display-serif text-2xl text-darkGraphite/70 mb-4">The Parent Hub & IP Custodian
+                            </h4>
+                            <p class="text-gray-600 leading-relaxed mb-10 text-lg">The Nexus holds Minsys's proprietary
+                                IP, competitive market intelligence, and pre-nurtured vendor ecosystems. It governs the
+                                strategic flow of assets across the group, ensuring we partner or acquire targets where
+                                we already have the "on the shelf" Digital & AI capabilities to win.</p>
+                        </div>
+                        <div id="content-org-3" class="tab-content-org hidden">
+                            <h3 class="display-serif text-3xl mb-6">The Venture Studio</h3>
+                            <h4 class="display-serif text-2xl text-darkGraphite/70 mb-4">The Portfolio & Change
+                                Management Arm</h4>
+                            <p class="text-gray-600 leading-relaxed mb-10 text-lg">The Studio oversees the operational
+                                integration of our Digital & AI ventures into the Main Street businesses. It manages
+                                change seamlessly, acting as the pivotal bridge between the newly partnered with or
+                                acquired legacy operators and the advanced technology being deployed.</p>
+                        </div>
+                        <div id="content-org-4" class="tab-content-org hidden">
+                            <h3 class="display-serif text-3xl mb-6">The MVP Factory</h3>
+                            <h4 class="display-serif text-2xl text-darkGraphite/70 mb-4">The Rapid AI-Native Production
+                                Line</h4>
+                            <p class="text-gray-600 leading-relaxed mb-10 text-lg">The Factory operationalizes our
+                                technology, building and releasing production-ready tech in weeks, not months. By
+                                absorbing the R&D costs at the group level, the Factory ensures the Main Street
+                                business doesn't burn vital working capital to achieve its digital & AI transformation.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="capabilities" class="max-w-7xl mx-auto px-4 py-24">
+            <div class="mb-12 flex flex-col md:flex-row md:items-end justify-between gap-8">
+                <div class="max-w-2xl">
+                    <h3 class="text-[10px] font-bold text-solarAmber tracking-widest uppercase mb-4">Capabilities
+                    </h3>
+                    <h2 class="display-serif text-4xl md:text-5xl leading-tight mb-6">Off-the-Shelf Digital & AI
+                        Capabilities.
+                    </h2>
+                    <p class="text-gray-600 leading-relaxed text-lg">
+                        We deploy our proprietary, battle-tested AI and Digital platforms directly into the Main Street
+                        businesses, ensuring rapid margin expansion and immediate market dominance.
+                    </p>
+                </div>
+
+                <div class="flex gap-4 shrink-0">
+                    <button onclick="document.getElementById('carousel').scrollBy({left: -400, behavior: 'smooth'})"
+                        aria-label="Previous capability"
+                        class="w-12 h-12 border border-gray-200 rounded-full flex items-center justify-center text-gray-400 hover:border-solarAmber hover:text-solarAmber transition-all cursor-pointer">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7">
+                            </path>
+                        </svg>
+                    </button>
+                    <button onclick="document.getElementById('carousel').scrollBy({left: 400, behavior: 'smooth'})"
+                        aria-label="Next capability"
+                        class="w-12 h-12 border border-gray-200 rounded-full flex items-center justify-center text-gray-400 hover:border-solarAmber hover:text-solarAmber transition-all cursor-pointer">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7">
+                            </path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <div id="carousel" class="flex overflow-x-auto gap-8 pb-8 no-scrollbar snap-x">
+
+                <div class="flex-none w-full md:w-[45%] lg:w-[35%] snap-start">
+                    <div class="relative h-[500px] rounded-3xl overflow-hidden group cursor-pointer">
+                        <img class="w-full h-full object-cover grayscale transition-all duration-700 group-hover:grayscale-0 group-hover:scale-105"
+                            src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=1000&auto=format&fit=crop"
+                            alt="Software Factory" />
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-darkGraphite/90 via-darkGraphite/30 to-transparent p-10 flex flex-col justify-end">
+                            <div class="relative z-10">
+                                <p class="text-[10px] text-solarAmber font-bold tracking-[0.2em] mb-4 uppercase">
+                                    Delivery Infrastructure</p>
+                                <div
+                                    class="text-white/60 text-[10px] mb-4 leading-relaxed max-w-sm uppercase font-bold tracking-widest">
+                                    Applying DevSecOps, SRE, and Platform Engineering principles. Leveraging automated
+                                    testing, SCM, robust CI/CD pipelines, containerization, and Infrastructure-as-Code
+                                    to achieve radical TTM acceleration for reusable, secure architectures.</div>
+                                <h3 class="display-serif text-3xl text-white">The Software Factory</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex-none w-full md:w-[45%] lg:w-[35%] snap-start">
+                    <div class="relative h-[500px] rounded-3xl overflow-hidden group cursor-pointer">
+                        <img class="w-full h-full object-cover grayscale transition-all duration-700 group-hover:grayscale-0 group-hover:scale-105"
+                            src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?q=80&w=1000&auto=format&fit=crop"
+                            alt="AI Factory" />
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-darkGraphite/90 via-darkGraphite/30 to-transparent p-10 flex flex-col justify-end">
+                            <div class="relative z-10">
+                                <p class="text-[10px] text-solarAmber font-bold tracking-[0.2em] mb-4 uppercase">
+                                    Intelligence Orchestration</p>
+                                <div
+                                    class="text-white/60 text-[10px] mb-4 leading-relaxed max-w-sm uppercase font-bold tracking-widest">
+                                    An industrialized MLOps platform engineered to continuously build, train, deploy,
+                                    and manage AI systems at scale. Utilizes frontier model gateways and optimized
+                                    inference to convert raw legacy data into actionable intelligence.</div>
+                                <h3 class="display-serif text-3xl text-white">The AI Factory</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex-none w-full md:w-[45%] lg:w-[35%] snap-start">
+                    <div class="relative h-[500px] rounded-3xl overflow-hidden group cursor-pointer">
+                        <img class="w-full h-full object-cover grayscale transition-all duration-700 group-hover:grayscale-0 group-hover:scale-105"
+                            src="https://images.unsplash.com/photo-1597733336794-12d05021d510?q=80&w=1000&auto=format&fit=crop"
+                            alt="Cloud Infrastructure" />
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-darkGraphite/90 via-darkGraphite/30 to-transparent p-10 flex flex-col justify-end">
+                            <div class="relative z-10">
+                                <p class="text-[10px] text-solarAmber font-bold tracking-[0.2em] mb-4 uppercase">
+                                    Infrastructure Modernization</p>
+                                <div
+                                    class="text-white/60 text-[10px] mb-4 leading-relaxed max-w-sm uppercase font-bold tracking-widest">
+                                    Rapid lift-and-shift deployment engine moving legacy on-premises data to the cloud
+                                    with zero operational downtime for the acquired firm.</div>
+                                <h3 class="display-serif text-3xl text-white">Cloud Migration Factory</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex-none w-full md:w-[45%] lg:w-[35%] snap-start">
+                    <div class="relative h-[500px] rounded-3xl overflow-hidden group cursor-pointer">
+                        <img class="w-full h-full object-cover grayscale transition-all duration-700 group-hover:grayscale-0 group-hover:scale-105"
+                            src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=1000&auto=format&fit=crop"
+                            alt="Business Transformation" />
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-darkGraphite/90 via-darkGraphite/30 to-transparent p-10 flex flex-col justify-end">
+                            <div class="relative z-10">
+                                <p class="text-[10px] text-solarAmber font-bold tracking-[0.2em] mb-4 uppercase">Change
+                                    Management</p>
+                                <div
+                                    class="text-white/60 text-[10px] mb-4 leading-relaxed max-w-sm uppercase font-bold tracking-widest">
+                                    Proprietary operational rewiring frameworks designed to smoothly transition legacy
+                                    management teams into an AI-native operational cadence.</div>
+                                <h3 class="display-serif text-3xl text-white">WorkshopThinking</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex-none w-full md:w-[45%] lg:w-[35%] snap-start">
+                    <div class="relative h-[500px] rounded-3xl overflow-hidden group cursor-pointer">
+                        <img class="w-full h-full object-cover grayscale transition-all duration-700 group-hover:grayscale-0 group-hover:scale-105"
+                            src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1000&auto=format&fit=crop"
+                            alt="Resilience Testing" />
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-darkGraphite/90 via-darkGraphite/30 to-transparent p-10 flex flex-col justify-end">
+                            <div class="relative z-10">
+                                <p class="text-[10px] text-solarAmber font-bold tracking-[0.2em] mb-4 uppercase">Scale &
+                                    Resilience</p>
+                                <div
+                                    class="text-white/60 text-[10px] mb-4 leading-relaxed max-w-sm uppercase font-bold tracking-widest">
+                                    Automated chaos engineering frameworks applied to legacy business processes,
+                                    stress-testing workflows before scaling digital operations.</div>
+                                <h3 class="display-serif text-3xl text-white">Turbulences Engineering</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex-none w-full md:w-[45%] lg:w-[35%] snap-start">
+                    <div class="relative h-[500px] rounded-3xl overflow-hidden group cursor-pointer">
+                        <img class="w-full h-full object-cover grayscale transition-all duration-700 group-hover:grayscale-0 group-hover:scale-105"
+                            src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?q=80&w=1000&auto=format&fit=crop"
+                            alt="Security" />
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-darkGraphite/90 via-darkGraphite/30 to-transparent p-10 flex flex-col justify-end">
+                            <div class="relative z-10">
+                                <p class="text-[10px] text-solarAmber font-bold tracking-[0.2em] mb-4 uppercase">Cyber &
+                                    SecOps</p>
+                                <div
+                                    class="text-white/60 text-[10px] mb-4 leading-relaxed max-w-sm uppercase font-bold tracking-widest">
+                                    Our AI-native SecOps platform deployed immediately upon acquisition to protect
+                                    legacy data and secure the perimeter for digital scaling.</div>
+                                <h3 class="display-serif text-3xl text-white">Zeste LTS Systems</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="getintouch" class="bg-darkGraphite text-white py-32 px-4 text-center">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="display-serif text-4xl md:text-6xl mb-16 leading-tight">
+                    Explore Asymmetric Returns in the <span class="text-solarAmber italic">Digital & AI Economy</span>
+                </h2>
+                <div class="grid md:grid-cols-2 gap-8 text-left">
+                    <div
+                        class="bg-white/5 backdrop-blur-md p-12 rounded-3xl border border-solarAmber/20 flex flex-col items-center text-center">
+                        <div class="w-12 h-12 bg-solarAmber/10 rounded-xl flex items-center justify-center mb-8">
+                            <svg class="w-6 h-6 text-solarAmber" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M13.13 22.19l-1.63-3.83c1.57-.64 3.05-1.56 4.37-2.71l2.83 2.83c-1.74 1.74-3.76 3.12-5.57 3.71M7.5 18.47l2.83-2.83c1.32 1.15 2.8 2.07 4.37 2.71l-1.63 3.83c-1.81-.59-3.83-1.97-5.57-3.71M2.19 13.13l3.83-1.63c.64 1.57 1.56 3.05 2.71 4.37l-2.83 2.83c-1.74-1.74-3.12-3.76-3.71-5.57M18.47 7.5l2.83-2.83c1.15 1.32 2.07 2.8 2.71 4.37l-3.83 1.63c-.64-1.57-1.56-3.05-2.71-4.37M12 8c-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4-1.79-4-4-4z">
+                                </path>
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-4">Capital Partners</h3>
+                        <p class="text-white/60 mb-8 leading-relaxed">Connect with our M&A Deal Desk regarding
+                            commercial lending for our next cash-flowing acquisition.</p>
+                        <a href="mailto:contact@minsys.xyz"
+                            class="w-full bg-solarAmber text-darkGraphite py-4 rounded-xl font-bold hover:brightness-110 transition-all cursor-pointer inline-block text-center">
+                            Contact Deal Desk
+                        </a>
+                    </div>
+                    <div
+                        class="bg-white/5 backdrop-blur-md p-12 rounded-3xl flex flex-col items-center text-center border border-white/5">
+                        <div class="w-12 h-12 bg-solarAmber/10 rounded-xl flex items-center justify-center mb-8">
+                            <svg class="w-6 h-6 text-solarAmber" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-4">M&A Origination</h3>
+                        <p class="text-white/60 mb-8 leading-relaxed">Present a Main Street business opportunity ripe
+                            for AI transformation and margin expansion.</p>
+                        <a href="mailto:contact@minsys.xyz"
+                            class="w-full border border-white/20 text-white py-4 rounded-xl font-bold hover:bg-white/5 transition-all cursor-pointer inline-block text-center">
+                            Share Opportunity
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-[#121210] text-white/40 py-12 px-8 border-t border-white/5">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
+            <div class="flex items-center gap-2 flex-1 justify-start">
+                <div class="w-6 h-6 bg-solarAmber/20 rounded flex items-center justify-center">
+                    <span class="text-solarAmber font-bold text-[8px]">M</span>
+                </div>
+                <span class="text-white/80 font-bold text-sm">Minsys</span>
+            </div>
+            <div class="text-center text-sm md:text-base leading-relaxed text-white/80 flex-1">
+                Minsys | Venture-Led Micro-PE Firm<br />
+                Augmentation over Automation<br />
+                © 2026 <span class="italic">Minsys Holdings, LLC.</span> All rights reserved.
+            </div>
+            <div class="flex gap-6 text-[10px] font-bold tracking-[0.2em] uppercase flex-1 justify-end">
+                <a class="hover:text-white transition-colors" href="#">Privacy Policy</a>
+                <a class="hover:text-white transition-colors" href="#">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Initialize Vanta.js Background
+        window.addEventListener('DOMContentLoaded', () => {
+            VANTA.NET({
+                el: "#hero",
+                mouseControls: true,
+                touchControls: true,
+                gyroControls: false,
+                minHeight: 500.00,
+                minWidth: 500.00,
+                scale: 2.00,
+                scaleMobile: 1.00,
+                color: 0xfd5e53,
+                backgroundColor: 0x181610,
+                points: 13.00,
+                maxDistance: 22.00,
+                spacing: 16.00
+            });
+        });
+
+        // Tab Switching Logic
+        function switchTab(group, tabId) {
+            // Hide all contents for this group
+            const contents = document.querySelectorAll(`.tab-content${group === 'org' ? '-org' : ''}`);
+            contents.forEach(content => content.classList.add('hidden'));
+            contents.forEach(content => content.classList.remove('block'));
+
+            // Show selected content
+            const selectedContent = document.getElementById(`content-${group}-${tabId}`);
+            if (selectedContent) {
+                selectedContent.classList.remove('hidden');
+                selectedContent.classList.add('block');
+            }
+
+            // Reset all buttons styling
+            const buttons = document.querySelectorAll(`.tab-btn${group === 'org' ? '-org' : ''}`);
+            buttons.forEach(btn => {
+                btn.classList.remove('bg-white', 'shadow-sm', 'border-gray-100', 'text-solarAmber');
+                btn.classList.add('text-gray-400', 'hover:text-darkGraphite', 'hover:bg-gray-50');
+                const indicator = btn.querySelector('.indicator' + (group === 'org' ? '-org' : ''));
+                if (indicator) {
+                    indicator.classList.add('hidden');
+                    indicator.classList.remove('block');
+                }
+            });
+
+            // Style selected button
+            const selectedBtn = document.getElementById(`tab-${group}-${tabId}`);
+            if (selectedBtn) {
+                selectedBtn.classList.add('bg-white', 'shadow-sm', 'border-gray-100', 'text-solarAmber');
+                selectedBtn.classList.remove('text-gray-400', 'hover:text-darkGraphite', 'hover:bg-gray-50');
+                const indicator = selectedBtn.querySelector('.indicator' + (group === 'org' ? '-org' : ''));
+                if (indicator) {
+                    indicator.classList.remove('hidden');
+                    indicator.classList.add('block');
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>

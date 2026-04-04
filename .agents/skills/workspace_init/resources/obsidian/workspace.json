@@ -1,0 +1,250 @@
+{
+  "main": {
+    "id": "094f5acebe78badf",
+    "type": "split",
+    "children": [
+      {
+        "id": "5466ecdf74a13bd3",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "942fa2d607b68106",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "bootstrap-venture-feature-framework-business_model-lean_canvas-problem.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "bootstrap-venture-feature-framework-business_model-lean_canvas-problem"
+            }
+          },
+          {
+            "id": "4316bddd8aa36ccf",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "ideate-venture-enabler-brainstorming-test-pbi.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "ideate-venture-enabler-brainstorming-test-pbi"
+            }
+          }
+        ],
+        "currentTab": 1
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "c333ad93a15d8f07",
+    "type": "split",
+    "children": [
+      {
+        "id": "09585a420f04abea",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "dcb1853ab1eb549d",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "de59197e772fb0f3",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "COI",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "33cc7a4d06a3ea08",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 680.5
+  },
+  "right": {
+    "id": "7612fb1677ceb7b9",
+    "type": "split",
+    "children": [
+      {
+        "id": "a4f98d8e5e6c5760",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "dd8a0f87005b28da",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "bootstrap-venture-feature-framework-business_model-lean_canvas-uvp.md",
+                "collapseAll": true,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for bootstrap-venture-feature-framework-business_model-lean_canvas-uvp"
+            }
+          },
+          {
+            "id": "3e4f7912e2177c77",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "bootstrap-venture-feature-framework-business_model-lean_canvas-uvp.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from bootstrap-venture-feature-framework-business_model-lean_canvas-uvp"
+            }
+          },
+          {
+            "id": "aeb5bb2f1e03eef5",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "e9402b0cd0cfa674",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "All properties"
+            }
+          },
+          {
+            "id": "1bdbd6fa40c7db16",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "ideate-venture-enabler-brainstorming-test-pbi.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline of ideate-venture-enabler-brainstorming-test-pbi"
+            }
+          }
+        ],
+        "currentTab": 4
+      }
+    ],
+    "direction": "horizontal",
+    "width": 347.5
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "bases:Create new base": false
+    }
+  },
+  "active": "4316bddd8aa36ccf",
+  "lastOpenFiles": [
+    "bootstrap-venture-feature-framework-business_model-lean_canvas-problem.md",
+    "ideate-venture-enabler-brainstorming-test-pbi.md",
+    "ideate-venture-enabler-brainstorming-website_copy_prototype.md",
+    "bootstrap-venture-feature-framework-business_model-lean_canvas-unfair_advantage.md",
+    "bootstrap-venture-feature-framework-business_model-lean_canvas-solution.md",
+    "bootstrap-venture-feature-framework-business_model-lean_canvas-revenue_streams.md",
+    "bootstrap-venture-feature-framework-business_model-lean_canvas-key_metrics.md",
+    "bootstrap-venture-feature-framework-business_model-lean_canvas-customer_segments.md",
+    "bootstrap-venture-feature-framework-business_model-lean_canvas-cost_structure.md",
+    "bootstrap-venture-feature-framework-business_model-lean_canvas-channels.md",
+    "bootstrap-venture-feature-framework-bme_market_forces-revenue_attractiveness.md",
+    "bootstrap-venture-feature-framework-bme_market_forces-needs_supply_demand.md",
+    "bootstrap-venture-feature-framework-bme_market_forces-market_segments.md",
+    "bootstrap-venture-feature-framework-bme_market_forces-market_issues.md",
+    "bootstrap-venture-feature-framework-bme_industry_forces-subsitutes_incumbents.md",
+    "bootstrap-venture-feature-framework-bme_industry_forces-competitors_incumbents.md",
+    "bootstrap-venture-enabler-brainstorming-business_model-lean_canvas-solution 1.md",
+    "bootstrap-venture-enabler-brainstorming-business_model-lean_canvas-solution.md",
+    "bootstrap-venture-enabler-brainstorming-business_model-lean_canvas-artefact.md",
+    "bootstrap-venture-feature-framework-business_model-lean_canvas-uvp.md",
+    "ideate-venture-enabler-library/ideate-venture-enabler-user_persona-business_owner.md",
+    "Archives/bootstrap-venture-feature-framework-business_model-lean_canvas-solution 1.md",
+    "ideate-venture-enabler-brainstorming-website_copy_prototype_only_membership_model.md",
+    "bootstrap-venture-enabler-library/bootstrap-venture-enabler-brainstorming-business_model-lean_canvas-library/bootstrap-venture-enabler-brainstorming-business_model-lean_canvas-solution.md",
+    "bootstrap-venture-enabler-library/bootstrap-venture-enabler-brainstorming-business_model-lean_canvas-library/bootstrap-venture-enabler-brainstorming-business_model-lean_canvas-problem.md",
+    "Archives",
+    "bootstrap-venture-feature-framework-business_model-lean_canvas-solution_backup.md",
+    "bootstrap-venture-feature-framework-business_model-lean_canvas-dashboard/LeanCanvasProblemBlock.jsx",
+    "bootstrap-venture-feature-framework-business_model-lean_canvas-dashboard",
+    "bootstrap-venture-enabler-library/test/LeanCanvasProblemBlock.jsx",
+    "bootstrap-venture-enabler-library/test/LeanCanvasProblemBlock.tsx",
+    "bootstrap-venture-enabler-library/test/test",
+    "bootstrap-venture-enabler-library/test",
+    "ideate-venture-enabler-library",
+    "bootstrap-venture-enabler-library",
+    "bootstrap-venture-enabler-library/bootstrap-venture-enabler-brainstorming-bme-library",
+    "IAM for LLM-Based AI Agents_files/Video_1756299841502-chapter-1.0000001.jpg",
+    "IAM for LLM-Based AI Agents_files/gartner-black.webp",
+    "IAM for LLM-Based AI Agents_files/Figure_1_Justifiable_IAM_Risk_vs._Actual_IAM_Risk.png",
+    "IAM for LLM-Based AI Agents_files/Figure_1_Relationship_Architecture_Transformation.png",
+    "IAM for LLM-Based AI Agents_files/Figure_2_The_IAM_Taxonomy.png",
+    "IAM for LLM-Based AI Agents_files/Figure_1_IAM_for_AI_Life_Cycle_Maturity.png",
+    "IAM for LLM-Based AI Agents_files/Figure_1_Key_Generative_AI_Impacts_on_IAM(1).png",
+    "IAM for LLM-Based AI Agents_files/Figure_1_IAM_System_of_Systems.png",
+    "IAM for LLM-Based AI Agents_files/Figure_1_Mind_the_AI_Agency_Gap.png",
+    "IAM for LLM-Based AI Agents_files/Figure_1_The_Seven_Core_Functions_of_Certificate_Life_Cycle_Management.png"
+  ]
+}
