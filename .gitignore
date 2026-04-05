@@ -8,4 +8,4 @@ coverage/
 !.env.example
 
 # Local development artifacts
-.claude/worktrees/
+.claude*

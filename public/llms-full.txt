@@ -12,7 +12,8 @@ Minsys engineers asymmetric returns by acquiring or partnering with profitable "
 
 The core insight: there is a massive and growing **valuation gap** between traditional Main Street businesses (valued at 2x–4x EBITDA) and tech-enabled businesses (valued at 8x–15x+ EBITDA). Minsys captures this arbitrage by transforming the former into the latter.
 
-Slogan: **"Augmentation over Automation"**
+Mission: "Unlocking Main Street's hidden value with Digital & AI Spin-Offs"
+Vision: "Augmentation over Automation"
 
 Website: https://minsys.xyz
 Contact: contact@minsys.xyz
@@ -37,7 +38,7 @@ The Minsys model operates in three sequential phases:
 
 ### Phase 1: Platform Acquisition — The Launchpad for Corporate Venturing
 
-Minsys partners with (taking a minority stake or joint venturing with existing owners) or acquires profitable, "boring" Main Street businesses at fair historical multiples (2x–4x EBITDA).
+Minsys partners with (taking a minority stake or joint venturing with existing owners) or acquires profitable Main Street businesses at fair historical multiples (2x–4x EBITDA).
 
 These businesses serve as:
 - A **stable foundation** providing predictable cash flows to service any acquisition debt.
@@ -48,14 +49,14 @@ Target profile: Profitable SMBs with stable operations, captive customer bases, 
 ### Phase 2: Venture Bootstrapping — Zero-CAC Venture Rollout
 
 Before partnering or acquisition closes, Minsys identifies adjacent optimization opportunities. Post-close:
-- Minsys deploys proprietary, **pre-built Digital & AI minimum viable products (MVPs)** subsidized at the Minsys Group level — not charged to the acquired business.
+- Minsys deploys proprietary, **pre-built Digital & AI minimum capabilities** subsidized at the Minsys Group level — not charged to the acquired business.
 - Operations are transformed and the existing client base is upsold with **effectively zero Customer Acquisition Cost (CAC)**.
 - The result: "Laggards" (legacy operators) are systematically converted into "Visionaries" (tech-enabled market leaders).
 
 ### Phase 3: Multiple Expansion — The Tech-Enabled Arbitrage
 
 By fundamentally changing the unit economics and margins of the core business through Digital & AI augmentation:
-- The business is elevated from a traditional service provider to a **"Tech-Enabled Service."**
+- The business is elevated from a traditional provider to a **"Tech-Enabled Business."**
 - A stake bought at a legacy low single-digit EBITDA multiple is repositioned as an asset valued at a **premium tech multiple**.
 - This creates significant equity upside for Minsys and its capital partners.
 
@@ -152,7 +153,7 @@ Contact: contact@minsys.xyz — subject: M&A Origination / Business Opportunity
 
 | Term | Definition |
 |------|-----------|
-| Venture-Led Micro-PE | Minsys's proprietary hybrid model — combining Micro Private Equity acquisition discipline with venture-style digital and AI value creation |
+| Venture-Led Micro-PE | Minsys's hybrid model — combining Micro Private Equity acquisition discipline with venture-style digital and AI value creation |
 | Main Street Business | A profitable, traditionally-operated SMB with stable cash flows, captive customers, but limited digital or AI capabilities |
 | Multiple Expansion | The valuation arbitrage from buying at 2x–4x EBITDA (traditional service) and exiting at 8x–15x+ (tech-enabled service) |
 | Zero-CAC Venture Rollout | Deploying new digital products to an acquired company's existing client base, eliminating customer acquisition cost |

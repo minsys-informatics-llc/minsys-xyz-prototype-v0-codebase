@@ -123,7 +123,7 @@ export default function App() {
                 <h3 className="display-serif text-3xl mb-6">Platform Acquisition</h3>
                 <p className="display-serif text-2xl text-darkGraphite/70 mb-4">The Launchpad for Corporate Venturing</p>
                 <p className="text-gray-600 leading-relaxed mb-10 text-lg">
-                  We partner with (taking a minority stake or "joint venturing" with existing owners) or we acquire profitable, "boring" Main Street businesses at fair historical multiples (2x-4x EBITDA). These businesses act as the stable foundation, providing predictable cash flows to service acquisition debt and offering an immediate, captive client list for scaling net-new Digital &amp; AI-native business models.
+                  We partner with asset-rich Business Owners through minority stakes or joint ventures, or we acquire profitable Main Street businesses at fair historical multiples. These businesses provide stable cash flow to fund growth and a built-in customer base for scaling net-new Digital &amp; AI-native business models.
                 </p>
               </div>
 
@@ -131,7 +131,7 @@ export default function App() {
                 <h3 className="display-serif text-3xl mb-6">Venture Bootstrapping</h3>
                 <p className="display-serif text-2xl text-darkGraphite/70 mb-4">Zero-CAC Venture Rollout</p>
                 <p className="text-gray-600 leading-relaxed mb-10 text-lg">
-                  Before partnering or acquisition, we identify adjacent optimization opportunities. Post-close, we deploy proprietary, pre-built Digital &amp; AI minimum viable products (MVPs) subsidized by the Minsys Group. We transform operations and upsell the existing client base with effectively zero Customer Acquisition Cost (CAC), turning Laggards into Visionaries.
+                  Before partnering or acquisition, we identify adjacent optimizatio or transformation opportunities. Post-close, we deploy proprietary, pre-built Digital &amp; AI minimum viable products (MVPs) subsidized by the Minsys Group. We transform operations and upsell the existing client base with effectively zero Customer Acquisition Cost (CAC), turning Laggards into Visionaries.
                 </p>
               </div>
 
@@ -139,7 +139,7 @@ export default function App() {
                 <h3 className="display-serif text-3xl mb-6">Multiple Expansion</h3>
                 <p className="display-serif text-2xl text-darkGraphite/70 mb-4">The Tech-Enabled Arbitrage</p>
                 <p className="text-gray-600 leading-relaxed mb-10 text-lg">
-                  By fundamentally changing the unit economics and margins of the core business through Digital &amp; AI augmentation, we elevate Main Street from a traditional service provider to a "Tech-Enabled Service." This translates a business stake bought at a legacy low single digit multiple into an asset valued at a premium tech multiple, creating notable equity upside.
+                  By fundamentally changing the unit economics and margins of the core business through Digital &amp; AI augmentation, we elevate Main Street from a traditional providers to a "Tech-Enabled Businesses" This translates a business stake bought at a legacy low single digit multiple into an asset valued at a premium tech multiple, creating notable equity upside.
                 </p>
               </div>
             </div>
@@ -158,7 +158,7 @@ export default function App() {
                   <p className="text-[10px] font-bold text-solarAmber tracking-widest uppercase mb-2">Operational Engine</p>
                   <h2 className="font-bold text-xl mb-3">Minsys Group Organization</h2>
                   <p className="text-gray-600 leading-relaxed text-sm">
-                    Our model is derisked by a highly specialized <span className="text-solarAmber font-medium">four-pillar organization</span>. Minsys handles the entire lifecycle in-house—from securing commercial lending based on solid M&amp;A theses, to deploying subsidized, rapid AI innovation into legacy operations without disrupting their cash-flowing core.
+                    Our model is derisked by a highly specialized <span className="text-solarAmber font-medium">four-pillar organization</span>. Minsys handles the entire lifecycle in-house—from securing commercial lending based on solid M&amp;A theses, to deploying subsidized, rapid Digital & AI innovation into legacy operations without disrupting their cash-flowing core.
                   </p>
                 </div>
               </div>
@@ -230,9 +230,9 @@ export default function App() {
           <div className="mb-12 flex flex-col md:flex-row md:items-end justify-between gap-8">
             <div className="max-w-2xl">
               <p className="text-[10px] font-bold text-solarAmber tracking-widest uppercase mb-4">Capabilities</p>
-              <h2 className="display-serif text-4xl md:text-5xl leading-tight mb-6">Off-the-Shelf Digital &amp; AI Capabilities.</h2>
+              <h2 className="display-serif text-4xl md:text-5xl mb-4">Off-the-Shelf Digital &amp; AI Capabilities.</h2>
               <p className="text-gray-600 leading-relaxed text-lg">
-                We deploy our proprietary, battle-tested AI and Digital platforms directly into the Main Street businesses, ensuring rapid margin expansion and immediate market dominance.
+                We deploy our proprietary, battle-tested AI and Digital capabilities directly into Main Street businesses, ensuring rapid margin expansion and immediate market dominance.
               </p>
             </div>
 
@@ -331,18 +331,8 @@ export default function App() {
             <span className="text-white/80 font-bold text-sm">Minsys</span>
           </div>
           <div className="text-center text-sm md:text-base leading-relaxed text-white/80 flex-1">
-            Minsys | Venture-Led Micro-PE Firm<br/>
-            Augmentation over Automation<br/>
-            Founded by{' '}
-            <a
-              href="https://laurent.vincentelli.pro/"
-              rel="noopener noreferrer"
-              target="_blank"
-              className="text-solarAmber hover:brightness-110 transition-colors"
-            >
-              Laurent Vincentelli
-            </a>
-            <br/>
+            Minsys | Venture-Led Micro-PE Firm<br />
+            Augmentation over Automation<br />
             © 2026 <span className="italic">Minsys Holdings, LLC.</span> All rights reserved.
           </div>
           <div className="flex gap-6 text-[10px] font-bold tracking-[0.2em] uppercase flex-1 justify-end">
