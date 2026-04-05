@@ -1,0 +1,33 @@
+{
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "Content-Security-Policy",
+          "value": "default-src 'self'; script-src 'self' 'sha256-M5Hsrp7RjiPFd+CtMTQqUjxku0I0usoubJ9pSnD8pq8=' 'sha256-hkvVdCjdfM+i1RR3eLU38JHDlBl5Uh1ZgiAp28XpOEQ=' 'sha256-Ac/gGlcSD43wUQ6wjd0aiWMfU5RI9a9BB1oxj+RHEgk=' 'sha256-YHP7STshNbrM3EFhbWeixpjSxPzHgcU3har3esOVjZ4=' 'sha256-khCiXYLNqpSgh0zMaufjc4sBndUXM37axI3O2wyI42E=' 'sha256-+N6HX+tUNMoATsdji9kVosf+f6QkWdTXYEhLA4r/g5Y=' 'sha256-lzjwGGBf/VTBE+LQqcXpDMo9n+BE8oQfgvL4G+P7kXM=' https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://images.unsplash.com https://www.googletagmanager.com; connect-src 'self' https://www.google-analytics.com https://region1.google-analytics.com; object-src 'none'; base-uri 'self'; frame-ancestors 'none';"
+        },
+        {
+          "key": "X-Frame-Options",
+          "value": "DENY"
+        },
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "Strict-Transport-Security",
+          "value": "max-age=31536000; includeSubDomains; preload"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "no-referrer-when-downgrade"
+        },
+        {
+          "key": "Permissions-Policy",
+          "value": "accelerometer=(), camera=(), geolocation=(), gyroscope=(), magnetometer=(), microphone=(), payment=(), usb=()"
+        }
+      ]
+    }
+  ]
+}
