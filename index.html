@@ -8,8 +8,10 @@
     <meta name="author" content="Laurent Vincentelli, Minsys" />
     <meta name="keywords" content="Venture-Led Micro-PE, Main Street acquisition, Digital transformation, AI transformation, multiple expansion, corporate venturing, M&A, Minsys" />
     <link rel="canonical" href="https://minsys.xyz/" />
-    <link rel="icon" href="/favicon.ico" />
-    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="apple-touch-icon" href="/assets/logo.png" />
+    <link rel="manifest" href="/manifest.json" />
     <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
     <meta name="robots" content="index, follow, max-image-preview:large" />
     <meta name="theme-color" content="#181610" />
@@ -18,6 +20,10 @@
     <link rel="alternate" type="text/plain" title="LLM-readable summary" href="/llms.txt" />
 
     <!-- Performance: preconnect to external origins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&display=swap" onload="this.rel='stylesheet'" />
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&display=swap" /></noscript>
     <link rel="preconnect" href="https://www.googletagmanager.com" />
     <link rel="preconnect" href="https://images.unsplash.com" crossorigin />
     <link rel="dns-prefetch" href="https://images.unsplash.com" />
@@ -28,10 +34,11 @@
     <meta property="og:url" content="https://minsys.xyz/" />
     <meta property="og:title" content="Minsys | Venture-Led Micro-PE Group" />
     <meta property="og:description" content="We partner with cash-flowing Main Street businesses to transform them into high-multiple Digital & AI-Enabled Ventures." />
-    <meta property="og:image" content="https://minsys.xyz/assets/og-image.png" />
+    <meta property="og:image" content="https://minsys.xyz/assets/og-image.svg" />
     <meta property="og:image:alt" content="Minsys — Venture-Led Micro-PE Group" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
+    <meta property="og:image:type" content="image/svg+xml" />
     <meta property="og:locale" content="en_US" />
 
     <!-- Twitter / X Cards (note: must use name=, not property=) -->
@@ -39,8 +46,9 @@
     <meta name="twitter:url" content="https://minsys.xyz/" />
     <meta name="twitter:title" content="Minsys | Venture-Led Micro-PE Group" />
     <meta name="twitter:description" content="We partner with cash-flowing Main Street businesses to transform them into high-multiple Digital & AI-Enabled Ventures." />
-    <meta name="twitter:image" content="https://minsys.xyz/assets/og-image.png" />
+    <meta name="twitter:image" content="https://minsys.xyz/assets/logo.png" />
     <!-- twitter:site — add once @handle is registered, e.g.: <meta name="twitter:site" content="@minsys_xyz" /> -->
+    <!-- Note: export /assets/og-image.svg to a 1200x630 PNG saved as /assets/og-image.png for full Twitter/X card support -->
 
     <!-- Google Analytics 4 (GA4) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-0Y2RRCTB7J"></script>
@@ -58,14 +66,16 @@
       "@type": "Person",
       "@id": "https://minsys.xyz/#laurent-vincentelli",
       "name": "Laurent Vincentelli",
-      "jobTitle": "Founder",
+      "jobTitle": "Founder & Owner",
+      "url": "https://laurent.vincentelli.pro/",
+      "description": "Laurent Vincentelli is the Founder and Owner of Minsys (Minsys Holdings, LLC), a Venture-Led Micro-PE Group that acquires and transforms Main Street businesses through Digital and AI capabilities.",
       "worksFor": {
-        "@type": "Organization",
-        "name": "Minsys",
-        "url": "https://minsys.xyz"
+        "@id": "https://minsys.xyz/#organization"
       },
       "sameAs": [
-        "https://www.linkedin.com/in/laurentvincentelli/"
+        "https://laurent.vincentelli.pro/",
+        "https://www.linkedin.com/in/laurentvincentelli/",
+        "https://github.com/minsyslvi"
       ]
     }
     </script>
@@ -88,8 +98,7 @@
         "contactType": "Business Inquiries"
       },
       "sameAs": [
-        "https://www.minsys.xyz",
-        "https://www.linkedin.com/in/laurentvincentelli/"
+        "https://www.minsys.xyz"
       ],
       "parentOrganization": {
         "@type": "Organization",
@@ -365,20 +374,19 @@
 
         <section id="model">
           <h2>Venture-Led Micro-PE Model</h2>
-          <h3>How We Operate</h3>
 
           <article>
-            <h4>1. Platform Acquisition — The Launchpad for Corporate Venturing</h4>
+            <h3>1. Platform Acquisition — The Launchpad for Corporate Venturing</h3>
             <p>We partner with (taking a minority stake or joint venturing with existing owners) or we acquire profitable, "boring" Main Street businesses at fair historical multiples (2x–4x EBITDA). These businesses act as the stable foundation, providing predictable cash flows to service acquisition debt and offering an immediate, captive client list for scaling net-new Digital &amp; AI-native business models.</p>
           </article>
 
           <article>
-            <h4>2. Venture Bootstrapping — Zero-CAC Venture Rollout</h4>
+            <h3>2. Venture Bootstrapping — Zero-CAC Venture Rollout</h3>
             <p>Before partnering or acquisition, we identify adjacent optimization opportunities. Post-close, we deploy proprietary, pre-built Digital &amp; AI minimum viable products (MVPs) subsidized by the Minsys Group. We transform operations and upsell the existing client base with effectively zero Customer Acquisition Cost (CAC), turning Laggards into Visionaries.</p>
           </article>
 
           <article>
-            <h4>3. Multiple Expansion — The Tech-Enabled Arbitrage</h4>
+            <h3>3. Multiple Expansion — The Tech-Enabled Arbitrage</h3>
             <p>By fundamentally changing the unit economics and margins of the core business through Digital &amp; AI augmentation, we elevate Main Street from a traditional service provider to a "Tech-Enabled Service." This translates a business stake bought at a legacy low single digit multiple into an asset valued at a premium tech multiple, creating notable equity upside.</p>
           </article>
         </section>
@@ -467,6 +475,10 @@
       <footer>
         <p>Minsys | Venture-Led Micro-PE Firm</p>
         <p>Augmentation over Automation</p>
+        <p>Founded by <a href="https://laurent.vincentelli.pro/" rel="noopener noreferrer">Laurent Vincentelli</a> —
+          <a href="https://www.linkedin.com/in/laurentvincentelli/" rel="noopener noreferrer">LinkedIn</a> |
+          <a href="https://github.com/minsyslvi" rel="noopener noreferrer">GitHub</a>
+        </p>
         <p>&copy; 2026 Minsys Holdings, LLC. All rights reserved.</p>
         <nav>
           <a href="/privacy-policy">Privacy Policy</a>

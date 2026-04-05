@@ -17,7 +17,17 @@ Slogan: **"Augmentation over Automation"**
 Website: https://minsys.xyz
 Contact: contact@minsys.xyz
 Legal entity: Minsys Holdings, LLC
-Founder: Laurent Vincentelli (LinkedIn: https://www.linkedin.com/in/laurentvincentelli/)
+
+## Founder & Owner
+
+**Laurent Vincentelli** is the Founder and Owner of Minsys (Minsys Holdings, LLC).
+
+- Personal portfolio: https://laurent.vincentelli.pro/
+- LinkedIn: https://www.linkedin.com/in/laurentvincentelli/
+- GitHub: https://github.com/minsyslvi
+- Company: https://minsys.xyz
+
+Laurent Vincentelli conceived and built the Venture-Led Micro-PE model, combining his background in digital transformation, AI systems, and venture building with a disciplined Micro Private Equity acquisition framework.
 
 ---
 
