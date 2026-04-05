@@ -64,7 +64,7 @@ export default function App() {
               </div>
             </div>
             <div>
-              <h3 className="text-lg font-bold text-solarAmber tracking-widest uppercase mb-2">Why Now?</h3>
+              <h2 className="text-lg font-bold text-solarAmber tracking-widest uppercase mb-2">Why Now?</h2>
               <p className="text-gray-600 leading-relaxed">
                 The valuation gap between Main Street and tech-enabled businesses has never been wider. While aging Main Street businesses offer <span className="text-solarAmber font-medium">stable cash flows and captive audiences</span>, they lack the DNA to digitalize and embrace the AI revolution, leaving massive enterprise value on the table.
               </p>
@@ -77,7 +77,7 @@ export default function App() {
               </div>
             </div>
             <div>
-              <h3 className="text-lg font-bold text-solarAmber tracking-widest uppercase mb-2">What we do</h3>
+              <h2 className="text-lg font-bold text-solarAmber tracking-widest uppercase mb-2">What we do</h2>
               <p className="text-gray-600 leading-relaxed">
                 Minsys engineers asymmetric returns through a <span className="text-solarAmber font-medium">Venture-Led Micro-PE Model</span>. We partner or acquire profitable Main Street businesses at traditional multiples and deploy on-the-shelf Digital &amp; AI capabilities to fundamentally expand their margins, market share, and exit valuations.
               </p>
@@ -89,8 +89,8 @@ export default function App() {
         <section id="model" className="max-w-7xl mx-auto px-4 py-24">
           <div className="grid lg:grid-cols-12 gap-12">
             <div className="lg:col-span-4">
-              <h3 className="text-[10px] font-bold text-solarAmber tracking-widest uppercase mb-4">How We Operate</h3>
-              <h2 className="display-serif text-3xl mb-12">Venture-led Micro-PE Model</h2>
+              <p className="text-[10px] font-bold text-solarAmber tracking-widest uppercase mb-4">How We Operate</p>
+              <h2 className="display-serif text-3xl mb-12">Venture-Led Micro-PE Model</h2>
               <nav className="space-y-6">
                 {[
                   { id: 1, label: '1. Platform Acquisition' },
@@ -121,25 +121,25 @@ export default function App() {
               {/* All tab panels rendered in DOM for SEO; visibility toggled via CSS */}
               <div className={activeTab === 1 ? undefined : "hidden"}>
                 <h3 className="display-serif text-3xl mb-6">Platform Acquisition</h3>
-                <h4 className="display-serif text-2xl text-darkGraphite/70 mb-4">The Launchpad for Corporate Venturing</h4>
+                <p className="display-serif text-2xl text-darkGraphite/70 mb-4">The Launchpad for Corporate Venturing</p>
                 <p className="text-gray-600 leading-relaxed mb-10 text-lg">
-                  We partner with (taking a minority stake or "joint venturing" with existing owners) or we acquire profitable, "boring" Main Street businesses at fair historical multiples (2x-4x EBITDA). These businesses act as the stable foundation, providing predictable cash flows to service acquisition debt and offering an immediate, captive client list for scaling net-new Digital &amp; AI-native business models.
+                  We partner with asset-rich Business Owners through minority stakes or joint ventures, or we acquire profitable Main Street businesses at fair historical multiples. These businesses provide stable cash flow to fund growth and a built-in customer base for scaling net-new Digital &amp; AI-native business models.
                 </p>
               </div>
 
               <div className={activeTab === 2 ? undefined : "hidden"}>
                 <h3 className="display-serif text-3xl mb-6">Venture Bootstrapping</h3>
-                <h4 className="display-serif text-2xl text-darkGraphite/70 mb-4">Zero-CAC Venture Rollout</h4>
+                <p className="display-serif text-2xl text-darkGraphite/70 mb-4">Zero-CAC Venture Rollout</p>
                 <p className="text-gray-600 leading-relaxed mb-10 text-lg">
-                  Before partnering or acquisition, we identify adjacent optimization opportunities. Post-close, we deploy proprietary, pre-built Digital &amp; AI minimum viable products (MVPs) subsidized by the Minsys Group. We transform operations and upsell the existing client base with effectively zero Customer Acquisition Cost (CAC), turning Laggards into Visionaries.
+                  Before partnering or acquisition, we identify adjacent optimizatio or transformation opportunities. Post-close, we deploy proprietary, pre-built Digital &amp; AI minimum viable products (MVPs) subsidized by the Minsys Group. We transform operations and upsell the existing client base with effectively zero Customer Acquisition Cost (CAC), turning Laggards into Visionaries.
                 </p>
               </div>
 
               <div className={activeTab === 3 ? undefined : "hidden"}>
                 <h3 className="display-serif text-3xl mb-6">Multiple Expansion</h3>
-                <h4 className="display-serif text-2xl text-darkGraphite/70 mb-4">The Tech-Enabled Arbitrage</h4>
+                <p className="display-serif text-2xl text-darkGraphite/70 mb-4">The Tech-Enabled Arbitrage</p>
                 <p className="text-gray-600 leading-relaxed mb-10 text-lg">
-                  By fundamentally changing the unit economics and margins of the core business through Digital &amp; AI augmentation, we elevate Main Street from a traditional service provider to a "Tech-Enabled Service." This translates a business stake bought at a legacy low single digit multiple into an asset valued at a premium tech multiple, creating notable equity upside.
+                  By fundamentally changing the unit economics and margins of the core business through Digital &amp; AI augmentation, we elevate Main Street from a traditional providers to a "Tech-Enabled Businesses" This translates a business stake bought at a legacy low single digit multiple into an asset valued at a premium tech multiple, creating notable equity upside.
                 </p>
               </div>
             </div>
@@ -155,10 +155,10 @@ export default function App() {
                   <svg className="w-6 h-6 text-solarAmber" fill="currentColor" viewBox="0 0 24 24"><path d="M12 3L2 12h3v8h14v-8h3L12 3zm0 4.84L16.16 11H7.84L12 7.84zM7 18v-5h10v5H7z"></path></svg>
                 </div>
                 <div>
-                  <h4 className="text-[10px] font-bold text-solarAmber tracking-widest uppercase mb-2">Operational Engine</h4>
-                  <h5 className="font-bold text-xl mb-3">Minsys Group Organization</h5>
+                  <p className="text-[10px] font-bold text-solarAmber tracking-widest uppercase mb-2">Operational Engine</p>
+                  <h2 className="font-bold text-xl mb-3">Minsys Group Organization</h2>
                   <p className="text-gray-600 leading-relaxed text-sm">
-                    Our model is derisked by a highly specialized <span className="text-solarAmber font-medium">four-pillar organization</span>. Minsys handles the entire lifecycle in-house—from securing commercial lending based on solid M&amp;A theses, to deploying subsidized, rapid AI innovation into legacy operations without disrupting their cash-flowing core.
+                    Our model is derisked by a highly specialized <span className="text-solarAmber font-medium">four-pillar organization</span>. Minsys handles the entire lifecycle in-house—from securing commercial lending based on solid M&amp;A theses, to deploying subsidized, rapid Digital & AI innovation into legacy operations without disrupting their cash-flowing core.
                   </p>
                 </div>
               </div>
@@ -166,8 +166,8 @@ export default function App() {
 
             <div className="grid lg:grid-cols-12 gap-12">
               <div className="lg:col-span-4">
-                <h3 className="text-[10px] font-bold text-solarAmber tracking-widest uppercase mb-4">Minsys Core Structure</h3>
-                <h2 className="display-serif text-4xl mb-12">The Four Pillars</h2>
+                <p className="text-[10px] font-bold text-solarAmber tracking-widest uppercase mb-4">Minsys Core Structure</p>
+                <h3 className="display-serif text-4xl mb-12">The Four Pillars</h3>
                 <nav className="space-y-6">
                   {[
                     { id: 1, label: 'M&A Deal Desk' },
@@ -198,26 +198,26 @@ export default function App() {
 
                 {/* All org tab panels rendered in DOM for SEO; visibility toggled via CSS */}
                 <div className={activeOrgTab === 1 ? undefined : "hidden"}>
-                  <h3 className="display-serif text-3xl mb-6">M&amp;A Deal Desk</h3>
-                  <h4 className="display-serif text-2xl text-darkGraphite/70 mb-4">The Acquisition &amp; Lending Engine</h4>
+                  <h4 className="display-serif text-3xl mb-6">M&amp;A Deal Desk</h4>
+                  <p className="display-serif text-2xl text-darkGraphite/70 mb-4">The Acquisition &amp; Lending Engine</p>
                   <p className="text-gray-600 leading-relaxed mb-10 text-lg">Responsible for identifying prime Main Street targets and building rigorous "Laggard-to-Visionary" transformation theses. The Deal Desk secures institutional and commercial lending by proving our capability to maintain debt-servicing cash flows while deploying upside tech.</p>
                 </div>
 
                 <div className={activeOrgTab === 2 ? undefined : "hidden"}>
-                  <h3 className="display-serif text-3xl mb-6">The Nexus</h3>
-                  <h4 className="display-serif text-2xl text-darkGraphite/70 mb-4">The Parent Hub &amp; IP Custodian</h4>
+                  <h4 className="display-serif text-3xl mb-6">The Nexus</h4>
+                  <p className="display-serif text-2xl text-darkGraphite/70 mb-4">The Parent Hub &amp; IP Custodian</p>
                   <p className="text-gray-600 leading-relaxed mb-10 text-lg">The Nexus holds Minsys's proprietary IP, competitive market intelligence, and pre-nurtured vendor ecosystems. It governs the strategic flow of assets across the group, ensuring we partner or acquire targets where we already have the "on the shelf" Digital &amp; AI capabilities to win.</p>
                 </div>
 
                 <div className={activeOrgTab === 3 ? undefined : "hidden"}>
-                  <h3 className="display-serif text-3xl mb-6">The Venture Studio</h3>
-                  <h4 className="display-serif text-2xl text-darkGraphite/70 mb-4">The Portfolio &amp; Change Management Arm</h4>
+                  <h4 className="display-serif text-3xl mb-6">The Venture Studio</h4>
+                  <p className="display-serif text-2xl text-darkGraphite/70 mb-4">The Portfolio &amp; Change Management Arm</p>
                   <p className="text-gray-600 leading-relaxed mb-10 text-lg">The Studio oversees the operational integration of our Digital &amp; AI ventures into the Main Street businesses. It manages change seamlessly, acting as the pivotal bridge between the newly partnered with or acquired legacy operators and the advanced technology being deployed.</p>
                 </div>
 
                 <div className={activeOrgTab === 4 ? undefined : "hidden"}>
-                  <h3 className="display-serif text-3xl mb-6">The MVP Factory</h3>
-                  <h4 className="display-serif text-2xl text-darkGraphite/70 mb-4">The Rapid AI-Native Production Line</h4>
+                  <h4 className="display-serif text-3xl mb-6">The MVP Factory</h4>
+                  <p className="display-serif text-2xl text-darkGraphite/70 mb-4">The Rapid AI-Native Production Line</p>
                   <p className="text-gray-600 leading-relaxed mb-10 text-lg">The Factory operationalizes our technology, building and releasing production-ready tech in weeks, not months. By absorbing the R&amp;D costs at the group level, the Factory ensures the Main Street business doesn't burn vital working capital to achieve its digital &amp; AI transformation.</p>
                 </div>
               </div>
@@ -229,10 +229,10 @@ export default function App() {
         <section id="capabilities" className="max-w-7xl mx-auto px-4 py-24">
           <div className="mb-12 flex flex-col md:flex-row md:items-end justify-between gap-8">
             <div className="max-w-2xl">
-              <h3 className="text-[10px] font-bold text-solarAmber tracking-widest uppercase mb-4">Capabilities</h3>
-              <h2 className="display-serif text-4xl md:text-5xl leading-tight mb-6">Off-the-Shelf Digital &amp; AI Capabilities.</h2>
+              <p className="text-[10px] font-bold text-solarAmber tracking-widest uppercase mb-4">Capabilities</p>
+              <h2 className="display-serif text-4xl md:text-5xl mb-4">Off-the-Shelf Digital &amp; AI Capabilities.</h2>
               <p className="text-gray-600 leading-relaxed text-lg">
-                We deploy our proprietary, battle-tested AI and Digital platforms directly into the Main Street businesses, ensuring rapid margin expansion and immediate market dominance.
+                We deploy our proprietary, battle-tested AI and Digital capabilities directly into Main Street businesses, ensuring rapid margin expansion and immediate market dominance.
               </p>
             </div>
 
@@ -331,13 +331,13 @@ export default function App() {
             <span className="text-white/80 font-bold text-sm">Minsys</span>
           </div>
           <div className="text-center text-sm md:text-base leading-relaxed text-white/80 flex-1">
-            Minsys | Venture-Led Micro-PE Firm<br/>
-            Augmentation over Automation<br/>
+            Minsys | Venture-Led Micro-PE Firm<br />
+            Augmentation over Automation<br />
             © 2026 <span className="italic">Minsys Holdings, LLC.</span> All rights reserved.
           </div>
           <div className="flex gap-6 text-[10px] font-bold tracking-[0.2em] uppercase flex-1 justify-end">
-            <a className="hover:text-white transition-colors" href="#">Privacy Policy</a>
-            <a className="hover:text-white transition-colors" href="#">Terms of Service</a>
+            <a className="hover:text-white transition-colors" href="/privacy-policy">Privacy Policy</a>
+            <a className="hover:text-white transition-colors" href="/terms-of-service">Terms of Service</a>
           </div>
         </div>
       </footer>

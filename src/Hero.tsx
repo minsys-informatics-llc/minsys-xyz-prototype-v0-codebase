@@ -43,10 +43,10 @@ export const Hero = () => {
 
         <h1 className="display-serif text-3xl md:text-4xl lg:text-5xl text-white font-black leading-tight mb-6">Ultimately, We Bootstrap Ventures</h1>
         <p className="text-[#F8F9FA] max-w-4xl mx-auto mb-10 leading-tight font-light text-xl md:text-2xl">
-          <strong>We partner with cash-flowing Main Street businesses,<br />To transform them into high-multiple <span className="text-solarAmber font-bold">Digital &amp; AI-Enabled Ventures</span>.</strong>
+          <strong>We partner with cash-flowing Main Street businesses,<br />to bootstrap and scale <span className="text-solarAmber font-bold">Digital &amp; AI-Enabled</span> Ventures</strong>
         </p>
         <p className="text-[#F8F9FA] text-base md:text-lg max-w-3xl mx-auto mb-10 leading-relaxed font-light italic opacity-90">
-          Closing the valuation gap through corporate venturing and operational excellence.
+          Unlocking Main Street's hidden value with Digital & AI Spin-Offs
         </p>
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
           <a href="#model" className="bg-solarAmber text-darkGraphite px-10 py-4 text-base font-bold rounded-lg hover:scale-105 transition-transform text-center">Our Model</a>

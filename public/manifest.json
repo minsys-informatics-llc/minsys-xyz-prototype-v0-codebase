@@ -1,0 +1,18 @@
+{
+  "name": "Minsys — Venture-Led Micro-PE Group",
+  "short_name": "Minsys",
+  "description": "We partner with cash-flowing Main Street businesses to transform them into high-multiple Digital & AI-Enabled Ventures. Augmentation over Automation.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#181610",
+  "theme_color": "#181610",
+  "lang": "en",
+  "icons": [
+    {
+      "src": "/assets/logo.png",
+      "sizes": "any",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}

@@ -1,77 +1,97 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Minsys | Venture-Led Micro-PE Group</title>
-    <meta name="description" content="We partner with cash-flowing Main Street businesses to transform them into high-multiple Digital & AI-Enabled Ventures. Augmentation over Automation." />
-    <meta name="author" content="Laurent Vincentelli, Minsys" />
-    <meta name="keywords" content="Venture-Led Micro-PE, Main Street acquisition, Digital transformation, AI transformation, multiple expansion, corporate venturing, M&A, Minsys" />
-    <link rel="canonical" href="https://minsys.xyz/" />
-    <link rel="icon" href="/favicon.ico" />
-    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-    <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
-    <meta name="robots" content="index, follow, max-image-preview:large" />
-    <meta name="theme-color" content="#181610" />
 
-    <!-- AI / LLM discoverability -->
-    <link rel="alternate" type="text/plain" title="LLM-readable summary" href="/llms.txt" />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Minsys | Venture-Led Micro-PE Group</title>
+  <meta name="description"
+    content="We partner with cash-flowing Main Street businesses, to bootstrap and scale Digital & AI-Enabled Ventures. Unlocking Main Street's hidden value with Digital & AI Spin-Offs." />
+  <meta name="author" content="Laurent Vincentelli, Minsys" />
+  <meta name="keywords"
+    content="Venture-Led Micro-PE, Main Street acquisition, Digital transformation, AI transformation, multiple expansion, corporate venturing, M&A, Minsys" />
+  <link rel="canonical" href="https://minsys.xyz/" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="icon" href="/favicon.ico" sizes="any" />
+  <link rel="apple-touch-icon" href="/assets/logo.png" />
+  <link rel="manifest" href="/manifest.json" />
+  <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
+  <meta name="robots" content="index, follow, max-image-preview:large" />
+  <meta name="theme-color" content="#181610" />
 
-    <!-- Performance: preconnect to external origins -->
-    <link rel="preconnect" href="https://www.googletagmanager.com" />
-    <link rel="preconnect" href="https://images.unsplash.com" crossorigin />
-    <link rel="dns-prefetch" href="https://images.unsplash.com" />
+  <!-- AI / LLM discoverability -->
+  <link rel="alternate" type="text/plain" title="LLM-readable summary" href="/llms.txt" />
 
-    <!-- Open Graph / Facebook / LinkedIn -->
-    <meta property="og:type" content="website" />
-    <meta property="og:site_name" content="Minsys" />
-    <meta property="og:url" content="https://minsys.xyz/" />
-    <meta property="og:title" content="Minsys | Venture-Led Micro-PE Group" />
-    <meta property="og:description" content="We partner with cash-flowing Main Street businesses to transform them into high-multiple Digital & AI-Enabled Ventures." />
-    <meta property="og:image" content="https://minsys.xyz/assets/og-image.png" />
-    <meta property="og:image:alt" content="Minsys — Venture-Led Micro-PE Group" />
-    <meta property="og:image:width" content="1200" />
-    <meta property="og:image:height" content="630" />
-    <meta property="og:locale" content="en_US" />
+  <!-- Performance: preconnect to external origins -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preload" as="style"
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&display=swap"
+    onload="this.rel='stylesheet'" />
+  <noscript>
+    <link rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&display=swap" />
+  </noscript>
+  <link rel="preconnect" href="https://www.googletagmanager.com" />
+  <link rel="preconnect" href="https://images.unsplash.com" crossorigin />
+  <link rel="dns-prefetch" href="https://images.unsplash.com" />
 
-    <!-- Twitter / X Cards (note: must use name=, not property=) -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:url" content="https://minsys.xyz/" />
-    <meta name="twitter:title" content="Minsys | Venture-Led Micro-PE Group" />
-    <meta name="twitter:description" content="We partner with cash-flowing Main Street businesses to transform them into high-multiple Digital & AI-Enabled Ventures." />
-    <meta name="twitter:image" content="https://minsys.xyz/assets/og-image.png" />
-    <!-- twitter:site — add once @handle is registered, e.g.: <meta name="twitter:site" content="@minsys_xyz" /> -->
+  <!-- Open Graph / Facebook / LinkedIn -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Minsys" />
+  <meta property="og:url" content="https://minsys.xyz/" />
+  <meta property="og:title" content="Minsys | Venture-Led Micro-PE Group" />
+  <meta property="og:description"
+    content="We partner with cash-flowing Main Street businesses, to bootstrap and scale Digital & AI-Enabled Ventures. Unlocking Main Street's hidden value with Digital & AI Spin-Offs." />
+  <meta property="og:image" content="https://minsys.xyz/assets/og-image.svg" />
+  <meta property="og:image:alt" content="Minsys — Venture-Led Micro-PE Group" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:type" content="image/svg+xml" />
+  <meta property="og:locale" content="en_US" />
 
-    <!-- Google Analytics 4 (GA4) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-0Y2RRCTB7J"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-0Y2RRCTB7J');
-    </script>
+  <!-- Twitter / X Cards (note: must use name=, not property=) -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:url" content="https://minsys.xyz/" />
+  <meta name="twitter:title" content="Minsys | Venture-Led Micro-PE Group" />
+  <meta name="twitter:description"
+    content="We partner with cash-flowing Main Street businesses, to bootstrap and scale Digital & AI-Enabled Ventures. Unlocking Main Street's hidden value with Digital & AI Spin-Offs." />
+  <meta name="twitter:image" content="https://minsys.xyz/assets/logo.png" />
+  <!-- twitter:site — add once @handle is registered, e.g.: <meta name="twitter:site" content="@minsys_xyz" /> -->
+  <!-- Note: export /assets/og-image.svg to a 1200x630 PNG saved as /assets/og-image.png for full Twitter/X card support -->
 
-    <!-- Schema.org JSON-LD: Person (Founder) -->
-    <script type="application/ld+json">
+  <!-- Google Analytics 4 (GA4) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-0Y2RRCTB7J"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-0Y2RRCTB7J');
+  </script>
+
+  <!-- Schema.org JSON-LD: Person (Founder) -->
+  <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "Person",
       "@id": "https://minsys.xyz/#laurent-vincentelli",
       "name": "Laurent Vincentelli",
-      "jobTitle": "Founder",
+      "jobTitle": "Founder & Owner",
+      "url": "https://laurent.vincentelli.pro/",
+      "description": "Laurent Vincentelli is the Founder and Owner of Minsys (Minsys Holdings, LLC), a Venture-Led Micro-PE Group that acquires and transforms Main Street businesses through Digital and AI capabilities.",
       "worksFor": {
-        "@type": "Organization",
-        "name": "Minsys",
-        "url": "https://minsys.xyz"
+        "@id": "https://minsys.xyz/#organization"
       },
       "sameAs": [
-        "https://www.linkedin.com/in/laurentvincentelli/"
+        "https://laurent.vincentelli.pro/",
+        "https://www.linkedin.com/in/laurentvincentelli/",
+        "https://github.com/minsyslvi"
       ]
     }
     </script>
 
-    <!-- Schema.org JSON-LD: Organization -->
-    <script type="application/ld+json">
+  <!-- Schema.org JSON-LD: Organization -->
+  <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "Organization",
@@ -80,7 +100,7 @@
       "url": "https://minsys.xyz",
       "logo": "https://minsys.xyz/assets/logo.png",
       "description": "Venture-Led Micro-PE Group that partners with cash-flowing Main Street businesses and transforms them into high-multiple Digital & AI-Enabled Ventures.",
-      "slogan": "Augmentation over Automation",
+      "slogan": "Unlocking Main Street's hidden value with Digital & AI Spin-Offs",
       "foundingDate": "2010",
       "contactPoint": {
         "@type": "ContactPoint",
@@ -88,8 +108,7 @@
         "contactType": "Business Inquiries"
       },
       "sameAs": [
-        "https://www.minsys.xyz",
-        "https://www.linkedin.com/in/laurentvincentelli/"
+        "https://www.minsys.xyz"
       ],
       "parentOrganization": {
         "@type": "Organization",
@@ -101,15 +120,15 @@
     }
     </script>
 
-    <!-- Schema.org JSON-LD: WebSite -->
-    <script type="application/ld+json">
+  <!-- Schema.org JSON-LD: WebSite -->
+  <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "WebSite",
       "@id": "https://minsys.xyz/#website",
       "name": "Minsys",
       "url": "https://minsys.xyz",
-      "description": "Venture-Led Micro-PE Group closing the valuation gap through corporate venturing and operational excellence.",
+      "description": "Venture-Led Micro-PE Group Unlocking Main Street's hidden value with Digital & AI Spin-Offs",
       "inLanguage": "en",
       "publisher": {
         "@id": "https://minsys.xyz/#organization"
@@ -117,8 +136,8 @@
     }
     </script>
 
-    <!-- Schema.org JSON-LD: WebPage -->
-    <script type="application/ld+json">
+  <!-- Schema.org JSON-LD: WebPage -->
+  <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "WebPage",
@@ -182,8 +201,8 @@
     }
     </script>
 
-    <!-- Schema.org JSON-LD: ProfessionalService (unified, founding date 2010) -->
-    <script type="application/ld+json">
+  <!-- Schema.org JSON-LD: ProfessionalService (unified, founding date 2010) -->
+  <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "ProfessionalService",
@@ -192,7 +211,7 @@
       "logo": "https://minsys.xyz/assets/logo.png",
       "foundingDate": "2010",
       "description": "Minsys is a Venture-Led Micro-PE Group that partners with or acquires profitable Main Street businesses at traditional multiples and deploys proprietary Digital & AI capabilities to fundamentally expand their margins, market share, and exit valuations.",
-      "slogan": "Augmentation over Automation",
+      "slogan": "Unlocking Main Street's hidden value with Digital & AI Spin-Offs",
       "areaServed": {
         "@type": "AdministrativeArea",
         "name": "Global"
@@ -231,7 +250,7 @@
             "itemOffered": {
               "@type": "Service",
               "name": "Platform Acquisition",
-              "description": "Partner with or acquire profitable Main Street businesses at fair historical multiples (2x-4x EBITDA) as stable foundations for digital transformation."
+              "description": "Partner with or acquire profitable Main Street businesses at fair historical multiples (2x-4x EBITDA) as stable foundations for digital & AI transformation."
             }
           },
           {
@@ -239,7 +258,7 @@
             "itemOffered": {
               "@type": "Service",
               "name": "Venture Bootstrapping",
-              "description": "Deploy proprietary Digital & AI MVPs with zero Customer Acquisition Cost, transforming operations and upselling existing client bases."
+              "description": "Deploy proprietary Digital & AI with zero Customer Acquisition Cost, transforming operations and upselling existing client bases."
             }
           },
           {
@@ -247,7 +266,7 @@
             "itemOffered": {
               "@type": "Service",
               "name": "Multiple Expansion",
-              "description": "Elevate Main Street businesses from traditional service providers to Tech-Enabled Services, creating notable equity upside through valuation multiple expansion."
+              "description": "Elevate Main Street businesses from traditional providers providers to Tech-Enabled Businesses, creating notable equity upside through valuation multiple expansion."
             }
           }
         ]
@@ -255,8 +274,8 @@
     }
     </script>
 
-    <!-- Schema.org JSON-LD: FAQPage — high-value for Google & AI model indexing -->
-    <script type="application/ld+json">
+  <!-- Schema.org JSON-LD: FAQPage — high-value for Google & AI model indexing -->
+  <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "FAQPage",
@@ -266,7 +285,7 @@
           "name": "What is Minsys?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Minsys is a Venture-Led Micro-PE Group that partners with or acquires profitable Main Street businesses, then transforms them into high-multiple Digital & AI-enabled ventures through proprietary technology deployment. Founded in 2010 by Laurent Vincentelli, Minsys operates under the slogan 'Augmentation over Automation'."
+            "text": "Minsys is a Venture-Led Micro-PE Group that partners with or acquires profitable Main Street businesses, then transforms them into high-multiple Digital & AI-enabled ventures through proprietary technology deployment. Founded in 2010 by Laurent Vincentelli, Minsys operates under the slogan 'Unlocking Main Street's hidden value with Digital & AI Spin-Offs'."
           }
         },
         {
@@ -274,7 +293,7 @@
           "name": "What is the Minsys Model?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "The Minsys Model is a three-phase Venture-Led Micro-PE approach: (1) Platform Acquisition — partner with or acquire cash-flowing Main Street businesses at 2x–4x EBITDA; (2) Venture Bootstrapping — deploy pre-built AI and Digital MVPs with zero Customer Acquisition Cost; (3) Multiple Expansion — exit at tech-enabled multiples (8x–15x+) after transforming the business into a Tech-Enabled Service."
+            "text": "The Minsys Model is a three-phase Venture-Led Micro-PE approach: (1) Platform Acquisition — partner with or acquire cash-flowing Main Street businesses at 2x–4x EBITDA; (2) Venture Bootstrapping — deploy pre-built AI and Digital capabilities with zero Customer Acquisition Cost; (3) Multiple Expansion — exit at tech-enabled multiples (8x–15x+) after transforming the business into a Tech-Enabled Business."
           }
         },
         {
@@ -282,7 +301,7 @@
           "name": "What does Venture-Led Micro-PE mean?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Venture-Led Micro-PE is Minsys's proprietary investment model that combines Micro Private Equity acquisition discipline — buying small, profitable businesses at traditional multiples — with Venture-style value creation by deploying AI and digital technology to transform unit economics and capture premium exit multiples."
+            "text": "Venture-Led Micro-PE is the Minsys' investment model that combines Micro Private Equity acquisition discipline — buying small, profitable businesses at traditional multiples — with Venture-style value creation by deploying AI and digital technology to transform unit economics and capture premium exit multiples."
           }
         },
         {
@@ -298,7 +317,7 @@
           "name": "What is Minsys's organizational structure?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Minsys operates through four specialized pillars: (1) The M&A Deal Desk — acquisition origination and commercial lending; (2) The Nexus — parent hub and IP custodian holding proprietary technology; (3) The Venture Studio — portfolio management and change management arm; (4) The MVP Factory — rapid AI-native technology production unit."
+            "text": "Minsys operates through four specialized pillars: (1) The M&A Deal Desk — acquisition origination and commercial lending; (2) The Nexus — parent hub and IP custodian holding proprietary technology; (3) The Venture Studio — portfolio management and change management arm; (4) The MVP Factory — rapid Digital AI-native technology production unit."
           }
         },
         {
@@ -322,157 +341,195 @@
           "name": "How can I partner with Minsys?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Minsys works with two types of partners: Capital Partners (commercial lenders and institutional investors supporting M&A deal flow) and M&A Origination partners (brokers, operators, or business owners with Main Street businesses ready for AI transformation). Contact Minsys at contact@minsys.xyz."
+            "text": "Minsys works with two types of partners: Capital Partners (commercial lenders and institutional investors supporting M&A deal flow) and M&A Origination partners (brokers, operators, or business owners with Main Street businesses ready for AI transformation)"
           }
         }
       ]
     }
     </script>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
+</head>
 
-    <!-- noscript: full semantic content for non-JS crawlers (AI bots, Googlebot pre-render queue, etc.) -->
-    <noscript>
-      <header>
-        <nav>
-          <a href="/">Minsys</a>
-          <a href="#model">Model</a>
-          <a href="#organization">Organization</a>
-          <a href="#capabilities">Capabilities</a>
-          <a href="#getintouch">Partner with Us</a>
-        </nav>
-      </header>
+<body>
+  <div id="root"></div>
+  <script type="module" src="/src/main.tsx"></script>
 
-      <main>
-        <section id="hero">
-          <h1>Ultimately, We Bootstrap Ventures</h1>
-          <p>We partner with cash-flowing Main Street businesses, to transform them into high-multiple Digital &amp; AI-Enabled Ventures.</p>
-          <p>Closing the valuation gap through corporate venturing and operational excellence.</p>
-        </section>
+  <!-- noscript: full semantic content for non-JS crawlers (AI bots, Googlebot pre-render queue, etc.) -->
+  <noscript>
+    <header>
+      <nav>
+        <a href="/">Minsys</a>
+        <a href="#model">Model</a>
+        <a href="#organization">Organization</a>
+        <a href="#capabilities">Capabilities</a>
+        <a href="#getintouch">Partner with Us</a>
+      </nav>
+    </header>
 
-        <section id="proposition">
-          <article>
-            <h2>Why Now?</h2>
-            <p>The valuation gap between Main Street and tech-enabled businesses has never been wider. While aging Main Street businesses offer stable cash flows and captive audiences, they lack the DNA to digitalize and embrace the AI revolution, leaving massive enterprise value on the table.</p>
-          </article>
-          <article>
-            <h2>What We Do</h2>
-            <p>Minsys engineers asymmetric returns through a Venture-Led Micro-PE Model. We partner or acquire profitable Main Street businesses at traditional multiples and deploy on-the-shelf Digital &amp; AI capabilities to fundamentally expand their margins, market share, and exit valuations.</p>
-          </article>
-        </section>
+    <main>
+      <section id="hero">
+        <h1>Ultimately, We Bootstrap Ventures</h1>
+        <p>We partner with cash-flowing Main Street businesses, to bootstrap and scale Digital & AI-Enabled Ventures.
+        </p>
+        <p>Unlocking Main Street's hidden value with Digital & AI Spin-Offs.</p>
+      </section>
 
-        <section id="model">
-          <h2>Venture-Led Micro-PE Model</h2>
-          <h3>How We Operate</h3>
+      <section id="proposition">
+        <article>
+          <h2>Why Now?</h2>
+          <p>The valuation gap between Main Street and tech-enabled businesses has never been wider. While aging Main
+            Street businesses offer stable cash flows and captive audiences, they lack the DNA to digitalize and embrace
+            the AI revolution, leaving massive enterprise value on the table.</p>
+        </article>
+        <article>
+          <h2>What We Do</h2>
+          <p>Minsys engineers asymmetric returns through a Venture-Led Micro-PE Model. We partner or acquire profitable
+            Main Street businesses at traditional multiples and deploy on-the-shelf Digital &amp; AI capabilities to
+            fundamentally expand their margins, market share, and exit valuations.</p>
+        </article>
+      </section>
 
-          <article>
-            <h4>1. Platform Acquisition — The Launchpad for Corporate Venturing</h4>
-            <p>We partner with (taking a minority stake or joint venturing with existing owners) or we acquire profitable, "boring" Main Street businesses at fair historical multiples (2x–4x EBITDA). These businesses act as the stable foundation, providing predictable cash flows to service acquisition debt and offering an immediate, captive client list for scaling net-new Digital &amp; AI-native business models.</p>
-          </article>
+      <section id="model">
+        <h2>Venture-Led Micro-PE Model</h2>
 
-          <article>
-            <h4>2. Venture Bootstrapping — Zero-CAC Venture Rollout</h4>
-            <p>Before partnering or acquisition, we identify adjacent optimization opportunities. Post-close, we deploy proprietary, pre-built Digital &amp; AI minimum viable products (MVPs) subsidized by the Minsys Group. We transform operations and upsell the existing client base with effectively zero Customer Acquisition Cost (CAC), turning Laggards into Visionaries.</p>
-          </article>
+        <article>
+          <h3>1. Platform Acquisition — The Launchpad for Corporate Venturing</h3>
+          <p>We partner with asset-rich Business Owners through minority stakes or joint ventures, or we acquire
+            profitable Main Street businesses at fair historical multiples. These businesses provide stable cash flow to
+            fund growth and a built-in customer base for scaling net-new Digital & AI-native business models.</p>
+        </article>
 
-          <article>
-            <h4>3. Multiple Expansion — The Tech-Enabled Arbitrage</h4>
-            <p>By fundamentally changing the unit economics and margins of the core business through Digital &amp; AI augmentation, we elevate Main Street from a traditional service provider to a "Tech-Enabled Service." This translates a business stake bought at a legacy low single digit multiple into an asset valued at a premium tech multiple, creating notable equity upside.</p>
-          </article>
-        </section>
+        <article>
+          <h3>2. Venture Bootstrapping — Zero-CAC Venture Rollout</h3>
+          <p>Before partnering or acquisition, we identify adjacent optimization opportunities. Post-close, we deploy
+            proprietary, pre-built Digital &amp; AI minimum viable products (MVPs) subsidized by the Minsys Group. We
+            transform operations and upsell the existing client base with effectively zero Customer Acquisition Cost
+            (CAC), turning Laggards into Visionaries.</p>
+        </article>
 
-        <section id="organization">
-          <h2>Minsys Group Organization</h2>
-          <p>Our model is de-risked by a highly specialized four-pillar organization. Minsys handles the entire lifecycle in-house — from securing commercial lending based on solid M&amp;A theses, to deploying subsidized, rapid AI innovation into legacy operations without disrupting their cash-flowing core.</p>
-          <h3>The Four Pillars</h3>
+        <article>
+          <h3>3. Multiple Expansion — The Tech-Enabled Arbitrage</h3>
+          <p>By fundamentally changing the unit economics and margins of the core business through Digital & AI
+            augmentation, we elevate Main Street from a traditional providers to a "Tech-Enabled Businesses" This
+            translates a business stake bought at a legacy low single digit multiple into an asset valued at a premium
+            tech multiple, creating notable equity upside.</p>
+        </article>
+      </section>
 
-          <article>
-            <h4>M&amp;A Deal Desk — The Acquisition &amp; Lending Engine</h4>
-            <p>Responsible for identifying prime Main Street targets and building rigorous "Laggard-to-Visionary" transformation theses. The Deal Desk secures institutional and commercial lending by proving our capability to maintain debt-servicing cash flows while deploying upside tech.</p>
-          </article>
+      <section id="organization">
+        <h2>Minsys Group Organization</h2>
+        <p>Our model is derisked by a highly specialized four-pillar organization. Minsys handles the entire lifecycle
+          in-house—from securing commercial lending based on solid M&A theses, to deploying subsidized, rapid Digital &
+          AI innovation into legacy operations without disrupting their cash-flowing core.</p>
+        <h3>The Four Pillars</h3>
 
-          <article>
-            <h4>The Nexus — The Parent Hub &amp; IP Custodian</h4>
-            <p>The Nexus holds Minsys's proprietary IP, competitive market intelligence, and pre-nurtured vendor ecosystems. It governs the strategic flow of assets across the group, ensuring we partner or acquire targets where we already have the "on the shelf" Digital &amp; AI capabilities to win.</p>
-          </article>
+        <article>
+          <h4>M&amp;A Deal Desk — The Acquisition &amp; Lending Engine</h4>
+          <p>Responsible for identifying prime Main Street targets and building rigorous "Laggard-to-Visionary"
+            transformation theses. The Deal Desk secures institutional and commercial lending by proving our capability
+            to maintain debt-servicing cash flows while deploying upside tech.</p>
+        </article>
 
-          <article>
-            <h4>The Venture Studio — The Portfolio &amp; Change Management Arm</h4>
-            <p>The Studio oversees the operational integration of our Digital &amp; AI ventures into the Main Street businesses. It manages change seamlessly, acting as the pivotal bridge between the newly partnered with or acquired legacy operators and the advanced technology being deployed.</p>
-          </article>
+        <article>
+          <h4>The Nexus — The Parent Hub &amp; IP Custodian</h4>
+          <p>The Nexus holds Minsys's proprietary IP, competitive market intelligence, and pre-nurtured vendor
+            ecosystems. It governs the strategic flow of assets across the group, ensuring we partner or acquire targets
+            where we already have the "on the shelf" Digital &amp; AI capabilities to win.</p>
+        </article>
 
-          <article>
-            <h4>The MVP Factory — The Rapid AI-Native Production Line</h4>
-            <p>The Factory operationalizes our technology, building and releasing production-ready tech in weeks, not months. By absorbing the R&amp;D costs at the group level, the Factory ensures the Main Street business doesn't burn vital working capital to achieve its digital &amp; AI transformation.</p>
-          </article>
-        </section>
+        <article>
+          <h4>The Venture Studio — The Portfolio &amp; Change Management Arm</h4>
+          <p>The Studio oversees the operational integration of our Digital &amp; AI ventures into the Main Street
+            businesses. It manages change seamlessly, acting as the pivotal bridge between the newly partnered with or
+            acquired legacy operators and the advanced technology being deployed.</p>
+        </article>
 
-        <section id="capabilities">
-          <h2>Off-the-Shelf Digital &amp; AI Capabilities</h2>
-          <p>We deploy our proprietary, battle-tested AI and Digital platforms directly into Main Street businesses, ensuring rapid margin expansion and immediate market dominance.</p>
+        <article>
+          <h4>The MVP Factory — The Rapid AI-Native Production Line</h4>
+          <p>The Factory operationalizes our technology, building and releasing production-ready tech in weeks, not
+            months. By absorbing the R&amp;D costs at the group level, the Factory ensures the Main Street business
+            doesn't burn vital working capital to achieve its digital &amp; AI transformation.</p>
+        </article>
+      </section>
 
-          <article>
-            <h3>Software Factory — Application Modernization</h3>
-            <p>Applying DevSecOps, SRE, and Platform Engineering principles. Leveraging automated testing, SCM, robust CI/CD pipelines, containerization, and Infrastructure-as-Code to achieve radical TTM acceleration for reusable, secure architectures.</p>
-          </article>
+      <section id="capabilities">
+        <h2>Off-the-Shelf Digital &amp; AI Capabilities</h2>
+        <p>We deploy our proprietary, battle-tested AI and Digital capabilities directly into Main Street businesses,
+          ensuring rapid margin expansion and immediate market dominance.</p>
 
-          <article>
-            <h3>Competitive Intelligence — Market Intelligence</h3>
-            <p>Proprietary AI-driven competitive intelligence engine deployed post-acquisition to instantly map adjacencies, predict competitor vulnerabilities, and aggressively capture local market share.</p>
-          </article>
+        <article>
+          <h3>Software Factory — Application Modernization</h3>
+          <p>Applying DevSecOps, SRE, and Platform Engineering principles. Leveraging automated testing, SCM, robust
+            CI/CD pipelines, containerization, and Infrastructure-as-Code to achieve radical TTM acceleration for
+            reusable, secure architectures.</p>
+        </article>
 
-          <article>
-            <h3>AI Factory — Intelligence Orchestration</h3>
-            <p>Our AI platform engineered to continuously build, train, deploy, and manage Gen AI and Agentic AI systems at scale. Utilizes MLOps, model gateways (frontier + edge) and optimized inference engines to convert raw legacy data into AI-enabled Applications.</p>
-          </article>
+        <article>
+          <h3>Competitive Intelligence — Market Intelligence</h3>
+          <p>Proprietary AI-driven competitive intelligence engine deployed post-acquisition to instantly map
+            adjacencies, predict competitor vulnerabilities, and aggressively capture local market share.</p>
+        </article>
 
-          <article>
-            <h3>Cloud Migration Factory — Infrastructure Consolidation</h3>
-            <p>Our rapid lift-and-shift cloud migration engine moving legacy data to our hybrid cloud, architected for scalability, security and continuity, with zero operational downtime.</p>
-          </article>
+        <article>
+          <h3>AI Factory — Intelligence Orchestration</h3>
+          <p>Our AI platform engineered to continuously build, train, deploy, and manage Gen AI and Agentic AI systems
+            at scale. Utilizes MLOps, model gateways (frontier + edge) and optimized inference engines to convert raw
+            legacy data into AI-enabled Applications.</p>
+        </article>
 
-          <article>
-            <h3>Business Agility — Change Management</h3>
-            <p>Proprietary operational rewiring frameworks designed to smoothly transition legacy management teams into an AI-native operational cadence.</p>
-          </article>
+        <article>
+          <h3>Cloud Migration Factory — Infrastructure Consolidation</h3>
+          <p>Our rapid lift-and-shift cloud migration engine moving legacy data to our hybrid cloud, architected for
+            scalability, security and continuity, with zero operational downtime.</p>
+        </article>
 
-          <article>
-            <h3>Technology Benchmarking — Scale &amp; Resilience</h3>
-            <p>Automated chaos engineering frameworks applied to legacy business processes, stress-testing workflows before scaling digital &amp; AI operations.</p>
-          </article>
+        <article>
+          <h3>Business Agility — Change Management</h3>
+          <p>Proprietary operational rewiring frameworks designed to smoothly transition legacy management teams into an
+            AI-native operational cadence.</p>
+        </article>
 
-          <article>
-            <h3>Cybersecurity — Cyber &amp; SecOps</h3>
-            <p>Our AI-native SecOps platform deployed immediately upon acquisition to protect legacy data and secure the perimeter for digital scaling.</p>
-          </article>
-        </section>
+        <article>
+          <h3>Technology Benchmarking — Scale &amp; Resilience</h3>
+          <p>Automated chaos engineering frameworks applied to legacy business processes, stress-testing workflows
+            before scaling digital &amp; AI operations.</p>
+        </article>
 
-        <section id="getintouch">
-          <h2>Explore Asymmetric Returns in the Digital &amp; AI Economy</h2>
-          <article>
-            <h3>Capital Partners</h3>
-            <p>Connect with our M&amp;A Deal Desk regarding commercial lending for our next cash-flowing acquisition.</p>
-            <a href="mailto:contact@minsys.xyz">Contact Deal Desk</a>
-          </article>
-          <article>
-            <h3>M&amp;A Origination</h3>
-            <p>Present a Main Street business opportunity ripe for AI transformation and margin expansion.</p>
-            <a href="mailto:contact@minsys.xyz">Share Opportunity</a>
-          </article>
-        </section>
-      </main>
+        <article>
+          <h3>Cybersecurity — Cyber &amp; SecOps</h3>
+          <p>Our AI-native SecOps platform deployed immediately upon acquisition to protect legacy data and secure the
+            perimeter for digital scaling.</p>
+        </article>
+      </section>
 
-      <footer>
-        <p>Minsys | Venture-Led Micro-PE Firm</p>
-        <p>Augmentation over Automation</p>
-        <p>&copy; 2026 Minsys Holdings, LLC. All rights reserved.</p>
-        <nav>
-          <a href="/privacy-policy">Privacy Policy</a>
-          <a href="/terms-of-service">Terms of Service</a>
-        </nav>
-      </footer>
-    </noscript>
-  </body>
+      <section id="getintouch">
+        <h2>Explore Asymmetric Returns in the Digital &amp; AI Economy</h2>
+        <article>
+          <h3>Capital Partners</h3>
+          <p>Connect with our M&amp;A Deal Desk regarding commercial lending for our next cash-flowing acquisition.</p>
+          <a href="mailto:contact@minsys.xyz">Contact Deal Desk</a>
+        </article>
+        <article>
+          <h3>M&amp;A Origination</h3>
+          <p>Present a Main Street business opportunity ripe for AI transformation and margin expansion.</p>
+          <a href="mailto:contact@minsys.xyz">Share Opportunity</a>
+        </article>
+      </section>
+    </main>
+
+    <footer>
+      <p>Minsys | Venture-Led Micro-PE Firm</p>
+      <p>Augmentation over Automation</p>
+      <p>Founded by <a href="https://laurent.vincentelli.pro/" rel="noopener noreferrer">Laurent Vincentelli</a> —
+        <a href="https://www.linkedin.com/in/laurentvincentelli/" rel="noopener noreferrer">LinkedIn</a> |
+        <a href="https://github.com/minsyslvi" rel="noopener noreferrer">GitHub</a>
+      </p>
+      <p>&copy; 2026 Minsys Holdings, LLC. All rights reserved.</p>
+      <nav>
+        <a href="/privacy-policy">Privacy Policy</a>
+        <a href="/terms-of-service">Terms of Service</a>
+      </nav>
+    </footer>
+  </noscript>
+</body>
+
 </html>

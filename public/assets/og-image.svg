@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <!-- Background -->
+  <rect width="1200" height="630" fill="#181610"/>
+
+  <!-- Subtle grid texture -->
+  <defs>
+    <pattern id="grid" width="60" height="60" patternUnits="userSpaceOnUse">
+      <path d="M 60 0 L 0 0 0 60" fill="none" stroke="#ffffff" stroke-width="0.2" opacity="0.08"/>
+    </pattern>
+  </defs>
+  <rect width="1200" height="630" fill="url(#grid)"/>
+
+  <!-- Left accent bar -->
+  <rect x="0" y="0" width="6" height="630" fill="#FD5E53"/>
+
+  <!-- Logo mark -->
+  <rect x="80" y="220" width="72" height="72" rx="10" fill="#FD5E53"/>
+  <text x="116" y="275" font-family="Georgia, serif" font-size="44" font-weight="700" fill="#181610" text-anchor="middle">M</text>
+
+  <!-- Brand name -->
+  <text x="176" y="268" font-family="Georgia, serif" font-size="52" font-weight="700" fill="#ffffff" letter-spacing="2">Minsys</text>
+
+  <!-- Divider -->
+  <rect x="80" y="318" width="520" height="2" fill="#FD5E53" opacity="0.5"/>
+
+  <!-- Tagline -->
+  <text x="80" y="368" font-family="Arial, sans-serif" font-size="28" font-weight="400" fill="#ffffff" opacity="0.9">Venture-Led Micro-PE Group</text>
+
+  <!-- Sub-tagline -->
+  <text x="80" y="414" font-family="Arial, sans-serif" font-size="20" font-weight="300" fill="#FD5E53" letter-spacing="3">AUGMENTATION OVER AUTOMATION</text>
+
+  <!-- Right decorative element -->
+  <circle cx="1050" cy="315" r="180" fill="none" stroke="#FD5E53" stroke-width="1" opacity="0.12"/>
+  <circle cx="1050" cy="315" r="130" fill="none" stroke="#FD5E53" stroke-width="1" opacity="0.18"/>
+  <circle cx="1050" cy="315" r="80" fill="none" stroke="#FD5E53" stroke-width="1.5" opacity="0.25"/>
+  <circle cx="1050" cy="315" r="30" fill="#FD5E53" opacity="0.15"/>
+  <text x="1050" y="330" font-family="Georgia, serif" font-size="32" font-weight="700" fill="#FD5E53" text-anchor="middle" opacity="0.7">M</text>
+
+  <!-- Bottom domain -->
+  <text x="80" y="580" font-family="Arial, sans-serif" font-size="18" fill="#ffffff" opacity="0.35" letter-spacing="2">minsys.xyz</text>
+</svg>
