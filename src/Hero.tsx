@@ -37,17 +37,14 @@ export const Hero = () => {
     <section ref={myRef} id="hero" className="relative flex items-center justify-center overflow-hidden min-h-[70vh] pt-12 pb-32">
       <div className="relative z-10 max-w-5xl mx-auto px-6 text-center w-full">
         <div
-          className="absolute inset-0 backdrop-blur-md -m-6 p-6 rounded-2xl -z-10 pointer-events-none"
-          style={{ backgroundColor: 'rgba(24, 22, 16, 0.1)' }}
+          className="absolute inset-0 backdrop-blur-md -m-10 p-6 rounded-2xl -z-12 pointer-events-none"
+          style={{ backgroundColor: 'rgba(13, 16, 1, 0.1)' }}
         ></div>
 
-        <h1 className="display-serif text-3xl md:text-4xl lg:text-5xl text-white font-black leading-tight mb-6">Ultimately, We Bootstrap Ventures</h1>
-        <p className="text-[#F8F9FA] max-w-4xl mx-auto mb-10 leading-tight font-light text-xl md:text-2xl">
-          <strong>We partner with cash-flowing Main Street businesses,<br />to bootstrap and scale <span className="text-solarAmber font-bold">Digital &amp; AI-Enabled</span> Ventures</strong>
-        </p>
-        <p className="text-[#F8F9FA] text-base md:text-lg max-w-3xl mx-auto mb-10 leading-relaxed font-light italic opacity-90">
-          Unlocking Main Street's hidden value with Digital & AI Spin-Offs
-        </p>
+        <h1 className="display-serif text-3xl md:text-4xl lg:text-5xl text-white font-black leading-tight mb-6">Ultimately, We Bootstrap Ventures<br /><span className="text-solarAmber italic"> for Main Street</span></h1>
+        <h2 className="text-[#F8F9FA] max-w-xl mx-auto mb-10 leading-tight font-light text-2xl md:text-3xl">
+          <strong>Unlock Main Street's hidden value<br />by spinning-off<span className="text-solarAmber font-bold"> Digital &amp; AI Ventures</span></strong>
+        </h2>
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
           <a href="#model" className="bg-solarAmber text-darkGraphite px-10 py-4 text-base font-bold rounded-lg hover:scale-105 transition-transform text-center">Our Model</a>
           <a href="#capabilities" className="border border-white/20 text-white px-10 py-4 text-base font-bold rounded-lg hover:bg-white/5 transition-colors text-center">Digital &amp; AI Capabilities</a>
