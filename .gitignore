@@ -9,3 +9,4 @@ coverage/
 
 # Local development artifacts
 .claude*
+.agent*

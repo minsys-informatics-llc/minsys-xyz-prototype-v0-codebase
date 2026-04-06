@@ -131,7 +131,7 @@ export default function App() {
                 <h3 className="display-serif text-3xl mb-6">Venture Bootstrapping</h3>
                 <p className="display-serif text-2xl text-darkGraphite/70 mb-4">Zero-CAC Venture Rollout</p>
                 <p className="text-gray-600 leading-relaxed mb-10 text-lg">
-                  Before partnering or acquisition, we identify adjacent optimizatio or transformation opportunities. Post-close, we deploy proprietary, pre-built Digital &amp; AI minimum viable products (MVPs) subsidized by the Minsys Group. We transform operations and upsell the existing client base with effectively zero Customer Acquisition Cost (CAC), turning Laggards into Visionaries.
+                  Before partnering or acquisition, we identify adjacent optimization or transformation opportunities. Post-close, we deploy proprietary, pre-built Digital &amp; AI capabilities subsidized by the Minsys Group. We transform operations and upsell the existing client base with effectively zero Customer Acquisition Cost (CAC), turning Laggards into Tech-Enabled Visionaries.
                 </p>
               </div>
 
@@ -307,13 +307,13 @@ export default function App() {
                 <div className="w-12 h-12 bg-solarAmber/10 rounded-xl flex items-center justify-center mb-8">
                   <svg aria-hidden="true" className="w-6 h-6 text-solarAmber" fill="currentColor" viewBox="0 0 24 24"><path d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
                 </div>
-                <h3 className="text-2xl font-bold mb-4">M&amp;A Origination</h3>
-                <p className="text-white/60 mb-8 leading-relaxed">Present a Main Street business opportunity ripe for AI transformation and margin expansion.</p>
+                <h3 className="text-2xl font-bold mb-4">M&amp;A Origination Partners</h3>
+                <p className="text-white/60 mb-8 leading-relaxed">You identified a Main Street opportunity ripe for Digital & AI transformation and margin expansion ? Let's get in touch.</p>
                 <button
                   onClick={handleContactClick}
                   className="w-full border border-white/20 text-white py-4 rounded-xl font-bold hover:bg-white/5 transition-all cursor-pointer"
                 >
-                  Share Opportunity
+                  Partner with Us
                 </button>
               </div>
             </div>

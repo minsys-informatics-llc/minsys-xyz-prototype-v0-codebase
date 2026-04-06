@@ -176,7 +176,7 @@ A: Minsys is a Venture Building Micro-PE Group that partners with or acquires pr
 A: The Minsys Model is a three-phase process: (1) Platform Acquisition — buy/partner with cash-flowing Main Street businesses at 2x–4x EBITDA; (2) Venture Bootstrapping — deploy pre-built AI/Digital MVPs with zero CAC; (3) Multiple Expansion — exit at tech-enabled multiples.
 
 **Q: What does "Venture Building Micro-PE" mean?**
-A: It's Minsys's proprietary investment model that combines Micro Private Equity acquisition discipline (buying small, profitable businesses) with Venture-style value creation (deploying AI and digital technology to transform unit economics and capture premium exit multiples).
+A: It's Minsys's proprietary investment model that combines Micro Private Equity acquisition discipline (buying small, profitable businesses) with Venture Building for value add (deploying AI and digital technology to transform unit economics and capture premium exit multiples).
 
 **Q: What kind of businesses does Minsys acquire?**
 A: Profitable "Main Street" SMBs — traditionally operated businesses with stable cash flows, captive customer bases, and limited in-house digital or AI capability. These are often in traditional service industries where the valuation gap between their current multiple and a tech-enabled multiple is largest.
