@@ -43,7 +43,7 @@ export const Hero = () => {
 
         <h1 className="display-serif text-3xl md:text-4xl lg:text-5xl text-white font-black leading-tight mb-6">Ultimately, We Bootstrap Ventures<br /><span className="text-solarAmber italic"> for Main Street</span></h1>
         <h2 className="text-[#F8F9FA] max-w-xl mx-auto mb-10 leading-tight font-light text-2xl md:text-3xl">
-          <strong>Unlock Main Street's hidden value<br />by spinning-off<span className="text-solarAmber font-bold"> Digital &amp; AI Ventures</span></strong>
+          <strong>Unlocking Main Street's hidden value<br />by spinning-off<span className="text-solarAmber font-bold"> Digital &amp; AI Ventures</span></strong>
         </h2>
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
           <a href="#model" className="bg-solarAmber text-darkGraphite px-10 py-4 text-base font-bold rounded-lg hover:scale-105 transition-transform text-center">Our Model</a>
