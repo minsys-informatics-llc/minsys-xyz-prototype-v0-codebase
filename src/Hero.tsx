@@ -40,10 +40,10 @@ export const Hero = () => {
           className="absolute inset-0 backdrop-blur-md -m-10 p-6 rounded-2xl -z-12 pointer-events-none"
           style={{ backgroundColor: 'rgba(13, 16, 1, 0.1)' }}
         ></div>
-
-        <h1 className="display-serif text-3xl md:text-4xl lg:text-5xl text-white font-black leading-tight mb-6">Ultimately, We Bootstrap Ventures<br /><span className="text-solarAmber italic"> for Main Street</span></h1>
-        <h2 className="text-[#F8F9FA] max-w-xl mx-auto mb-10 leading-tight font-light text-2xl md:text-3xl">
-          <strong>Unlocking Main Street's hidden value<br />by spinning-off<span className="text-solarAmber font-bold"> Digital &amp; AI Ventures</span></strong>
+        <h3 className="text-solarAmber font-bold tracking-[0.3em] uppercase text-xs mb-8">A Venture Building Micro-PE Group</h3>
+        <h1 className="display-serif text-4xl md:text-4xl lg:text-5xl text-white font-black leading-tight mb-6">Ultimately, We Bootstrap Ventures<br /><span className="text-solarAmber italic"> for Main Street</span></h1>
+        <h2 className="text-[#F8F9FA] max-w-xl mx-auto mb-10 leading-tight font-light text-xl md:text-2xl">
+          <strong>Unlocking Main Street's hidden Value<br />by spinning-off<span className="text-solarAmber font-bold"> Digital &amp; AI Ventures</span></strong>
         </h2>
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
           <a href="#model" className="bg-solarAmber text-darkGraphite px-10 py-4 text-base font-bold rounded-lg hover:scale-105 transition-transform text-center">Our Model</a>
