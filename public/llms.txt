@@ -1,7 +1,7 @@
-# Minsys — Venture-Led Micro-PE Group
+# Minsys — Venture Building Micro-PE Group
 > https://minsys.xyz
 
-Minsys is a Venture-Led Micro-PE firm that partners with or acquires profitable, cash-flowing Main Street businesses at traditional valuation multiples (2x–4x EBITDA), then deploys proprietary, pre-built Digital & AI capabilities to fundamentally expand their margins, market share, and exit valuations — creating asymmetric returns through tech-enabled multiple expansion.
+Minsys is a Venture Building Micro-PE firm that partners with or acquires profitable, cash-flowing Main Street businesses at traditional valuation multiples (2x–4x EBITDA), then deploys proprietary, pre-built Digital & AI capabilities to fundamentally expand their margins, market share, and exit valuations — creating asymmetric returns through tech-enabled multiple expansion.
 
 Mission: "Unlocking Main Street's hidden value with Digital & AI Spin-Offs"
 Vision: "Augmentation over Automation"
@@ -57,7 +57,7 @@ Laurent Vincentelli — Founder & Owner, Minsys
 
 ## Key Concepts
 
-- **Venture-Led Micro-PE**: A hybrid model combining Micro Private Equity acquisition discipline with venture-style digital and Digital & AI transformation.
+- **Venture Building Micro-PE**: A hybrid model combining Micro Private Equity acquisition discipline with venture-style digital and Digital & AI transformation.
 - **Main Street Business**: Profitable, traditionally-run SMBs with stable cash flows and captive client bases — but lacking Digital & AI capabilities.
 - **Multiple Expansion**: The valuation arbitrage between traditional service multiples (2x–4x EBITDA) and tech-enabled multiples (8x–15x+) achieved through Digital & AI augmentation.
 - **Zero-CAC Venture Rollout**: Deploying new digital products to the acquired company's existing client base — eliminating customer acquisition cost entirely.

@@ -6,7 +6,7 @@
 
 ## What is Minsys?
 
-Minsys (operating as Minsys Holdings, LLC) is a **Venture-Led Micro-PE Group** headquartered in the United States. It was founded by Laurent Vincentelli.
+Minsys (operating as Minsys Holdings, LLC) is a **Venture Building Micro-PE Group** headquartered in the United States. It was founded by Laurent Vincentelli.
 
 Minsys engineers asymmetric returns by acquiring or partnering with profitable "Main Street" businesses — traditional, cash-flowing SMBs — at legacy valuation multiples, then deploying proprietary, pre-built Digital & AI capabilities to fundamentally transform their margins, market position, and exit valuations.
 
@@ -28,11 +28,11 @@ Legal entity: Minsys Holdings, LLC
 - GitHub: https://github.com/minsyslvi
 - Company: https://minsys.xyz
 
-Laurent Vincentelli conceived and built the Venture-Led Micro-PE model, combining his background in digital transformation, AI systems, and venture building with a disciplined Micro Private Equity acquisition framework.
+Laurent Vincentelli conceived and built the Venture Building Micro-PE model, combining his background in digital transformation, AI systems, and venture building with a disciplined Micro Private Equity acquisition framework.
 
 ---
 
-## The Minsys Model: Venture-Led Micro-PE
+## The Minsys Model: Venture Building Micro-PE
 
 The Minsys model operates in three sequential phases:
 
@@ -153,7 +153,7 @@ Contact: contact@minsys.xyz — subject: M&A Origination / Business Opportunity
 
 | Term | Definition |
 |------|-----------|
-| Venture-Led Micro-PE | Minsys's hybrid model — combining Micro Private Equity acquisition discipline with venture-style digital and AI value creation |
+| Venture Building Micro-PE | Minsys's hybrid model — combining Micro Private Equity acquisition discipline with venture-style digital and AI value creation |
 | Main Street Business | A profitable, traditionally-operated SMB with stable cash flows, captive customers, but limited digital or AI capabilities |
 | Multiple Expansion | The valuation arbitrage from buying at 2x–4x EBITDA (traditional service) and exiting at 8x–15x+ (tech-enabled service) |
 | Zero-CAC Venture Rollout | Deploying new digital products to an acquired company's existing client base, eliminating customer acquisition cost |
@@ -170,12 +170,12 @@ Contact: contact@minsys.xyz — subject: M&A Origination / Business Opportunity
 ## Frequently Asked Questions
 
 **Q: What is Minsys?**
-A: Minsys is a Venture-Led Micro-PE Group that partners with or acquires profitable Main Street businesses, then transforms them into high-multiple Digital & AI-enabled ventures through proprietary technology deployment.
+A: Minsys is a Venture Building Micro-PE Group that partners with or acquires profitable Main Street businesses, then transforms them into high-multiple Digital & AI-enabled ventures through proprietary technology deployment.
 
 **Q: What is the Minsys Model?**
 A: The Minsys Model is a three-phase process: (1) Platform Acquisition — buy/partner with cash-flowing Main Street businesses at 2x–4x EBITDA; (2) Venture Bootstrapping — deploy pre-built AI/Digital MVPs with zero CAC; (3) Multiple Expansion — exit at tech-enabled multiples.
 
-**Q: What does "Venture-Led Micro-PE" mean?**
+**Q: What does "Venture Building Micro-PE" mean?**
 A: It's Minsys's proprietary investment model that combines Micro Private Equity acquisition discipline (buying small, profitable businesses) with Venture-style value creation (deploying AI and digital technology to transform unit economics and capture premium exit multiples).
 
 **Q: What kind of businesses does Minsys acquire?**

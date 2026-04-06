@@ -79,7 +79,7 @@ export default function App() {
             <div>
               <h2 className="text-lg font-bold text-solarAmber tracking-widest uppercase mb-2">What we do</h2>
               <p className="text-gray-600 leading-relaxed">
-                Minsys engineers asymmetric returns through a <span className="text-solarAmber font-medium">Venture-Led Micro-PE Model</span>. We partner or acquire profitable Main Street businesses at traditional multiples and deploy on-the-shelf Digital &amp; AI capabilities to fundamentally expand their margins, market share, and exit valuations.
+                Minsys engineers asymmetric returns through a <span className="text-solarAmber font-medium">Venture Building Micro-PE Model</span>. We partner or acquire profitable Main Street businesses at traditional multiples and deploy on-the-shelf Digital &amp; AI capabilities to fundamentally expand their margins, market share, and exit valuations.
               </p>
             </div>
           </div>
@@ -90,7 +90,7 @@ export default function App() {
           <div className="grid lg:grid-cols-12 gap-12">
             <div className="lg:col-span-4">
               <p className="text-[10px] font-bold text-solarAmber tracking-widest uppercase mb-4">How We Operate</p>
-              <h2 className="display-serif text-3xl mb-12">Venture-Led Micro-PE Model</h2>
+              <h2 className="display-serif text-3xl mb-12">Venture Building Micro-PE Model</h2>
               <nav className="space-y-6">
                 {[
                   { id: 1, label: '1. Platform Acquisition' },
@@ -331,7 +331,7 @@ export default function App() {
             <span className="text-white/80 font-bold text-sm">Minsys</span>
           </div>
           <div className="text-center text-sm md:text-base leading-relaxed text-white/80 flex-1">
-            Minsys | Venture-Led Micro-PE Firm<br />
+            Minsys | Venture Building Micro-PE Firm<br />
             Augmentation over Automation<br />
             © 2026 <span className="italic">Minsys Holdings, LLC.</span> All rights reserved.
           </div>
