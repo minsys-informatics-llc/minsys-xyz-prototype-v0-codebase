@@ -37,8 +37,8 @@ export const Hero = () => {
     <section ref={myRef} id="hero" className="relative flex items-center justify-center overflow-hidden min-h-[70vh] pt-12 pb-32">
       <div className="relative z-10 max-w-5xl mx-auto px-6 text-center w-full">
         <div
-          className="absolute inset-0 backdrop-blur-md -m-10 p-6 rounded-2xl -z-12 pointer-events-none"
-          style={{ backgroundColor: 'rgba(13, 16, 1, 0.1)' }}
+          className="absolute inset-0 backdrop-blur-md -m-7 p-6 rounded-2xl -z-10 pointer-events-none"
+          style={{ backgroundColor: '#1A1A17' }}
         ></div>
         <h3 className="text-solarAmber font-bold tracking-[0.3em] uppercase text-xs mb-8">A Venture Building Micro-PE Group</h3>
         <h1 className="display-serif text-4xl md:text-4xl lg:text-5xl text-white font-black leading-tight mb-6">Ultimately, We Bootstrap Ventures<br /><span className="text-solarAmber italic"> for Main Street</span></h1>
