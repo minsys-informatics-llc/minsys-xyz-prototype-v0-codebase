@@ -278,6 +278,24 @@ Ship the **Minsys Talent Acquisition Engine** — a dedicated `/talent` page plu
 | modified | `public/sitemap.xml` | `/talent` URL entry |
 | modified | `vercel.json` | CSP `connect-src` += `api.web3forms.com`; SPA `rewrites` for `/talent` |
 
+## 7.5 UAT Sign-Off
+
+**Date:** 2026-04-07
+**Tester:** Laurent's UAT Team
+**Result:** ✅ **PASS**
+
+**Confirmed:**
+- [x] 3 CTA cards visible on homepage (Capital Partners, M&A Origination Partners, Join Minsys)
+- [x] "Express your Interest" button links to `/talent` via Router
+- [x] `/talent` page renders: hero, 3 open-position cards, accordion forms, pillar tabs, general application
+- [x] Browser navigation (back/forward) between `/` and `/talent` works
+- [x] Form UX (word count, accordion open/close, success state) functions as designed
+- [x] Visual design matches the mockup
+
+**Ready for merge to `main`.**
+
+---
+
 ## 8. Follow-ups (Out of Sprint)
 
 - Provision the real Web3Forms access key and replace `YOUR_WEB3FORMS_ACCESS_KEY` in `src/data/talent.ts`.
