@@ -4,7 +4,7 @@
  */
 
 import React, { useEffect, useState, useRef } from 'react';
-import { initAnalytics } from './analytics';
+import { initAnalytics, trackEvent } from './analytics';
 import { capabilities } from './data/capabilities';
 
 import { Hero } from './Hero';
@@ -19,11 +19,14 @@ export default function App() {
   }, []);
 
   const scrollCarousel = (direction: number) => {
+    trackEvent('carousel_scroll', { direction: direction < 0 ? 'prev' : 'next' });
     carouselRef.current?.scrollBy({ left: direction * 400, behavior: 'smooth' });
   };
 
-  const handleContactClick = (e: React.MouseEvent) => {
+  const handleContactClick = (e: React.MouseEvent, cta_id: string) => {
     e.preventDefault();
+    trackEvent('cta_click', { cta_id, cta_text: cta_id === 'contact_deal_desk' ? 'Contact Deal Desk' : 'Partner with Us', destination: 'mailto' });
+    trackEvent('generate_lead', { lead_source: cta_id });
     const user = 'contact';
     const domain = 'minsys.xyz';
     window.location.href = `mailto:${user}@${domain}`;
@@ -40,14 +43,15 @@ export default function App() {
           <span className="text-white font-bold tracking-tight text-xl">Minsys</span>
         </div>
         <nav className="hidden md:flex items-center gap-8 text-white/80 text-sm font-medium">
-          <a className="hover:text-solarAmber transition-colors" href="#model">Model</a>
-          <a className="hover:text-solarAmber transition-colors" href="#organization">Organization</a>
-          <a className="hover:text-solarAmber transition-colors" href="#capabilities">Capabilities</a>
-          <a className="hover:text-solarAmber transition-colors" href="/talent">Join Minsys</a>
+          <a className="hover:text-solarAmber transition-colors" href="#model" onClick={() => trackEvent('nav_click', { link_text: 'Model', link_url: '#model', link_location: 'header' })}>Model</a>
+          <a className="hover:text-solarAmber transition-colors" href="#organization" onClick={() => trackEvent('nav_click', { link_text: 'Organization', link_url: '#organization', link_location: 'header' })}>Organization</a>
+          <a className="hover:text-solarAmber transition-colors" href="#capabilities" onClick={() => trackEvent('nav_click', { link_text: 'Capabilities', link_url: '#capabilities', link_location: 'header' })}>Capabilities</a>
+          <a className="hover:text-solarAmber transition-colors" href="/talent" onClick={() => trackEvent('nav_click', { link_text: 'Join Minsys', link_url: '/talent', link_location: 'header' })}>Join Minsys</a>
         </nav>
         <a
           className="bg-solarAmber text-darkGraphite px-6 py-2 rounded-md font-bold text-sm hover:brightness-110 transition-all cursor-pointer"
           href="#getintouch"
+          onClick={() => { trackEvent('cta_click', { cta_id: 'header_partner', cta_text: 'Partner with Us', destination: '#getintouch' }); trackEvent('generate_lead', { lead_source: 'header_partner' }); }}
         >
           Partner with Us
         </a>
@@ -94,13 +98,13 @@ export default function App() {
               <h2 className="display-serif text-3xl mb-12">Venture Building Micro-PE Model</h2>
               <nav className="space-y-6">
                 {[
-                  { id: 1, label: '1. Platform Acquisition' },
-                  { id: 2, label: '2. Venture Bootstrapping' },
-                  { id: 3, label: '3. Multiple Expansion' },
+                  { id: 1, label: '1. Platform Acquisition', tab_id: 'platform_acquisition' },
+                  { id: 2, label: '2. Venture Bootstrapping', tab_id: 'venture_bootstrapping' },
+                  { id: 3, label: '3. Multiple Expansion', tab_id: 'multiple_expansion' },
                 ].map((tab) => (
                   <div
                     key={tab.id}
-                    onClick={() => setActiveTab(tab.id)}
+                    onClick={() => { setActiveTab(tab.id); trackEvent('tab_select', { tab_group: 'model', tab_id: tab.tab_id }); trackEvent('generate_lead', { lead_source: 'model_tab' }); }}
                     className={activeTab === tab.id
                       ? "flex items-center justify-between p-4 bg-white shadow-sm border border-gray-100 rounded-lg text-solarAmber font-bold cursor-pointer transition-colors"
                       : "flex items-center justify-between p-4 text-gray-400 font-medium cursor-pointer hover:text-darkGraphite hover:bg-gray-50 hover:rounded-lg transition-colors"}
@@ -171,14 +175,14 @@ export default function App() {
                 <h3 className="display-serif text-4xl mb-12">The Four Pillars</h3>
                 <nav className="space-y-6">
                   {[
-                    { id: 1, label: 'M&A Deal Desk' },
-                    { id: 2, label: 'The Nexus' },
-                    { id: 3, label: 'The Venture Studio' },
-                    { id: 4, label: 'The MVP Factory' },
+                    { id: 1, label: 'M&A Deal Desk', tab_id: 'ma_deal_desk' },
+                    { id: 2, label: 'The Nexus', tab_id: 'the_nexus' },
+                    { id: 3, label: 'The Venture Studio', tab_id: 'venture_studio' },
+                    { id: 4, label: 'The MVP Factory', tab_id: 'mvp_factory' },
                   ].map((tab) => (
                     <div
                       key={tab.id}
-                      onClick={() => setActiveOrgTab(tab.id)}
+                      onClick={() => { setActiveOrgTab(tab.id); trackEvent('tab_select', { tab_group: 'organization', tab_id: tab.tab_id }); trackEvent('generate_lead', { lead_source: 'organization_tab' }); }}
                       className={activeOrgTab === tab.id
                         ? "flex items-center justify-between p-4 bg-white shadow-sm border border-gray-100 rounded-lg text-solarAmber font-bold cursor-pointer transition-colors"
                         : "flex items-center justify-between p-4 text-gray-400 font-medium cursor-pointer hover:text-darkGraphite hover:bg-gray-50 hover:rounded-lg transition-colors"}
@@ -298,7 +302,7 @@ export default function App() {
                 <h3 className="text-2xl font-bold mb-4">Capital Partners</h3>
                 <p className="text-white/60 mb-8 leading-relaxed">Connect with our M&amp;A Deal Desk regarding commercial lending for our next cash-flowing acquisition.</p>
                 <button
-                  onClick={handleContactClick}
+                  onClick={(e) => handleContactClick(e, 'contact_deal_desk')}
                   className="w-full bg-solarAmber text-darkGraphite py-4 rounded-xl font-bold hover:brightness-110 transition-all cursor-pointer"
                 >
                   Contact Deal Desk
@@ -311,7 +315,7 @@ export default function App() {
                 <h3 className="text-2xl font-bold mb-4">M&amp;A Origination Partners</h3>
                 <p className="text-white/60 mb-8 leading-relaxed">You identified a Main Street opportunity ripe for Digital & AI transformation and margin expansion ? Let's get in touch.</p>
                 <button
-                  onClick={handleContactClick}
+                  onClick={(e) => handleContactClick(e, 'partner_body')}
                   className="w-full border border-white/20 text-white py-4 rounded-xl font-bold hover:bg-white/5 transition-all cursor-pointer"
                 >
                   Partner with Us
@@ -326,6 +330,7 @@ export default function App() {
                 <a
                   href="/talent"
                   className="w-full bg-solarAmber text-darkGraphite py-4 rounded-xl font-bold hover:brightness-110 transition-all cursor-pointer text-center"
+                  onClick={() => { trackEvent('cta_click', { cta_id: 'join_minsys_body', cta_text: 'Express your Interest', destination: '/talent' }); trackEvent('generate_lead', { lead_source: 'join_minsys_body' }); }}
                 >
                   Express your Interest
                 </a>
@@ -350,8 +355,8 @@ export default function App() {
             © 2026 <span className="italic">Minsys Holdings, LLC.</span> All rights reserved.
           </div>
           <div className="flex gap-6 text-[10px] font-bold tracking-[0.2em] uppercase flex-1 justify-end">
-            <a className="hover:text-white transition-colors" href="/privacy-policy">Privacy Policy</a>
-            <a className="hover:text-white transition-colors" href="/terms-of-service">Terms of Service</a>
+            <a className="hover:text-white transition-colors" href="/privacy-policy" onClick={() => trackEvent('nav_click', { link_text: 'Privacy Policy', link_url: '/privacy-policy', link_location: 'footer' })}>Privacy Policy</a>
+            <a className="hover:text-white transition-colors" href="/terms-of-service" onClick={() => trackEvent('nav_click', { link_text: 'Terms of Service', link_url: '/terms-of-service', link_location: 'footer' })}>Terms of Service</a>
           </div>
         </div>
       </footer>

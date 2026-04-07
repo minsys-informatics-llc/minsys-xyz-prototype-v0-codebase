@@ -3,7 +3,8 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
+import { trackEvent } from './analytics';
 import {
   roles,
   pillars,
@@ -77,6 +78,13 @@ const RoleCard: React.FC<RoleCardProps> = ({ role, isOpen, onToggle }) => {
   const [form, setForm] = useState<RoleFormState>(EMPTY_FORM);
   const [state, setState] = useState<SubmissionState>('idle');
   const [error, setError] = useState<string>('');
+  const formStartFired = useRef(false);
+
+  const handleFormFocus = () => {
+    if (formStartFired.current) return;
+    formStartFired.current = true;
+    trackEvent('form_start', { form_id: 'role_apply', role_id: role.id });
+  };
 
   const update = (k: keyof RoleFormState, v: string) => setForm((f) => ({ ...f, [k]: v }));
 
@@ -102,10 +110,13 @@ const RoleCard: React.FC<RoleCardProps> = ({ role, isOpen, onToggle }) => {
       const data = await res.json();
       if (!data.success) throw new Error(data.message || 'Web3Forms rejected the submission.');
       setState('success');
+      trackEvent('form_submit', { form_id: 'role_apply', role_id: role.id });
+      trackEvent('generate_prospect', { form_id: 'role_apply' });
     } catch (err) {
       const message = err instanceof Error ? err.message : 'Unknown error';
       setError(message);
       setState('error');
+      trackEvent('form_error', { form_id: 'role_apply', error_type: message });
     }
   };
 
@@ -134,7 +145,13 @@ const RoleCard: React.FC<RoleCardProps> = ({ role, isOpen, onToggle }) => {
           <div className="flex justify-center mt-6">
             <button
               type="button"
-              onClick={() => onToggle(role.id)}
+              onClick={() => {
+                if (!isOpen) {
+                  trackEvent('role_interest', { role_id: role.id, role_title: role.title });
+                  trackEvent('generate_lead', { lead_source: 'role_interest' });
+                }
+                onToggle(role.id);
+              }}
               className={
                 'inline-flex items-center gap-2 font-bold text-sm px-7 py-2.5 rounded-md border-2 transition-all cursor-pointer ' +
                 (isOpen
@@ -218,7 +235,7 @@ const RoleCard: React.FC<RoleCardProps> = ({ role, isOpen, onToggle }) => {
                 </p>
               </div>
             ) : (
-              <form onSubmit={submit} className="space-y-6">
+              <form onSubmit={submit} onFocus={handleFormFocus} className="space-y-6">
                 <div className="grid md:grid-cols-2 gap-6">
                   <div>
                     <label className="block text-xs font-bold uppercase tracking-widest text-gray-400 mb-2">
@@ -349,6 +366,13 @@ function GeneralApplicationSection() {
   const [form, setForm] = useState({ name: '', linkedin: '', portfolio: '', pillar: '' });
   const [state, setState] = useState<SubmissionState>('idle');
   const [error, setError] = useState('');
+  const formStartFired = useRef(false);
+
+  const handleFormFocus = () => {
+    if (formStartFired.current) return;
+    formStartFired.current = true;
+    trackEvent('form_start', { form_id: 'general_apply' });
+  };
 
   const submit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -364,10 +388,13 @@ function GeneralApplicationSection() {
       const data = await res.json();
       if (!data.success) throw new Error(data.message || 'Web3Forms rejected the submission.');
       setState('success');
+      trackEvent('form_submit', { form_id: 'general_apply', pillar: form.pillar });
+      trackEvent('generate_prospect', { form_id: 'general_apply' });
     } catch (err) {
       const message = err instanceof Error ? err.message : 'Unknown error';
       setError(message);
       setState('error');
+      trackEvent('form_error', { form_id: 'general_apply', error_type: message });
     }
   };
 
@@ -390,7 +417,7 @@ function GeneralApplicationSection() {
               <button
                 key={p.id}
                 type="button"
-                onClick={() => setActivePillar(p.id)}
+                onClick={() => { setActivePillar(p.id); trackEvent('tab_select', { tab_group: 'talent_pillar', tab_id: p.id }); trackEvent('generate_lead', { lead_source: 'talent_pillar_tab' }); }}
                 className={
                   'px-6 py-3 text-xs font-bold tracking-wider uppercase whitespace-nowrap border-b-[3px] -mb-[2px] transition-colors cursor-pointer ' +
                   (activePillar === p.id
@@ -465,7 +492,7 @@ function GeneralApplicationSection() {
               </p>
             </div>
           ) : (
-            <form onSubmit={submit} className="space-y-6">
+            <form onSubmit={submit} onFocus={handleFormFocus} className="space-y-6">
               <div className="grid md:grid-cols-2 gap-6">
                 <div>
                   <label className="block text-xs font-bold uppercase tracking-widest text-gray-400 mb-2">
@@ -574,19 +601,20 @@ export function TalentPage() {
           <span className="text-white font-bold tracking-tight text-xl">Minsys</span>
         </a>
         <nav className="hidden md:flex items-center gap-8 text-white/80 text-sm font-medium">
-          <a className="hover:text-solarAmber transition-colors" href="/#model">
+          <a className="hover:text-solarAmber transition-colors" href="/#model" onClick={() => trackEvent('nav_click', { link_text: 'Model', link_url: '/#model', link_location: 'header' })}>
             Model
           </a>
-          <a className="hover:text-solarAmber transition-colors" href="/#organization">
+          <a className="hover:text-solarAmber transition-colors" href="/#organization" onClick={() => trackEvent('nav_click', { link_text: 'Organization', link_url: '/#organization', link_location: 'header' })}>
             Organization
           </a>
-          <a className="hover:text-solarAmber transition-colors" href="/#capabilities">
+          <a className="hover:text-solarAmber transition-colors" href="/#capabilities" onClick={() => trackEvent('nav_click', { link_text: 'Capabilities', link_url: '/#capabilities', link_location: 'header' })}>
             Capabilities
           </a>
         </nav>
         <a
           className="bg-solarAmber text-darkGraphite px-6 py-2 rounded-md font-bold text-sm hover:brightness-110 transition-all cursor-pointer"
           href="#open-positions"
+          onClick={() => { trackEvent('cta_click', { cta_id: 'header_join', cta_text: 'Join Minsys', destination: '#open-positions' }); trackEvent('generate_lead', { lead_source: 'header_join' }); }}
         >
           Join Minsys
         </a>
@@ -616,12 +644,14 @@ export function TalentPage() {
               <a
                 href="#open-positions"
                 className="bg-solarAmber text-darkGraphite px-10 py-4 text-base font-bold rounded-lg hover:scale-105 transition-transform text-center w-full sm:w-auto"
+                onClick={() => { trackEvent('cta_click', { cta_id: 'hero_open_positions', cta_text: 'Open Positions', destination: '#open-positions' }); trackEvent('generate_lead', { lead_source: 'hero_open_positions' }); }}
               >
                 Open Positions
               </a>
               <a
                 href="#general-application"
                 className="border border-white/20 text-white px-10 py-4 text-base font-bold rounded-lg hover:bg-white/5 transition-colors text-center w-full sm:w-auto"
+                onClick={() => { trackEvent('cta_click', { cta_id: 'hero_general_application', cta_text: 'General Application', destination: '#general-application' }); trackEvent('generate_lead', { lead_source: 'hero_general_application' }); }}
               >
                 General Application
               </a>
@@ -694,10 +724,10 @@ export function TalentPage() {
             <span className="italic">Minsys Holdings, LLC.</span> All rights reserved.
           </div>
           <div className="flex gap-6 text-[10px] font-bold tracking-[0.2em] uppercase flex-1 justify-end">
-            <a className="hover:text-white transition-colors" href="/privacy-policy">
+            <a className="hover:text-white transition-colors" href="/privacy-policy" onClick={() => trackEvent('nav_click', { link_text: 'Privacy Policy', link_url: '/privacy-policy', link_location: 'footer' })}>
               Privacy Policy
             </a>
-            <a className="hover:text-white transition-colors" href="/terms-of-service">
+            <a className="hover:text-white transition-colors" href="/terms-of-service" onClick={() => trackEvent('nav_click', { link_text: 'Terms of Service', link_url: '/terms-of-service', link_location: 'footer' })}>
               Terms of Service
             </a>
           </div>

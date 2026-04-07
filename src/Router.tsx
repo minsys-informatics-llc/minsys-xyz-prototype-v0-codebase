@@ -8,6 +8,7 @@
  */
 
 import React, { useEffect, useState } from 'react';
+import { trackPageView } from './analytics';
 
 export function getRoute(pathname: string): 'talent' | 'home' {
   if (pathname === '/talent' || pathname === '/talent/') return 'talent';
@@ -25,7 +26,10 @@ export function Router({ home, talent }: Props) {
   );
 
   useEffect(() => {
-    const onPop = () => setPath(window.location.pathname);
+    const onPop = () => {
+      setPath(window.location.pathname);
+      trackPageView(window.location.pathname);
+    };
     window.addEventListener('popstate', onPop);
 
     const onClick = (e: MouseEvent) => {
@@ -54,6 +58,7 @@ export function Router({ home, talent }: Props) {
       e.preventDefault();
       window.history.pushState({}, '', url.pathname + url.hash);
       setPath(url.pathname);
+      trackPageView(url.pathname);
       if (url.hash) {
         // Defer scroll until route renders
         setTimeout(() => {
