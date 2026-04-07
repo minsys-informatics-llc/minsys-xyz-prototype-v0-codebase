@@ -1,0 +1,1145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Minsys | Talent </title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&family=Georgia:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
+
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <!-- Web3Forms: no SDK needed, uses native fetch -->
+
+    <style type="text/tailwindcss">
+        @theme {
+      --color-solarAmber: #FD5E53;
+      --color-darkGraphite: #1A1A17;
+      --color-lightGray: #F7F7F7;
+      --font-serif: "Georgia", serif;
+      --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+    }
+    .shadow-soft { box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05); }
+    .display-serif { font-family: var(--font-serif); }
+    html { scroll-behavior: smooth; }
+    body { font-family: var(--font-sans); background-color: white; color: var(--color-darkGraphite); }
+  </style>
+
+    <style>
+        /* Inline application form expand/collapse */
+        .role-form-wrapper {
+            display: grid;
+            grid-template-rows: 0fr;
+            transition: grid-template-rows 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+                opacity 0.35s ease,
+                margin-top 0.4s ease;
+            opacity: 0;
+            margin-top: 0;
+        }
+
+        .role-form-wrapper.open {
+            grid-template-rows: 1fr;
+            opacity: 1;
+            margin-top: 2rem;
+        }
+
+        .role-form-inner {
+            overflow: hidden;
+        }
+
+        /* Apply button — amber CTA (base), dark outline when open */
+        .apply-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background-color: #FD5E53;
+            color: #1A1A17;
+            font-weight: 700;
+            font-size: 0.875rem;
+            padding: 0.625rem 1.75rem;
+            border-radius: 0.375rem;
+            border: 2px solid transparent;
+            cursor: pointer;
+            transition: filter 0.2s ease, background-color 0.2s ease, color 0.2s ease;
+        }
+
+        .apply-btn:hover {
+            filter: brightness(1.08);
+        }
+
+        .apply-btn.active {
+            background-color: transparent;
+            color: #1A1A17;
+            border-color: #1A1A17;
+            filter: none;
+        }
+
+        .apply-btn.active:hover {
+            background-color: #1A1A17;
+            color: white;
+        }
+
+        .apply-btn svg {
+            transition: transform 0.3s ease;
+        }
+
+        .apply-btn.active svg {
+            transform: rotate(90deg);
+        }
+
+        /* Word counter styling */
+        .word-counter {
+            font-size: 0.7rem;
+            color: #9ca3af;
+            text-align: right;
+            margin-top: 0.35rem;
+            transition: color 0.2s;
+        }
+
+        .word-counter.warn {
+            color: #FD5E53;
+        }
+
+        /* Divider with label */
+        .divider-label {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin: 2rem 0 1.5rem;
+        }
+
+        .divider-label::before,
+        .divider-label::after {
+            content: '';
+            flex: 1;
+            height: 1px;
+            background: #e5e7eb;
+        }
+
+        .divider-label span {
+            font-size: 0.65rem;
+            font-weight: 700;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            color: #9ca3af;
+            white-space: nowrap;
+        }
+
+        /* Question label */
+        .q-label {
+            font-size: 0.7rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            color: #9ca3af;
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+
+        .q-prompt {
+            font-size: 0.95rem;
+            color: #1A1A17;
+            font-weight: 500;
+            margin-bottom: 0.75rem;
+            line-height: 1.55;
+        }
+
+        textarea.role-textarea {
+            width: 100%;
+            border: 1px solid #e5e7eb;
+            border-radius: 0.75rem;
+            padding: 1rem;
+            font-size: 0.9rem;
+            font-family: "Inter", sans-serif;
+            color: #1A1A17;
+            resize: vertical;
+            min-height: 130px;
+            outline: none;
+            transition: border-color 0.2s;
+            background: #fafafa;
+            line-height: 1.6;
+        }
+
+        textarea.role-textarea:focus {
+            border-color: #FD5E53;
+            background: white;
+        }
+
+        /* Role badge inside form */
+        .role-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: #FFF7F7;
+            border: 1px solid #FD5E53/20;
+            border-radius: 9999px;
+            padding: 0.3rem 0.85rem;
+            font-size: 0.7rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            color: #FD5E53;
+            margin-bottom: 1.25rem;
+        }
+
+        /* Success state */
+        .form-success {
+            display: none;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 2.5rem 1rem;
+            text-align: center;
+            gap: 0.75rem;
+        }
+
+        .form-success.visible {
+            display: flex;
+        }
+
+        .form-success svg {
+            color: #FD5E53;
+        }
+
+        /* Pillar tabs */
+        .pillar-tabs {
+            display: flex;
+            gap: 0;
+            border-bottom: 2px solid #e5e7eb;
+            margin-bottom: 2rem;
+            overflow-x: auto;
+        }
+
+        .pillar-tab {
+            padding: 0.85rem 1.5rem;
+            font-size: 0.8rem;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: #9ca3af;
+            background: none;
+            border: none;
+            border-bottom: 3px solid transparent;
+            cursor: pointer;
+            transition: color 0.2s, border-color 0.2s;
+            white-space: nowrap;
+            margin-bottom: -2px;
+        }
+
+        .pillar-tab:hover {
+            color: #1A1A17;
+        }
+
+        .pillar-tab.active {
+            color: #1A1A17;
+            border-bottom-color: #FD5E53;
+        }
+
+        .pillar-panel {
+            display: none;
+            animation: panelFadeIn 0.35s ease;
+        }
+
+        .pillar-panel.active {
+            display: block;
+        }
+
+        @keyframes panelFadeIn {
+            from { opacity: 0; transform: translateY(8px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+
+<body class="antialiased">
+
+    <header
+        class="bg-darkGraphite border-b border-white/10 sticky top-0 z-50 px-8 py-4 flex items-center justify-between">
+        <div class="flex items-center gap-2">
+            <a href="/" class="flex items-center gap-2">
+                <div class="w-8 h-8 bg-solarAmber rounded-sm flex items-center justify-center">
+                    <span class="text-darkGraphite font-bold text-xs">M</span>
+                </div>
+                <span class="text-white font-bold tracking-tight text-xl">Minsys</span>
+            </a>
+        </div>
+        <nav class="hidden md:flex items-center gap-8 text-white/80 text-sm font-medium">
+            <a class="hover:text-solarAmber transition-colors" href="/#model">Model</a>
+            <a class="hover:text-solarAmber transition-colors" href="/#organization">Organization</a>
+            <a class="hover:text-solarAmber transition-colors" href="/#capabilities">Capabilities</a>
+        </nav>
+        <a class="bg-solarAmber text-darkGraphite px-6 py-2 rounded-md font-bold text-sm hover:brightness-110 transition-all cursor-pointer"
+            href="#open-positions">
+            Join Minsys
+        </a>
+    </header>
+
+    <main>
+        <section class="bg-darkGraphite text-white pt-24 pb-32 px-6 relative overflow-hidden">
+            <div class="max-w-5xl mx-auto text-center relative z-10">
+                <div class="absolute inset-0 backdrop-blur-md -m-10 p-10 rounded-2xl -z-12 pointer-events-none"
+                    style="background-color: rgba(162, 162, 154, 0.1)"></div>
+
+                <h4 class="text-solarAmber font-bold tracking-[0.3em] uppercase text-xs mb-6">Join Minsys - Augmentation
+                    over Automation</h4>
+
+                <h1 class="display-serif text-4xl md:text-5xl font-black mb-8 leading-tight">
+                    Ultimately, Human Ingenuity <br class="hidden md:block" /> <span class="italic text-solarAmber">is
+                        our North Star</span>
+                </h1>
+                <h2 class="text-[#F8F9FA] text-lg md:text-xl max-w-4xl mx-auto leading-relaxed font-light">
+                    <span class="font-bold">As a Talent</span>, you seek an environment where your professional
+                    brilliance is augmented
+                    and elevated, never automated away. Partner with us to build the future of Main Street.
+                </h2>
+
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mt-12">
+                    <a href="#open-positions"
+                        class="bg-solarAmber text-darkGraphite px-10 py-4 text-base font-bold rounded-lg hover:scale-105 transition-transform text-center w-full sm:w-auto">
+                        Open Positions
+                    </a>
+                    <a href="#general-application"
+                        class="border border-white/20 text-white px-10 py-4 text-base font-bold rounded-lg hover:bg-white/5 transition-colors text-center w-full sm:w-auto">
+                        General Application
+                    </a>
+                </div>
+            </div>
+
+            <div
+                class="absolute top-0 right-0 w-1/3 h-full bg-gradient-to-l from-solarAmber/5 to-transparent pointer-events-none">
+            </div>
+
+            <div
+                class="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-solarAmber/50 to-transparent z-6">
+            </div>
+        </section>
+
+        <!-- ===== OPEN POSITIONS ===== -->
+        <section id="open-positions" class="max-w-7xl mx-auto px-6 py-24">
+            <div class="mb-16">
+                <h2 class="display-serif text-4xl mb-4">Open Positions</h2>
+                <p class="text-gray-500 max-w-6xl">We are scaling. Partner with us. We seek high-agency Talent to make
+                    an impact
+                    unlocking Main Street's hidden Value by spinning-off Digital & AI Ventures. </p>
+            </div>
+
+            <div class="space-y-8">
+
+                <!-- JOB CARD 1: M&A Deal Desk Lead -->
+                <div id="card-ma"
+                    class="group bg-white border border-gray-100 rounded-2xl p-8 md:p-12 shadow-soft hover:border-solarAmber/30 transition-all">
+                    <div class="flex flex-col md:flex-row md:gap-8">
+                        <div class="flex flex-col justify-between md:w-2/3">
+                            <div>
+                                <div class="flex items-center gap-3 mb-4">
+                                    <span
+                                        class="bg-solarAmber/10 text-solarAmber text-[10px] font-bold px-3 py-1 rounded-full uppercase">M&A
+                                        Deal Desk</span>
+                                    <span class="text-gray-400 text-xs">• Full-time</span>
+                                </div>
+                                <h3 class="display-serif text-3xl mb-6">M&A Deal Desk Lead</h3>
+                                <p class="text-gray-600 leading-relaxed mb-6 text-lg">
+                                    Responsible for identifying "boring," cash-flow positive Main Street businesses at
+                                    2x-4x
+                                    EBITDA. You will build rigorous "Laggard-to-Visionary" transformation theses and
+                                    secure
+                                    commercial lending by proving our capability to maintain debt-servicing while
+                                    deploying
+                                    upside tech.
+                                </p>
+                                <ul class="grid md:grid-cols-2 gap-4 text-sm text-gray-500 italic">
+                                    <li>• Small-cap LBO modeling</li>
+                                    <li>• Commercial banking relationships</li>
+                                    <li>• Transformation-focused Due Diligence</li>
+                                    <li>• "Capability Gap" mapping</li>
+                                </ul>
+                            </div>
+                            <div class="flex justify-center mt-6">
+                                <button id="btn-ma" onclick="toggleForm('ma')" class="apply-btn">
+                                    Apply for Role
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path d="M19 9l-7 7-7-7" stroke-width="2" stroke-linecap="round"
+                                            stroke-linejoin="round"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="hidden md:flex md:w-1/3 items-center">
+                            <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=600&h=560&fit=crop&q=80"
+                                alt="Financial analysis and deal-making" class="w-full h-52 object-cover rounded-xl" />
+                        </div>
+                    </div>
+
+                    <!-- Inline form: M&A -->
+                    <div id="form-wrapper-ma" class="role-form-wrapper">
+                        <div class="role-form-inner">
+                            <div id="form-body-ma" class="border-t border-gray-100 pt-8">
+                                <div class="role-badge">
+                                    <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd"
+                                            d="M6 6V5a3 3 0 013-3h2a3 3 0 013 3v1h2a2 2 0 012 2v8a2 2 0 01-2 2H4a2 2 0 01-2-2V8a2 2 0 012-2h2zm4-3a1 1 0 00-1 1v1h2V4a1 1 0 00-1-1zm0 9a2 2 0 100-4 2 2 0 000 4z"
+                                            clip-rule="evenodd" />
+                                    </svg>
+                                    Applying for: M&A Deal Desk Lead
+                                </div>
+                                <!-- ▼▼▼ JD PLACEHOLDER: M&A Deal Desk Lead — Replace content below ▼▼▼ -->
+                                <div class="border-2 border-dashed border-gray-200 rounded-xl p-6 mb-6 bg-gray-50/50">
+                                    <p class="text-xs font-bold uppercase tracking-widest text-gray-400 mb-3">Full Job
+                                        Description</p>
+                                    <p class="text-gray-400 text-sm italic leading-relaxed">The detailed job description
+                                        for this role will be published here once finalized by the Hiring Manager. In
+                                        the meantime, the summary above covers the core scope and required competencies.
+                                    </p>
+                                </div>
+                                <!-- ▲▲▲ END JD PLACEHOLDER: M&A Deal Desk Lead ▲▲▲ -->
+                                <form id="role-form-ma" onsubmit="submitForm(event, 'ma')" class="space-y-6">
+                                    <div class="grid md:grid-cols-2 gap-6">
+                                        <div>
+                                            <label
+                                                class="block text-xs font-bold uppercase tracking-widest text-gray-400 mb-2">Full
+                                                Name</label>
+                                            <input id="ma-name" type="text" placeholder="John Doe" required
+                                                class="w-full border-b border-gray-200 py-3 focus:border-solarAmber outline-none transition-colors bg-transparent" />
+                                        </div>
+                                        <div>
+                                            <label
+                                                class="block text-xs font-bold uppercase tracking-widest text-gray-400 mb-2">LinkedIn
+                                                Profile</label>
+                                            <input id="ma-linkedin" type="url" placeholder="linkedin.com/in/..."
+                                                required
+                                                class="w-full border-b border-gray-200 py-3 focus:border-solarAmber outline-none transition-colors bg-transparent" />
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <label
+                                            class="block text-xs font-bold uppercase tracking-widest text-gray-400 mb-2">Professional
+                                            Portfolio / Online Presence</label>
+                                        <input id="ma-portfolio" type="url"
+                                            placeholder="Online portfolio, website, blog, Github…"
+                                            class="w-full border-b border-gray-200 py-3 focus:border-solarAmber outline-none transition-colors bg-transparent" />
+                                    </div>
+
+                                    <div class="divider-label"><span>Tell us about you</span></div>
+
+                                    <div>
+                                        <span class="q-label">Question 1</span>
+                                        <p class="q-prompt">Why do you want to work at Minsys? Please describe the value
+                                            you could bring to the team and the type of role that best suits your
+                                            strengths.</p>
+                                        <textarea id="q1-ma" class="role-textarea" rows="5" maxlength="3500"
+                                            oninput="countWords(this, 'wc-q1-ma')"
+                                            placeholder="Your answer…"></textarea>
+                                        <p id="wc-q1-ma" class="word-counter">0 / 500 words</p>
+                                    </div>
+                                    <div>
+                                        <span class="q-label">Question 2</span>
+                                        <p class="q-prompt">Describe your most significant accomplishment. We are
+                                            especially interested in the <em>how</em> — the steps you took, and what you
+                                            learned along the way.</p>
+                                        <textarea id="q2-ma" class="role-textarea" rows="5" maxlength="3500"
+                                            oninput="countWords(this, 'wc-q2-ma')"
+                                            placeholder="Your answer…"></textarea>
+                                        <p id="wc-q2-ma" class="word-counter">0 / 500 words</p>
+                                    </div>
+
+                                    <div class="pt-2">
+                                        <button id="submit-btn-ma" type="submit"
+                                            class="w-full bg-darkGraphite text-white py-5 rounded-xl font-bold hover:bg-black transition-all cursor-pointer">
+                                            Submit Application
+                                        </button>
+                                    </div>
+                                </form>
+                                <!-- Success state -->
+                                <div id="success-ma" class="form-success">
+                                    <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                            d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                    </svg>
+                                    <h4 class="display-serif text-2xl">Application received.</h4>
+                                    <p class="text-gray-500 text-sm max-w-sm">We will review your profile and be in
+                                        touch if there is a fit. Thank you for your interest in Minsys.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- JOB CARD 2: Agentic AI Engineer -->
+                <div id="card-ai"
+                    class="group bg-white border border-gray-100 rounded-2xl p-8 md:p-12 shadow-soft hover:border-solarAmber/30 transition-all">
+                    <div class="flex flex-col md:flex-row md:gap-8">
+                        <div class="flex flex-col justify-between md:w-2/3">
+                            <div>
+                                <div class="flex items-center gap-3 mb-4">
+                                    <span
+                                        class="bg-solarAmber/10 text-solarAmber text-[10px] font-bold px-3 py-1 rounded-full uppercase">The
+                                        MVP Factory</span>
+                                    <span class="text-gray-400 text-xs">• Remote / Hybrid</span>
+                                </div>
+                                <h3 class="display-serif text-3xl mb-6">Agentic AI Engineer</h3>
+                                <p class="text-gray-600 leading-relaxed mb-6 text-lg">
+                                    Build the "Operating System" for transformed legacy assets. You will use frontier
+                                    model
+                                    gateways and our proprietary AI Factory to build, train, and deploy agentic AI
+                                    systems
+                                    that convert raw legacy data into high-margin applications and autonomous workflows.
+                                </p>
+                                <ul class="grid md:grid-cols-2 gap-4 text-sm text-gray-500 italic">
+                                    <li>• Agentic Frameworks (LangChain, etc.)</li>
+                                    <li>• Frontier &amp; Edge Model Gateways</li>
+                                    <li>• MLOps &amp; Production Inference</li>
+                                    <li>• Rapid MVP TTM mindset</li>
+                                </ul>
+                            </div>
+                            <div class="flex justify-center mt-6">
+                                <button id="btn-ai" onclick="toggleForm('ai')" class="apply-btn">
+                                    Apply for Role
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path d="M19 9l-7 7-7-7" stroke-width="2" stroke-linecap="round"
+                                            stroke-linejoin="round"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="hidden md:flex md:w-1/3 items-center">
+                            <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=600&h=560&fit=crop&q=80"
+                                alt="AI and machine learning development" class="w-full h-52 object-cover rounded-xl" />
+                        </div>
+                    </div>
+
+                    <!-- Inline form: AI Agent -->
+                    <div id="form-wrapper-ai" class="role-form-wrapper">
+                        <div class="role-form-inner">
+                            <div id="form-body-ai" class="border-t border-gray-100 pt-8">
+                                <div class="role-badge">
+                                    <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd"
+                                            d="M6 6V5a3 3 0 013-3h2a3 3 0 013 3v1h2a2 2 0 012 2v8a2 2 0 01-2 2H4a2 2 0 01-2-2V8a2 2 0 012-2h2zm4-3a1 1 0 00-1 1v1h2V4a1 1 0 00-1-1zm0 9a2 2 0 100-4 2 2 0 000 4z"
+                                            clip-rule="evenodd" />
+                                    </svg>
+                                    Applying for: Agentic AI Engineer
+                                </div>
+                                <!-- ▼▼▼ JD PLACEHOLDER: Agentic AI Engineer — Replace content below ▼▼▼ -->
+                                <div class="border-2 border-dashed border-gray-200 rounded-xl p-6 mb-6 bg-gray-50/50">
+                                    <p class="text-xs font-bold uppercase tracking-widest text-gray-400 mb-3">Full Job
+                                        Description</p>
+                                    <p class="text-gray-400 text-sm italic leading-relaxed">The detailed job description
+                                        for this role will be published here once finalized by the Hiring Manager. In
+                                        the meantime, the summary above covers the core scope and required competencies.
+                                    </p>
+                                </div>
+                                <!-- ▲▲▲ END JD PLACEHOLDER: Agentic AI Engineer ▲▲▲ -->
+                                <form id="role-form-ai" onsubmit="submitForm(event, 'ai')" class="space-y-6">
+                                    <div class="grid md:grid-cols-2 gap-6">
+                                        <div>
+                                            <label
+                                                class="block text-xs font-bold uppercase tracking-widest text-gray-400 mb-2">Full
+                                                Name</label>
+                                            <input id="ai-name" type="text" placeholder="John Doe" required
+                                                class="w-full border-b border-gray-200 py-3 focus:border-solarAmber outline-none transition-colors bg-transparent" />
+                                        </div>
+                                        <div>
+                                            <label
+                                                class="block text-xs font-bold uppercase tracking-widest text-gray-400 mb-2">LinkedIn
+                                                Profile</label>
+                                            <input id="ai-linkedin" type="url" placeholder="linkedin.com/in/..."
+                                                required
+                                                class="w-full border-b border-gray-200 py-3 focus:border-solarAmber outline-none transition-colors bg-transparent" />
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <label
+                                            class="block text-xs font-bold uppercase tracking-widest text-gray-400 mb-2">Professional
+                                            Portfolio / Online Presence</label>
+                                        <input id="ai-portfolio" type="url"
+                                            placeholder="Online portfolio, website, blog, Github…"
+                                            class="w-full border-b border-gray-200 py-3 focus:border-solarAmber outline-none transition-colors bg-transparent" />
+                                    </div>
+
+                                    <div class="divider-label"><span>Tell us about you</span></div>
+
+                                    <div>
+                                        <span class="q-label">Question 1</span>
+                                        <p class="q-prompt">Why do you want to work at Minsys? Please describe the value
+                                            you could bring to the team and the type of role that best suits your
+                                            strengths.</p>
+                                        <textarea id="q1-ai" class="role-textarea" rows="5" maxlength="3500"
+                                            oninput="countWords(this, 'wc-q1-ai')"
+                                            placeholder="Your answer…"></textarea>
+                                        <p id="wc-q1-ai" class="word-counter">0 / 500 words</p>
+                                    </div>
+                                    <div>
+                                        <span class="q-label">Question 2</span>
+                                        <p class="q-prompt">Describe your most significant accomplishment. We are
+                                            especially interested in the <em>how</em> — the steps you took, and what you
+                                            learned along the way.</p>
+                                        <textarea id="q2-ai" class="role-textarea" rows="5" maxlength="3500"
+                                            oninput="countWords(this, 'wc-q2-ai')"
+                                            placeholder="Your answer…"></textarea>
+                                        <p id="wc-q2-ai" class="word-counter">0 / 500 words</p>
+                                    </div>
+
+                                    <div class="pt-2">
+                                        <button id="submit-btn-ai" type="submit"
+                                            class="w-full bg-darkGraphite text-white py-5 rounded-xl font-bold hover:bg-black transition-all cursor-pointer">
+                                            Submit Application
+                                        </button>
+                                    </div>
+                                </form>
+                                <div id="success-ai" class="form-success">
+                                    <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                            d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                    </svg>
+                                    <h4 class="display-serif text-2xl">Application received.</h4>
+                                    <p class="text-gray-500 text-sm max-w-sm">We will review your profile and be in
+                                        touch if there is a fit. Thank you for your interest in Minsys.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- JOB CARD 3: Digital & AI Change Manager -->
+                <div id="card-tcm"
+                    class="group bg-white border border-gray-100 rounded-2xl p-8 md:p-12 shadow-soft hover:border-solarAmber/30 transition-all">
+                    <div class="flex flex-col md:flex-row md:gap-8">
+                        <div class="flex flex-col justify-between md:w-2/3">
+                            <div>
+                                <div class="flex items-center gap-3 mb-4">
+                                    <span
+                                        class="bg-solarAmber/10 text-solarAmber text-[10px] font-bold px-3 py-1 rounded-full uppercase">Venture
+                                        Studio</span>
+                                    <span class="text-gray-400 text-xs">• Full-time</span>
+                                </div>
+                                <h3 class="display-serif text-3xl mb-6">Digital & AI Change Manager</h3>
+                                <p class="text-gray-600 leading-relaxed mb-6 text-lg">
+                                    Bridge the culture chasm. You will apply our "WorkshopThinking" frameworks to
+                                    smoothly
+                                    transition legacy management teams into an AI-native operational cadence, ensuring
+                                    that
+                                    tech upgrades feel like a seamless "upgrade" rather than a disruptive overhaul.
+                                </p>
+                                <ul class="grid md:grid-cols-2 gap-4 text-sm text-gray-500 italic">
+                                    <li>• Decoupled Deployment management</li>
+                                    <li>• Operational rewiring frameworks</li>
+                                    <li>• Stakeholder alignment (Main St. to Tech)</li>
+                                    <li>• Agile Change Leadership</li>
+                                </ul>
+                            </div>
+                            <div class="flex justify-center mt-6">
+                                <button id="btn-tcm" onclick="toggleForm('tcm')" class="apply-btn">
+                                    Apply for Role
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path d="M19 9l-7 7-7-7" stroke-width="2" stroke-linecap="round"
+                                            stroke-linejoin="round"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="hidden md:flex md:w-1/3 items-center">
+                            <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=600&h=560&fit=crop&q=80"
+                                alt="Executive workshop and change management session"
+                                class="w-full h-52 object-cover rounded-xl" />
+                        </div>
+                    </div>
+
+                    <!-- Inline form: Digital & AI Change Manager -->
+                    <div id="form-wrapper-tcm" class="role-form-wrapper">
+                        <div class="role-form-inner">
+                            <div id="form-body-tcm" class="border-t border-gray-100 pt-8">
+                                <div class="role-badge">
+                                    <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd"
+                                            d="M6 6V5a3 3 0 013-3h2a3 3 0 013 3v1h2a2 2 0 012 2v8a2 2 0 01-2 2H4a2 2 0 01-2-2V8a2 2 0 012-2h2zm4-3a1 1 0 00-1 1v1h2V4a1 1 0 00-1-1zm0 9a2 2 0 100-4 2 2 0 000 4z"
+                                            clip-rule="evenodd" />
+                                    </svg>
+                                    Applying for: Digital & AI Change Manager
+                                </div>
+                                <!-- ▼▼▼ JD PLACEHOLDER: Digital & AI Change Manager — Replace content below ▼▼▼ -->
+                                <div class="border-2 border-dashed border-gray-200 rounded-xl p-6 mb-6 bg-gray-50/50">
+                                    <p class="text-xs font-bold uppercase tracking-widest text-gray-400 mb-3">Full Job
+                                        Description</p>
+                                    <p class="text-gray-400 text-sm italic leading-relaxed">The detailed job description
+                                        for this role will be published here once finalized by the Hiring Manager. In
+                                        the meantime, the summary above covers the core scope and required competencies.
+                                    </p>
+                                </div>
+                                <!-- ▲▲▲ END JD PLACEHOLDER: Digital & AI Change Manager ▲▲▲ -->
+                                <form id="role-form-tcm" onsubmit="submitForm(event, 'tcm')" class="space-y-6">
+                                    <div class="grid md:grid-cols-2 gap-6">
+                                        <div>
+                                            <label
+                                                class="block text-xs font-bold uppercase tracking-widest text-gray-400 mb-2">Full
+                                                Name</label>
+                                            <input id="tcm-name" type="text" placeholder="John Doe" required
+                                                class="w-full border-b border-gray-200 py-3 focus:border-solarAmber outline-none transition-colors bg-transparent" />
+                                        </div>
+                                        <div>
+                                            <label
+                                                class="block text-xs font-bold uppercase tracking-widest text-gray-400 mb-2">LinkedIn
+                                                Profile</label>
+                                            <input id="tcm-linkedin" type="url" placeholder="linkedin.com/in/..."
+                                                required
+                                                class="w-full border-b border-gray-200 py-3 focus:border-solarAmber outline-none transition-colors bg-transparent" />
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <label
+                                            class="block text-xs font-bold uppercase tracking-widest text-gray-400 mb-2">Professional
+                                            Portfolio / Online Presence</label>
+                                        <input id="tcm-portfolio" type="url"
+                                            placeholder="Online portfolio, website, blog, Github…"
+                                            class="w-full border-b border-gray-200 py-3 focus:border-solarAmber outline-none transition-colors bg-transparent" />
+                                    </div>
+
+                                    <div class="divider-label"><span>Tell us about you</span></div>
+
+                                    <div>
+                                        <span class="q-label">Question 1</span>
+                                        <p class="q-prompt">Why do you want to work at Minsys? Please describe the value
+                                            you could bring to the team and the type of role that best suits your
+                                            strengths.</p>
+                                        <textarea id="q1-tcm" class="role-textarea" rows="5" maxlength="3500"
+                                            oninput="countWords(this, 'wc-q1-tcm')"
+                                            placeholder="Your answer…"></textarea>
+                                        <p id="wc-q1-tcm" class="word-counter">0 / 500 words</p>
+                                    </div>
+                                    <div>
+                                        <span class="q-label">Question 2</span>
+                                        <p class="q-prompt">Describe your most significant accomplishment. We are
+                                            especially interested in the <em>how</em> — the steps you took, and what you
+                                            learned along the way.</p>
+                                        <textarea id="q2-tcm" class="role-textarea" rows="5" maxlength="3500"
+                                            oninput="countWords(this, 'wc-q2-tcm')"
+                                            placeholder="Your answer…"></textarea>
+                                        <p id="wc-q2-tcm" class="word-counter">0 / 500 words</p>
+                                    </div>
+
+                                    <div class="pt-2">
+                                        <button id="submit-btn-tcm" type="submit"
+                                            class="w-full bg-darkGraphite text-white py-5 rounded-xl font-bold hover:bg-black transition-all cursor-pointer">
+                                            Submit Application
+                                        </button>
+                                    </div>
+                                </form>
+                                <div id="success-tcm" class="form-success">
+                                    <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                            d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                    </svg>
+                                    <h4 class="display-serif text-2xl">Application received.</h4>
+                                    <p class="text-gray-500 text-sm max-w-sm">We will review your profile and be in
+                                        touch if there is a fit. Thank you for your interest in Minsys.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ===== GENERAL APPLICATION ===== -->
+        <section id="general-application" class="bg-lightGray">
+            <div class="max-w-7xl mx-auto px-6 py-24">
+                <div class="mb-16">
+                    <h2 class="display-serif text-4xl mb-4">General Application</h2>
+                    <p class="text-gray-500">Don't see a role that fits? Minsys is built on four pillars — Deal Desk,
+                        The
+                        MVP Factory, Venture Studio, and The Nexus — and we're always looking for exceptional people who
+                        can
+                        operate across them. Share your profile and tell us which pillar resonates with you.</p>
+                </div>
+
+                <!-- Pillar Tabs -->
+                <div class="mb-12">
+                    <div class="pillar-tabs">
+                        <button class="pillar-tab active" onclick="switchPillarTab('dealdesk')">M&A Deal Desk</button>
+                        <button class="pillar-tab" onclick="switchPillarTab('nexus')">The Nexus</button>
+                        <button class="pillar-tab" onclick="switchPillarTab('studio')">Venture Studio</button>
+                        <button class="pillar-tab" onclick="switchPillarTab('factory')">The MVP Factory</button>
+                    </div>
+
+                    <!-- Panel: M&A Deal Desk -->
+                    <div id="panel-dealdesk" class="pillar-panel active">
+                        <div class="group bg-white border border-gray-100 rounded-2xl p-8 md:p-12 shadow-soft">
+                            <div class="flex flex-col md:flex-row md:gap-8">
+                                <div class="flex flex-col gap-6 md:w-2/3">
+                                    <div>
+                                        <div class="flex items-center gap-3 mb-4">
+                                            <span class="bg-solarAmber/10 text-solarAmber text-[10px] font-bold px-3 py-1 rounded-full uppercase">M&A Deal Desk</span>
+                                        </div>
+                                        <h3 class="display-serif text-3xl mb-2">The Acquisition & Lending Engine</h3>
+                                        <p class="text-gray-600 leading-relaxed mb-6 text-lg">
+                                            Responsible for identifying prime Main Street targets and building rigorous
+                                            "Laggard-to-Visionary" transformation theses. The Deal Desk secures
+                                            institutional and commercial lending by proving our capability to maintain
+                                            debt-servicing cash flows while deploying upside tech.
+                                        </p>
+                                        <p class="text-xs font-bold uppercase tracking-widest text-gray-400 mb-3">Example Roles</p>
+                                        <ul class="grid md:grid-cols-2 gap-4 text-sm text-gray-500 italic">
+                                            <li>• M&A Deal Desk Lead</li>
+                                            <li>• Commercial Lending Officer</li>
+                                            <li>• Due Diligence Analyst</li>
+                                            <li>• Transformation Thesis Architect</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="hidden md:flex md:w-1/3 items-center">
+                                    <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=560&fit=crop&q=80"
+                                        alt="Financial analysis and deal structuring"
+                                        class="w-full h-52 object-cover rounded-xl" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Panel: The Nexus -->
+                    <div id="panel-nexus" class="pillar-panel">
+                        <div class="group bg-white border border-gray-100 rounded-2xl p-8 md:p-12 shadow-soft">
+                            <div class="flex flex-col md:flex-row md:gap-8">
+                                <div class="flex flex-col gap-6 md:w-2/3">
+                                    <div>
+                                        <div class="flex items-center gap-3 mb-4">
+                                            <span class="bg-solarAmber/10 text-solarAmber text-[10px] font-bold px-3 py-1 rounded-full uppercase">The Nexus</span>
+                                        </div>
+                                        <h3 class="display-serif text-3xl mb-2">The Parent Hub & IP Custodian</h3>
+                                        <p class="text-gray-600 leading-relaxed mb-6 text-lg">
+                                            The Nexus holds Minsys's proprietary IP, competitive market intelligence,
+                                            and pre-nurtured vendor ecosystems. It governs the flow of assets across
+                                            the group, ensuring we partner or acquire targets where we already have
+                                            the "on the shelf" Digital & AI capabilities to win.
+                                        </p>
+                                        <p class="text-xs font-bold uppercase tracking-widest text-gray-400 mb-3">Example Roles</p>
+                                        <ul class="grid md:grid-cols-2 gap-4 text-sm text-gray-500 italic">
+                                            <li>• IP Portfolio Manager</li>
+                                            <li>• Market Intelligence Analyst</li>
+                                            <li>• Vendor Ecosystem Lead</li>
+                                            <li>• Group Asset Coordinator</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="hidden md:flex md:w-1/3 items-center">
+                                    <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=600&h=560&fit=crop&q=80"
+                                        alt="Network hub and connected systems"
+                                        class="w-full h-52 object-cover rounded-xl" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Panel: Venture Studio -->
+                    <div id="panel-studio" class="pillar-panel">
+                        <div class="group bg-white border border-gray-100 rounded-2xl p-8 md:p-12 shadow-soft">
+                            <div class="flex flex-col md:flex-row md:gap-8">
+                                <div class="flex flex-col gap-6 md:w-2/3">
+                                    <div>
+                                        <div class="flex items-center gap-3 mb-4">
+                                            <span class="bg-solarAmber/10 text-solarAmber text-[10px] font-bold px-3 py-1 rounded-full uppercase">Venture Studio</span>
+                                        </div>
+                                        <h3 class="display-serif text-3xl mb-2">The Portfolio & Change Management Arm</h3>
+                                        <p class="text-gray-600 leading-relaxed mb-6 text-lg">
+                                            The Studio oversees the operational integration of our Digital & AI ventures
+                                            into the Main Street businesses. It manages change seamlessly, acting as the
+                                            pivotal bridge between the newly partnered with or acquired legacy operators
+                                            and the advanced technology being deployed.
+                                        </p>
+                                        <p class="text-xs font-bold uppercase tracking-widest text-gray-400 mb-3">Example Roles</p>
+                                        <ul class="grid md:grid-cols-2 gap-4 text-sm text-gray-500 italic">
+                                            <li>• Digital & AI Change Manager</li>
+                                            <li>• Portfolio Integration Lead</li>
+                                            <li>• Operational Transformation Consultant</li>
+                                            <li>• Agile Program Manager</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="hidden md:flex md:w-1/3 items-center">
+                                    <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=600&h=560&fit=crop&q=80"
+                                        alt="Workshop and change management session"
+                                        class="w-full h-52 object-cover rounded-xl" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Panel: The MVP Factory -->
+                    <div id="panel-factory" class="pillar-panel">
+                        <div class="group bg-white border border-gray-100 rounded-2xl p-8 md:p-12 shadow-soft">
+                            <div class="flex flex-col md:flex-row md:gap-8">
+                                <div class="flex flex-col gap-6 md:w-2/3">
+                                    <div>
+                                        <div class="flex items-center gap-3 mb-4">
+                                            <span class="bg-solarAmber/10 text-solarAmber text-[10px] font-bold px-3 py-1 rounded-full uppercase">The MVP Factory</span>
+                                        </div>
+                                        <h3 class="display-serif text-3xl mb-2">The Rapid AI-Native Production Line</h3>
+                                        <p class="text-gray-600 leading-relaxed mb-6 text-lg">
+                                            The Factory operationalizes our technology, building and releasing
+                                            production-ready tech in weeks, not months. By absorbing the R&D costs at
+                                            the group level, the Factory ensures the Main Street business doesn't burn
+                                            vital working capital to achieve its digital & AI transformation.
+                                        </p>
+                                        <p class="text-xs font-bold uppercase tracking-widest text-gray-400 mb-3">Example Roles</p>
+                                        <ul class="grid md:grid-cols-2 gap-4 text-sm text-gray-500 italic">
+                                            <li>• Agentic AI Engineer</li>
+                                            <li>• Full-Stack Product Engineer</li>
+                                            <li>• MLOps & Inference Engineer</li>
+                                            <li>• Rapid Prototyping Lead</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="hidden md:flex md:w-1/3 items-center">
+                                    <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=600&h=560&fit=crop&q=80"
+                                        alt="AI and machine learning production systems"
+                                        class="w-full h-52 object-cover rounded-xl" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="group bg-white border border-gray-100 rounded-2xl p-8 md:p-12 shadow-soft">
+                    <form id="general-form" onsubmit="submitGeneralForm(event)" class="space-y-6">
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-xs font-bold uppercase tracking-widest text-gray-400 mb-2">Full
+                                    Name</label>
+                                <input id="gen-name" type="text" placeholder="John Doe" required
+                                    class="w-full border-b border-gray-200 py-3 focus:border-solarAmber outline-none transition-colors bg-transparent" />
+                            </div>
+                            <div>
+                                <label
+                                    class="block text-xs font-bold uppercase tracking-widest text-gray-400 mb-2">LinkedIn
+                                    Profile</label>
+                                <input id="gen-linkedin" type="url" placeholder="linkedin.com/in/..." required
+                                    class="w-full border-b border-gray-200 py-3 focus:border-solarAmber outline-none transition-colors bg-transparent" />
+                            </div>
+                        </div>
+                        <div>
+                            <label
+                                class="block text-xs font-bold uppercase tracking-widest text-gray-400 mb-2">Professional
+                                Portfolio / Online Presence</label>
+                            <input id="gen-portfolio" type="url" placeholder="Online portfolio, website, blog, Github…"
+                                class="w-full border-b border-gray-200 py-3 focus:border-solarAmber outline-none transition-colors bg-transparent" />
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold uppercase tracking-widest text-gray-400 mb-2">Which
+                                Pillar
+                                Interests You?</label>
+                            <select id="gen-pillar" required
+                                class="w-full border-b border-gray-200 py-3 focus:border-solarAmber outline-none transition-colors bg-transparent">
+                                <option value="" disabled selected hidden>Choose…</option>
+                                <option>M&A Deal Desk</option>
+                                <option>The MVP Factory</option>
+                                <option>Venture Studio</option>
+                                <option>The Nexus</option>
+                            </select>
+                        </div>
+                        <div class="pt-6">
+                            <button id="submit-btn-gen" type="submit"
+                                class="w-full bg-darkGraphite text-white py-5 rounded-xl font-bold hover:bg-black transition-all cursor-pointer">
+                                Submit Application
+                            </button>
+                        </div>
+                    </form>
+                    <div id="general-success" class="form-success">
+                        <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                        <h4 class="display-serif text-2xl">Application received.</h4>
+                        <p class="text-gray-500 text-sm max-w-sm">We have received your profile. We will be in touch if
+                            there is a match.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-[#121210] text-white/40 py-12 px-8 border-t border-white/5">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
+            <div class="flex items-center gap-2 flex-1 justify-start">
+                <div class="w-6 h-6 bg-solarAmber/20 rounded flex items-center justify-center">
+                    <span class="text-solarAmber font-bold text-[8px]">M</span>
+                </div>
+                <span class="text-white/80 font-bold text-sm">Minsys</span>
+            </div>
+            <div class="text-center text-sm md:text-base leading-relaxed text-white/80 flex-1">
+                Minsys | Venture-Led Micro-PE Group<br />
+                Augmentation over Automation<br />
+                © 2026 <span class="italic">Minsys Holdings, LLC.</span> All rights reserved.
+            </div>
+            <div class="flex gap-6 text-[10px] font-bold tracking-[0.2em] uppercase flex-1 justify-end">
+                <a class="hover:text-white transition-colors" href="#">Privacy Policy</a>
+                <a class="hover:text-white transition-colors" href="#">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // ─────────────────────────────────────────────────────────────
+        // WEB3FORMS CONFIGURATION
+        // 1. Go to https://web3forms.com
+        // 2. Enter talent@minsys.xyz → click "Create Access Key"
+        // 3. Check your inbox → copy the key → paste below. Done.
+        // ─────────────────────────────────────────────────────────────
+        var W3F_ACCESS_KEY = 'YOUR_WEB3FORMS_ACCESS_KEY';
+        var W3F_ENDPOINT = 'https://api.web3forms.com/submit';
+        // ─────────────────────────────────────────────────────────────
+
+        // Role metadata map
+        var ROLES = {
+            ma: { prefix: 'ma', title: 'M&A Deal Desk Lead' },
+            ai: { prefix: 'ai', title: 'Agentic AI Engineer' },
+            tcm: { prefix: 'tcm', title: 'Digital & AI Change Manager' }
+        };
+
+        // ── Helpers ──────────────────────────────────────────────────
+        function val(id) {
+            var el = document.getElementById(id);
+            return el ? el.value.trim() : '';
+        }
+
+        function setButtonState(btnId, loading) {
+            var btn = document.getElementById(btnId);
+            if (!btn) return;
+            btn.disabled = loading;
+            btn.textContent = loading ? 'Sending…' : 'Submit Application';
+        }
+
+        function w3fSend(payload) {
+            return fetch(W3F_ENDPOINT, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+                body: JSON.stringify(Object.assign({ access_key: W3F_ACCESS_KEY }, payload))
+            }).then(function (res) {
+                return res.json().then(function (data) {
+                    if (!data.success) throw new Error(data.message || 'Web3Forms rejected the submission.');
+                    return data;
+                });
+            });
+        }
+
+        // ── Toggle inline application form ───────────────────────────
+        function toggleForm(id) {
+            var wrapper = document.getElementById('form-wrapper-' + id);
+            var btn = document.getElementById('btn-' + id);
+            var isOpen = wrapper.classList.contains('open');
+
+            ['ma', 'ai', 'tcm'].forEach(function (key) {
+                if (key !== id) {
+                    document.getElementById('form-wrapper-' + key).classList.remove('open');
+                    document.getElementById('btn-' + key).classList.remove('active');
+                    document.getElementById('btn-' + key).childNodes[0].textContent = 'Apply for Role';
+                }
+            });
+
+            if (isOpen) {
+                wrapper.classList.remove('open');
+                btn.classList.remove('active');
+                btn.childNodes[0].textContent = 'Apply for Role';
+            } else {
+                wrapper.classList.add('open');
+                btn.classList.add('active');
+                btn.childNodes[0].textContent = 'Close Form';
+                setTimeout(function () {
+                    wrapper.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+                }, 420);
+            }
+        }
+
+        // ── Word counter with 500-word cap ───────────────────────────
+        function countWords(textarea, counterId) {
+            var text = textarea.value.trim();
+            var words = text === '' ? 0 : text.split(/\s+/).filter(function (w) { return w.length > 0; }).length;
+            var counter = document.getElementById(counterId);
+            counter.textContent = words + ' / 500 words';
+            if (words >= 450) { counter.classList.add('warn'); }
+            else { counter.classList.remove('warn'); }
+            if (words > 500) {
+                var arr = text.split(/\s+/).filter(function (w) { return w.length > 0; });
+                textarea.value = arr.slice(0, 500).join(' ');
+                counter.textContent = '500 / 500 words';
+                counter.classList.add('warn');
+            }
+        }
+
+        // ── Submit role-specific application ─────────────────────────
+        function submitForm(event, id) {
+            event.preventDefault();
+            var role = ROLES[id];
+            var btnId = 'submit-btn-' + id;
+            var prefix = role.prefix;
+
+            var payload = {
+                subject: '[Minsys Talent] New Application — ' + role.title,
+                from_name: val(prefix + '-name'),
+                // Web3Forms renders the "message" field as the email body
+                message:
+                    'ROLE APPLIED FOR:\n' + role.title + '\n\n' +
+                    'APPLICANT NAME:\n' + val(prefix + '-name') + '\n\n' +
+                    'LINKEDIN:\n' + val(prefix + '-linkedin') + '\n\n' +
+                    'PORTFOLIO:\n' + (val(prefix + '-portfolio') || 'Not provided') + '\n\n' +
+                    '--- Q1: Why Minsys / Value & Strengths ---\n' + val('q1-' + id) + '\n\n' +
+                    '--- Q2: Most Significant Accomplishment ---\n' + val('q2-' + id)
+            };
+
+            setButtonState(btnId, true);
+
+            w3fSend(payload)
+                .then(function () {
+                    document.getElementById('role-form-' + id).style.display = 'none';
+                    document.getElementById('success-' + id).classList.add('visible');
+                })
+                .catch(function (err) {
+                    setButtonState(btnId, false);
+                    alert('Something went wrong. Please try again or reach us at talent@minsys.xyz\n\n' + err.message);
+                    console.error('Web3Forms error:', err);
+                });
+        }
+
+        // ── Pillar tab switching ─────────────────────────────────────
+        function switchPillarTab(id) {
+            document.querySelectorAll('.pillar-tab').forEach(function(t) { t.classList.remove('active'); });
+            document.querySelectorAll('.pillar-panel').forEach(function(p) { p.classList.remove('active'); });
+            document.getElementById('panel-' + id).classList.add('active');
+            // activate the clicked button
+            event.currentTarget.classList.add('active');
+        }
+
+        // ── Submit general interest form ─────────────────────────────
+        function submitGeneralForm(event) {
+            event.preventDefault();
+
+            var payload = {
+                subject: '[Minsys Talent] General Interest — ' + val('gen-name'),
+                from_name: val('gen-name'),
+                message:
+                    'APPLICANT NAME:\n' + val('gen-name') + '\n\n' +
+                    'LINKEDIN:\n' + val('gen-linkedin') + '\n\n' +
+                    'PORTFOLIO:\n' + (val('gen-portfolio') || 'Not provided') + '\n\n' +
+                    'PILLAR INTEREST:\n' + val('gen-pillar')
+            };
+
+            setButtonState('submit-btn-gen', true);
+
+            w3fSend(payload)
+                .then(function () {
+                    document.getElementById('general-form').style.display = 'none';
+                    document.getElementById('general-success').classList.add('visible');
+                })
+                .catch(function (err) {
+                    setButtonState('submit-btn-gen', false);
+                    alert('Something went wrong. Please try again or reach us at talent@minsys.xyz\n\n' + err.message);
+                    console.error('Web3Forms error:', err);
+                });
+        }
+    </script>
+
+</body>
+
+</html>
