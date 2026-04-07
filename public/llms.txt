@@ -50,6 +50,18 @@ Laurent Vincentelli — Founder & Owner, Minsys
 
 7. **Cybersecurity** (Cyber & SecOps): AI-native SecOps platform deployed immediately upon acquisition to protect legacy data and secure the perimeter for digital scaling.
 
+## Open Positions (Talent Engine)
+
+Minsys is hiring elite operators for the "Laggard-to-Visionary" transformation engine. Apply at https://minsys.xyz/talent or email talent@minsys.xyz.
+
+- **M&A Deal Desk Lead** (M&A Deal Desk, Full-time): Identifies cash-flow positive Main Street targets at 2x–4x EBITDA, builds "Laggard-to-Visionary" transformation theses, and secures commercial lending. Requires small-cap LBO modeling, commercial banking relationships, transformation-focused due diligence.
+
+- **Agentic AI Engineer** (The MVP Factory, Remote / Hybrid): Builds the "Operating System" for transformed legacy assets — agentic AI systems, frontier + edge model gateways, MLOps and production inference pipelines that turn legacy data into autonomous workflows.
+
+- **Digital & AI Change Manager** (Venture Studio, Full-time): Bridges the culture chasm between legacy management teams and AI-native operations using Minsys's "WorkshopThinking" frameworks. Requires decoupled deployment management and agile change leadership.
+
+General applications are welcome from candidates aligned with any of the four pillars (M&A Deal Desk, The Nexus, Venture Studio, The MVP Factory).
+
 ## Who Minsys Works With
 
 - **Capital Partners**: Commercial lenders and institutional investors supporting M&A deal flow.

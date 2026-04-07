@@ -198,3 +198,33 @@ A: Two types of partners: (1) Capital Partners — commercial lenders and instit
 
 **Q: Where is Minsys based?**
 A: Minsys (Minsys Holdings, LLC) operates in the United States with a global Digital & AI delivery capability.
+
+---
+
+## Open Positions — Minsys Talent Acquisition Engine
+
+Minsys is actively recruiting elite operators to execute its "Laggard-to-Visionary" thesis. All applications are routed to talent@minsys.xyz. Apply at https://minsys.xyz/talent.
+
+### M&A Deal Desk Lead
+- **Pillar:** M&A Deal Desk (The Acquisition & Lending Engine)
+- **Type:** Full-time
+- **Mandate:** Identify "boring," cash-flow positive Main Street businesses at 2x-4x EBITDA. Build rigorous "Laggard-to-Visionary" transformation theses. Secure commercial lending by proving Minsys's capability to maintain debt-servicing cash flows while deploying upside Digital & AI tech.
+- **Required competencies:** Small-cap LBO modeling; commercial banking relationships; transformation-focused due diligence; "capability gap" mapping between legacy operations and Minsys's off-the-shelf Digital & AI capabilities.
+- **Why this role exists:** The Deal Desk is the front door to every Minsys acquisition. Without rigorous thesis-building and lender confidence, no deal moves forward.
+
+### Agentic AI Engineer
+- **Pillar:** The MVP Factory (The Rapid AI-Native Production Line)
+- **Type:** Remote / Hybrid
+- **Mandate:** Build the "Operating System" for transformed legacy assets. Use frontier model gateways and Minsys's proprietary AI Factory to build, train, and deploy agentic AI systems that convert raw legacy data into high-margin applications and autonomous workflows.
+- **Required competencies:** Agentic frameworks (LangChain and similar); frontier and edge model gateways; MLOps and production inference pipelines; rapid MVP time-to-market mindset.
+- **Why this role exists:** Every acquired Main Street business becomes a deployment target for Minsys's AI Factory. This role builds the production line.
+
+### Digital & AI Change Manager
+- **Pillar:** Venture Studio (The Portfolio & Change Management Arm)
+- **Type:** Full-time
+- **Mandate:** Bridge the culture chasm between legacy management teams and AI-native operations. Apply Minsys's "WorkshopThinking" frameworks to make tech upgrades feel like a seamless evolution rather than a disruptive overhaul.
+- **Required competencies:** Decoupled deployment management; operational rewiring frameworks; stakeholder alignment from Main Street operators to technology teams; agile change leadership.
+- **Why this role exists:** Technology only creates value when it is adopted. The Change Manager ensures the human side of every transformation.
+
+### General Pillar Applications
+Candidates whose expertise spans multiple disciplines or who bring unique "Human Ingenuity" outside the active roles can submit a general application tagged to one of the four pillars (M&A Deal Desk, The Nexus, Venture Studio, The MVP Factory). General applications are indexed at the parent group level for future venture-led opportunities.

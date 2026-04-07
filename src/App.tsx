@@ -43,6 +43,7 @@ export default function App() {
           <a className="hover:text-solarAmber transition-colors" href="#model">Model</a>
           <a className="hover:text-solarAmber transition-colors" href="#organization">Organization</a>
           <a className="hover:text-solarAmber transition-colors" href="#capabilities">Capabilities</a>
+          <a className="hover:text-solarAmber transition-colors" href="/talent">Join Minsys</a>
         </nav>
         <a
           className="bg-solarAmber text-darkGraphite px-6 py-2 rounded-md font-bold text-sm hover:brightness-110 transition-all cursor-pointer"
@@ -285,11 +286,11 @@ export default function App() {
 
         {/* CTA Section */}
         <section id="getintouch" className="bg-darkGraphite text-white py-32 px-4 text-center">
-          <div className="max-w-4xl mx-auto">
+          <div className="max-w-6xl mx-auto">
             <h2 className="display-serif text-4xl md:text-6xl mb-16 leading-tight">
               Explore Asymmetric Returns in the <span className="text-solarAmber italic">Digital &amp; AI Economy</span>
             </h2>
-            <div className="grid md:grid-cols-2 gap-8 text-left">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 text-left">
               <div className="bg-white/5 backdrop-blur-md p-12 rounded-3xl border border-solarAmber/20 flex flex-col items-center text-center">
                 <div className="w-12 h-12 bg-solarAmber/10 rounded-xl flex items-center justify-center mb-8">
                   <svg aria-hidden="true" className="w-6 h-6 text-solarAmber" fill="currentColor" viewBox="0 0 24 24"><path d="M13.13 22.19l-1.63-3.83c1.57-.64 3.05-1.56 4.37-2.71l2.83 2.83c-1.74 1.74-3.76 3.12-5.57 3.71M7.5 18.47l2.83-2.83c1.32 1.15 2.8 2.07 4.37 2.71l-1.63 3.83c-1.81-.59-3.83-1.97-5.57-3.71M2.19 13.13l3.83-1.63c.64 1.57 1.56 3.05 2.71 4.37l-2.83 2.83c-1.74-1.74-3.12-3.76-3.71-5.57M18.47 7.5l2.83-2.83c1.15 1.32 2.07 2.8 2.71 4.37l-3.83 1.63c-.64-1.57-1.56-3.05-2.71-4.37M12 8c-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4-1.79-4-4-4z"></path></svg>
@@ -315,6 +316,19 @@ export default function App() {
                 >
                   Partner with Us
                 </button>
+              </div>
+              <div className="bg-white/5 backdrop-blur-md p-12 rounded-3xl flex flex-col items-center text-center border border-white/5">
+                <div className="w-12 h-12 bg-solarAmber/10 rounded-xl flex items-center justify-center mb-8">
+                  <svg aria-hidden="true" className="w-6 h-6 text-solarAmber" fill="currentColor" viewBox="0 0 24 24"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"></path></svg>
+                </div>
+                <h3 className="text-2xl font-bold mb-4">Join Minsys</h3>
+                <p className="text-white/60 mb-8 leading-relaxed">We are seeking elite M&amp;A specialists, Agentic AI Engineer, and Change Managers to help us rewire Main Street.</p>
+                <a
+                  href="/talent"
+                  className="w-full bg-solarAmber text-darkGraphite py-4 rounded-xl font-bold hover:brightness-110 transition-all cursor-pointer text-center"
+                >
+                  Express your Interest
+                </a>
               </div>
             </div>
           </div>
