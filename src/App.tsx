@@ -563,7 +563,7 @@ export default function App() {
             <h2 className="display-serif text-4xl md:text-6xl mb-16 leading-tight">
               Explore Asymmetric Returns in the <span className="text-solarAmber italic">Digital &amp; AI Economy</span>
             </h2>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 text-left">
+            <div className="grid md:grid-cols-2 gap-8 text-left max-w-3xl mx-auto">
               {/* Card 1: Capital Partners */}
               <div className="bg-white/5 backdrop-blur-md p-12 rounded-3xl border border-solarAmber/20 flex flex-col items-center text-center">
                 <div className="w-12 h-12 bg-solarAmber/10 rounded-xl flex items-center justify-center mb-8">
@@ -594,21 +594,6 @@ export default function App() {
                 </button>
               </div>
 
-              {/* Card 3: Join Minsys (Talent) */}
-              <div className="bg-white/5 backdrop-blur-md p-12 rounded-3xl flex flex-col items-center text-center border border-white/5">
-                <div className="w-12 h-12 bg-solarAmber/10 rounded-xl flex items-center justify-center mb-8">
-                  <svg aria-hidden="true" className="w-6 h-6 text-solarAmber" fill="currentColor" viewBox="0 0 24 24"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"></path></svg>
-                </div>
-                <h3 className="text-2xl font-bold mb-4">Join Minsys</h3>
-                <p className="text-white/60 mb-8 leading-relaxed">We are seeking elite M&amp;A specialists, Agentic AI Engineer, and Change Managers to help us rewire Main Street.</p>
-                <a
-                  href="/talent"
-                  className="w-full bg-solarAmber text-darkGraphite py-4 rounded-xl font-bold hover:brightness-110 transition-all cursor-pointer text-center"
-                  onClick={() => { trackEvent('cta_click', { cta_id: 'join_minsys_body', cta_text: 'Express your Interest', destination: '/talent' }); trackEvent('generate_lead', { lead_source: 'join_minsys_body' }); }}
-                >
-                  Express your Interest
-                </a>
-              </div>
             </div>
           </div>
         </section>
