@@ -172,6 +172,16 @@ export interface Web3FormsPayload {
   access_key: string;
   subject: string;
   from_name: string;
+  replyto?: string;
+  message: string;
+}
+
+export type PartnerType = 'capital' | 'origination';
+
+export interface PartnerApplication {
+  name: string;
+  email: string;
+  company: string;
   message: string;
 }
 
@@ -200,6 +210,22 @@ export function buildGeneralPayload(app: GeneralApplication): Web3FormsPayload {
       `LINKEDIN:\n${app.linkedin}\n\n` +
       `PORTFOLIO:\n${app.portfolio || 'Not provided'}\n\n` +
       `PILLAR INTEREST:\n${app.pillar}`,
+  };
+}
+
+export function buildPartnerPayload(type: PartnerType, app: PartnerApplication): Web3FormsPayload {
+  const label = type === 'capital' ? 'Capital Inquiry' : 'Deal Origination';
+  return {
+    access_key: W3F_ACCESS_KEY,
+    subject: `[Minsys Partners] ${label} — ${app.name}`,
+    from_name: app.name,
+    replyto: app.email,
+    message:
+      `PARTNER TYPE:\n${label}\n\n` +
+      `NAME:\n${app.name}\n\n` +
+      `EMAIL:\n${app.email}\n\n` +
+      `COMPANY:\n${app.company}\n\n` +
+      `MESSAGE:\n${app.message || 'Not provided'}`,
   };
 }
 
