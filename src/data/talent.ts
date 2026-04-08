@@ -9,7 +9,7 @@
 // 2. Enter talent@minsys.xyz → "Create Access Key"
 // 3. Replace YOUR_WEB3FORMS_ACCESS_KEY below.
 // ─────────────────────────────────────────────────────────────
-export const W3F_ACCESS_KEY = 'YOUR_WEB3FORMS_ACCESS_KEY';
+export const W3F_ACCESS_KEY = '262745d1-43ba-4b6b-bf8a-63f8d2d8d607';
 export const W3F_ENDPOINT = 'https://api.web3forms.com/submit';
 
 export type RoleId = 'ma' | 'ai' | 'tcm';
