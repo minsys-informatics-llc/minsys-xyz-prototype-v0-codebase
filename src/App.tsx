@@ -3,15 +3,287 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-import React, { useEffect, useState, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { initAnalytics, trackEvent } from './analytics';
 import { capabilities } from './data/capabilities';
+import {
+  PartnerApplication,
+  PartnerType,
+  buildPartnerPayload,
+  countWords,
+  W3F_ENDPOINT,
+} from './data/talent';
 
 import { Hero } from './Hero';
+
+// ─── Partner Contact Modal ────────────────────────────────────────────────────
+
+const PARTNER_COPY: Record<
+  PartnerType,
+  { title: string; description: string; messagePlaceholder: string }
+> = {
+  capital: {
+    title: 'Partner with Minsys — Capital',
+    description:
+      "We're securing commercial lending for our next Main Street acquisition. Tell us about your mandate.",
+    messagePlaceholder:
+      'e.g. We manage a SME lending portfolio and are exploring co-investment in AI-led acquisitions. Happy to jump on a call.',
+  },
+  origination: {
+    title: 'Partner with Minsys — Deal Origination',
+    description:
+      "You've identified a Main Street business ripe for transformation. Share the opportunity and we'll be in touch.",
+    messagePlaceholder:
+      "e.g. I'm aware of a profitable HVAC business with $2M EBITDA in the Southwest. The owner is open to a structured exit and transition.",
+  },
+};
+
+const EMPTY_PARTNER_FORM: PartnerApplication = {
+  name: '',
+  email: '',
+  company: '',
+  message: '',
+};
+
+type SubmissionState = 'idle' | 'sending' | 'success' | 'error';
+
+interface PartnerModalProps {
+  type: PartnerType;
+  onClose: () => void;
+}
+
+function PartnerModal({ type, onClose }: PartnerModalProps) {
+  const copy = PARTNER_COPY[type];
+  const form_id = type === 'capital' ? 'partner_capital' : 'partner_origination';
+
+  const [form, setForm] = useState<PartnerApplication>(EMPTY_PARTNER_FORM);
+  const [state, setState] = useState<SubmissionState>('idle');
+  const [error, setError] = useState('');
+  const formStartFired = useRef(false);
+
+  const messageWords = countWords(form.message);
+
+  // Close on Escape
+  useEffect(() => {
+    const onKey = (e: KeyboardEvent) => { if (e.key === 'Escape') onClose(); };
+    window.addEventListener('keydown', onKey);
+    return () => window.removeEventListener('keydown', onKey);
+  }, [onClose]);
+
+  const handleFieldChange = (
+    field: keyof PartnerApplication,
+    value: string,
+  ) => {
+    if (!formStartFired.current) {
+      trackEvent('form_start', { form_id });
+      formStartFired.current = true;
+    }
+    setForm((prev) => ({ ...prev, [field]: value }));
+  };
+
+  const handleRetry = () => {
+    setState('idle');
+    setError('');
+    formStartFired.current = false;
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setState('sending');
+    setError('');
+    try {
+      const payload = buildPartnerPayload(type, form);
+      const res = await fetch(W3F_ENDPOINT, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+        body: JSON.stringify(payload),
+      });
+      const data = await res.json();
+      if (!data.success) throw new Error(data.message || 'Submission rejected.');
+      setState('success');
+      trackEvent('form_submit', { form_id });
+      trackEvent('generate_prospect', { form_id });
+    } catch (err) {
+      const message = err instanceof Error ? err.message : 'Unknown error';
+      setError(message);
+      setState('error');
+      trackEvent('form_error', { form_id, error_type: message });
+    }
+  };
+
+  return (
+    /* Overlay */
+    <div
+      className="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 flex items-center justify-center p-4"
+      onClick={onClose}
+    >
+      {/* Panel — stop propagation so clicking inside doesn't close */}
+      <div
+        className="bg-white rounded-3xl max-w-lg w-full p-10 relative shadow-2xl"
+        onClick={(e) => e.stopPropagation()}
+      >
+        {/* Close button */}
+        <button
+          aria-label="Close"
+          onClick={onClose}
+          className="absolute top-5 right-5 w-8 h-8 flex items-center justify-center rounded-full text-gray-400 hover:text-darkGraphite hover:bg-gray-100 transition-all cursor-pointer"
+        >
+          <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+
+        {/* Success state */}
+        {state === 'success' ? (
+          <div className="flex flex-col items-center text-center py-8 gap-6">
+            <div className="w-16 h-16 bg-solarAmber/10 rounded-full flex items-center justify-center">
+              <svg className="w-8 h-8 text-solarAmber" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
+              </svg>
+            </div>
+            <div>
+              <h3 className="text-2xl font-bold text-darkGraphite mb-2">Message received.</h3>
+              <p className="text-gray-500 text-sm leading-relaxed">
+                Thank you for reaching out. We'll review your message and get back to you at <span className="font-medium text-darkGraphite">{form.email}</span> shortly.
+              </p>
+            </div>
+            <button
+              onClick={onClose}
+              className="mt-2 bg-solarAmber text-darkGraphite px-8 py-3 rounded-xl font-bold hover:brightness-110 transition-all cursor-pointer"
+            >
+              Close
+            </button>
+          </div>
+        ) : (
+          <>
+            {/* Header */}
+            <div className="mb-8">
+              <p className="text-[10px] font-bold text-solarAmber tracking-widest uppercase mb-3">Get in Touch</p>
+              <h3 className="text-2xl font-bold text-darkGraphite mb-2">{copy.title}</h3>
+              <p className="text-sm text-gray-500 leading-relaxed">{copy.description}</p>
+            </div>
+
+            <form onSubmit={handleSubmit} noValidate className="space-y-6">
+              {/* Full Name */}
+              <div>
+                <label className="block text-[10px] font-bold text-solarAmber tracking-widest uppercase mb-1">
+                  Full Name <span className="text-gray-400 normal-case font-normal tracking-normal">*</span>
+                </label>
+                <input
+                  type="text"
+                  required
+                  placeholder="Jane Smith"
+                  value={form.name}
+                  onChange={(e) => handleFieldChange('name', e.target.value)}
+                  disabled={state === 'sending'}
+                  className="w-full border-b border-gray-200 py-3 text-sm focus:border-solarAmber outline-none bg-transparent transition-colors disabled:opacity-50"
+                />
+              </div>
+
+              {/* Email */}
+              <div>
+                <label className="block text-[10px] font-bold text-solarAmber tracking-widest uppercase mb-1">
+                  Email Address <span className="text-gray-400 normal-case font-normal tracking-normal">*</span>
+                </label>
+                <input
+                  type="email"
+                  required
+                  placeholder="jane@firm.com"
+                  value={form.email}
+                  onChange={(e) => handleFieldChange('email', e.target.value)}
+                  disabled={state === 'sending'}
+                  className="w-full border-b border-gray-200 py-3 text-sm focus:border-solarAmber outline-none bg-transparent transition-colors disabled:opacity-50"
+                />
+              </div>
+
+              {/* Company */}
+              <div>
+                <label className="block text-[10px] font-bold text-solarAmber tracking-widest uppercase mb-1">
+                  Company / Organization <span className="text-gray-400 normal-case font-normal tracking-normal">*</span>
+                </label>
+                <input
+                  type="text"
+                  required
+                  placeholder="Smith Capital Partners"
+                  value={form.company}
+                  onChange={(e) => handleFieldChange('company', e.target.value)}
+                  disabled={state === 'sending'}
+                  className="w-full border-b border-gray-200 py-3 text-sm focus:border-solarAmber outline-none bg-transparent transition-colors disabled:opacity-50"
+                />
+              </div>
+
+              {/* Message */}
+              <div>
+                <div className="flex items-center justify-between mb-1">
+                  <label className="block text-[10px] font-bold text-solarAmber tracking-widest uppercase">
+                    Brief Message <span className="text-gray-400 normal-case font-normal tracking-normal">(optional)</span>
+                  </label>
+                  <span className={`text-[10px] font-medium tabular-nums ${messageWords >= 180 ? 'text-solarAmber' : 'text-gray-400'}`}>
+                    {messageWords} / 200 words
+                  </span>
+                </div>
+                <textarea
+                  rows={4}
+                  placeholder={copy.messagePlaceholder}
+                  value={form.message}
+                  onChange={(e) => handleFieldChange('message', e.target.value)}
+                  disabled={state === 'sending'}
+                  className="w-full border border-gray-200 rounded-xl p-4 text-sm bg-[#fafafa] focus:bg-white focus:border-solarAmber outline-none resize-none transition-colors disabled:opacity-50"
+                  style={{ minHeight: 110 }}
+                />
+              </div>
+
+              {/* Error banner */}
+              {state === 'error' && (
+                <div className="bg-red-50 border border-red-200 rounded-xl p-4 text-sm text-red-700">
+                  <p className="font-medium mb-1">Something went wrong.</p>
+                  <p className="text-red-600/80 mb-3">{error}</p>
+                  <p className="text-red-600/80">
+                    You can also reach us at{' '}
+                    <a href="mailto:partners@minsys.xyz" className="underline font-medium">partners@minsys.xyz</a>
+                  </p>
+                  <button
+                    type="button"
+                    onClick={handleRetry}
+                    className="mt-3 text-xs font-bold text-red-700 underline cursor-pointer"
+                  >
+                    Try again
+                  </button>
+                </div>
+              )}
+
+              {/* Submit */}
+              <button
+                type="submit"
+                disabled={state === 'sending'}
+                className="w-full bg-solarAmber text-darkGraphite py-4 rounded-xl font-bold hover:brightness-110 transition-all cursor-pointer disabled:opacity-60 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+              >
+                {state === 'sending' ? (
+                  <>
+                    <svg className="w-4 h-4 animate-spin" fill="none" viewBox="0 0 24 24">
+                      <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
+                      <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v8H4z" />
+                    </svg>
+                    Sending…
+                  </>
+                ) : (
+                  'Send Message'
+                )}
+              </button>
+            </form>
+          </>
+        )}
+      </div>
+    </div>
+  );
+}
+
+// ─── Main App ─────────────────────────────────────────────────────────────────
 
 export default function App() {
   const [activeTab, setActiveTab] = useState<number>(1);
   const [activeOrgTab, setActiveOrgTab] = useState<number>(1);
+  const [partnerModal, setPartnerModal] = useState<PartnerType | null>(null);
   const carouselRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -23,13 +295,10 @@ export default function App() {
     carouselRef.current?.scrollBy({ left: direction * 400, behavior: 'smooth' });
   };
 
-  const handleContactClick = (e: React.MouseEvent, cta_id: string) => {
-    e.preventDefault();
-    trackEvent('cta_click', { cta_id, cta_text: cta_id === 'contact_deal_desk' ? 'Contact Deal Desk' : 'Partner with Us', destination: 'mailto' });
+  const openPartnerModal = (type: PartnerType, cta_id: string, cta_text: string) => {
+    trackEvent('cta_click', { cta_id, cta_text, destination: 'modal' });
     trackEvent('generate_lead', { lead_source: cta_id });
-    const user = 'contact';
-    const domain = 'minsys.xyz';
-    window.location.href = `mailto:${user}@${domain}`;
+    setPartnerModal(type);
   };
 
   return (
@@ -295,6 +564,7 @@ export default function App() {
               Explore Asymmetric Returns in the <span className="text-solarAmber italic">Digital &amp; AI Economy</span>
             </h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 text-left">
+              {/* Card 1: Capital Partners */}
               <div className="bg-white/5 backdrop-blur-md p-12 rounded-3xl border border-solarAmber/20 flex flex-col items-center text-center">
                 <div className="w-12 h-12 bg-solarAmber/10 rounded-xl flex items-center justify-center mb-8">
                   <svg aria-hidden="true" className="w-6 h-6 text-solarAmber" fill="currentColor" viewBox="0 0 24 24"><path d="M13.13 22.19l-1.63-3.83c1.57-.64 3.05-1.56 4.37-2.71l2.83 2.83c-1.74 1.74-3.76 3.12-5.57 3.71M7.5 18.47l2.83-2.83c1.32 1.15 2.8 2.07 4.37 2.71l-1.63 3.83c-1.81-.59-3.83-1.97-5.57-3.71M2.19 13.13l3.83-1.63c.64 1.57 1.56 3.05 2.71 4.37l-2.83 2.83c-1.74-1.74-3.12-3.76-3.71-5.57M18.47 7.5l2.83-2.83c1.15 1.32 2.07 2.8 2.71 4.37l-3.83 1.63c-.64-1.57-1.56-3.05-2.71-4.37M12 8c-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4-1.79-4-4-4z"></path></svg>
@@ -302,25 +572,29 @@ export default function App() {
                 <h3 className="text-2xl font-bold mb-4">Capital Partners</h3>
                 <p className="text-white/60 mb-8 leading-relaxed">Connect with our M&amp;A Deal Desk regarding commercial lending for our next cash-flowing acquisition.</p>
                 <button
-                  onClick={(e) => handleContactClick(e, 'contact_deal_desk')}
+                  onClick={() => openPartnerModal('capital', 'contact_deal_desk', 'Contact Deal Desk')}
                   className="w-full bg-solarAmber text-darkGraphite py-4 rounded-xl font-bold hover:brightness-110 transition-all cursor-pointer"
                 >
                   Contact Deal Desk
                 </button>
               </div>
+
+              {/* Card 2: M&A Origination Partners */}
               <div className="bg-white/5 backdrop-blur-md p-12 rounded-3xl flex flex-col items-center text-center border border-white/5">
                 <div className="w-12 h-12 bg-solarAmber/10 rounded-xl flex items-center justify-center mb-8">
                   <svg aria-hidden="true" className="w-6 h-6 text-solarAmber" fill="currentColor" viewBox="0 0 24 24"><path d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
                 </div>
                 <h3 className="text-2xl font-bold mb-4">M&amp;A Origination Partners</h3>
-                <p className="text-white/60 mb-8 leading-relaxed">You identified a Main Street opportunity ripe for Digital & AI transformation and margin expansion ? Let's get in touch.</p>
+                <p className="text-white/60 mb-8 leading-relaxed">You identified a Main Street opportunity ripe for Digital &amp; AI transformation and margin expansion? Let's get in touch.</p>
                 <button
-                  onClick={(e) => handleContactClick(e, 'partner_body')}
+                  onClick={() => openPartnerModal('origination', 'partner_body', 'Partner with Us')}
                   className="w-full border border-white/20 text-white py-4 rounded-xl font-bold hover:bg-white/5 transition-all cursor-pointer"
                 >
                   Partner with Us
                 </button>
               </div>
+
+              {/* Card 3: Join Minsys (Talent) */}
               <div className="bg-white/5 backdrop-blur-md p-12 rounded-3xl flex flex-col items-center text-center border border-white/5">
                 <div className="w-12 h-12 bg-solarAmber/10 rounded-xl flex items-center justify-center mb-8">
                   <svg aria-hidden="true" className="w-6 h-6 text-solarAmber" fill="currentColor" viewBox="0 0 24 24"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"></path></svg>
@@ -360,6 +634,14 @@ export default function App() {
           </div>
         </div>
       </footer>
+
+      {/* Partner Contact Modal */}
+      {partnerModal && (
+        <PartnerModal
+          type={partnerModal}
+          onClose={() => setPartnerModal(null)}
+        />
+      )}
     </div>
   );
 }
