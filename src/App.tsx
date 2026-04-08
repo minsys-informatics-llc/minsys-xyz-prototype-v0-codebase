@@ -563,7 +563,7 @@ export default function App() {
             <h2 className="display-serif text-4xl md:text-6xl mb-16 leading-tight">
               Explore Asymmetric Returns in the <span className="text-solarAmber italic">Digital &amp; AI Economy</span>
             </h2>
-            <div className="grid md:grid-cols-2 gap-8 text-left max-w-3xl mx-auto">
+            <div className="grid md:grid-cols-2 gap-8 text-left">
               {/* Card 1: Capital Partners */}
               <div className="bg-white/5 backdrop-blur-md p-12 rounded-3xl border border-solarAmber/20 flex flex-col items-center text-center">
                 <div className="w-12 h-12 bg-solarAmber/10 rounded-xl flex items-center justify-center mb-8">
