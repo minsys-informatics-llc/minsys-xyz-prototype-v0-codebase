@@ -363,7 +363,7 @@ export default function App() {
         <section id="model" className="max-w-7xl mx-auto px-4 py-24">
           <div className="grid lg:grid-cols-12 gap-12">
             <div className="lg:col-span-4">
-              <p className="text-[10px] font-bold text-solarAmber tracking-widest uppercase mb-4">How We Operate</p>
+              <p className="text-[10px] font-bold text-solarAmber tracking-widest uppercase mb-4">Minsys Model</p>
               <h2 className="display-serif text-3xl mb-12">Venture Building Micro-PE <span className="underline">Model</span></h2>
               <nav className="space-y-6">
                 {[
@@ -429,10 +429,10 @@ export default function App() {
                   <svg className="w-6 h-6 text-solarAmber" fill="currentColor" viewBox="0 0 24 24"><path d="M12 3L2 12h3v8h14v-8h3L12 3zm0 4.84L16.16 11H7.84L12 7.84zM7 18v-5h10v5H7z"></path></svg>
                 </div>
                 <div>
-                  <p className="text-[10px] font-bold text-solarAmber tracking-widest uppercase mb-2">Operational Engine</p>
+                  <p className="text-[10px] font-bold text-solarAmber tracking-widest uppercase mb-2">Operating Model</p>
                   <h2 className="font-bold text-xl mb-3">Minsys Group Organization</h2>
                   <p className="text-gray-600 leading-relaxed text-sm">
-                    Our model is derisked by a highly specialized <span className="text-solarAmber font-medium">four-pillar organization</span>. Minsys handles the entire lifecycle in-house—from securing commercial lending based on solid M&amp;A theses, to deploying subsidized, rapid Digital & AI innovation into legacy operations without disrupting their cash-flowing core.
+                    Our operating model is derisked by a highly specialized <span className="text-solarAmber font-medium">four-pillar organization</span>. Minsys handles the entire lifecycle in-house—from securing commercial lending based on solid M&amp;A theses, to deploying subsidized, rapid Digital & AI innovation into legacy operations without disrupting their cash-flowing core.
                   </p>
                 </div>
               </div>
@@ -440,7 +440,7 @@ export default function App() {
 
             <div className="grid lg:grid-cols-12 gap-12">
               <div className="lg:col-span-4">
-                <p className="text-[10px] font-bold text-solarAmber tracking-widest uppercase mb-4">Minsys Core Structure</p>
+                <p className="text-[10px] font-bold text-solarAmber tracking-widest uppercase mb-4">Minsys Organization</p>
                 <h3 className="display-serif text-4xl mb-12">The Four Pillars <span className="underline">Organization</span></h3>
                 <nav className="space-y-6">
                   {[
@@ -503,8 +503,8 @@ export default function App() {
         <section id="capabilities" className="max-w-7xl mx-auto px-4 py-24">
           <div className="mb-12 flex flex-col md:flex-row md:items-end justify-between gap-8">
             <div className="flex-1">
-              <p className="text-[10px] font-bold text-solarAmber tracking-widest uppercase mb-4">Capabilities</p>
-              <h3 className="display-serif text-4xl md:text-5xl mb-4">Off-the-Shelf Digital &amp; AI <span className="underline">Capabilities.</span></h3>
+              <p className="text-[10px] font-bold text-solarAmber tracking-widest uppercase mb-4">Minsys Capabilities</p>
+              <h3 className="display-serif text-3xl md:text-4xl mb-4">Off-the-Shelf Digital &amp; AI <span className="underline">Capabilities.</span></h3>
               <p className="text-gray-600 leading-relaxed text-lg">
                 We deploy our proprietary, battle-tested AI and Digital capabilities directly into Main Street businesses, ensuring rapid margin expansion and immediate market dominance.
               </p>
@@ -543,9 +543,9 @@ export default function App() {
                     height={500}
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-darkGraphite/90 via-darkGraphite/30 to-transparent p-10 flex flex-col justify-end">
-                    <div className="relative z-10">
+                    <div className="relative z-10 backdrop-blur-md bg-darkGraphite/40 rounded-2xl p-6 w-[calc(100%+5rem)] -mx-10">
                       <p className="text-[10px] text-solarAmber font-bold tracking-[0.2em] mb-4 uppercase">{cap.category}</p>
-                      <div className="text-white/60 text-[10px] mb-4 leading-relaxed max-w-sm uppercase font-bold tracking-widest">
+                      <div className="text-white/60 text-xs mb-4 leading-relaxed max-w-sm font-bold">
                         {cap.description}
                       </div>
                       <h3 className="display-serif text-3xl text-white">{cap.title}</h3>
