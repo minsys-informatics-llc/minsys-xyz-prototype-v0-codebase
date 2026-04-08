@@ -364,7 +364,7 @@ export default function App() {
           <div className="grid lg:grid-cols-12 gap-12">
             <div className="lg:col-span-4">
               <p className="text-[10px] font-bold text-solarAmber tracking-widest uppercase mb-4">How We Operate</p>
-              <h2 className="display-serif text-3xl mb-12">Venture Building Micro-PE Model</h2>
+              <h2 className="display-serif text-3xl mb-12">Venture Building Micro-PE <span className="underline">Model</span></h2>
               <nav className="space-y-6">
                 {[
                   { id: 1, label: '1. Platform Acquisition', tab_id: 'platform_acquisition' },
@@ -441,7 +441,7 @@ export default function App() {
             <div className="grid lg:grid-cols-12 gap-12">
               <div className="lg:col-span-4">
                 <p className="text-[10px] font-bold text-solarAmber tracking-widest uppercase mb-4">Minsys Core Structure</p>
-                <h3 className="display-serif text-4xl mb-12">The Four Pillars</h3>
+                <h3 className="display-serif text-4xl mb-12">The Four Pillars <span className="underline">Organization</span></h3>
                 <nav className="space-y-6">
                   {[
                     { id: 1, label: 'M&A Deal Desk', tab_id: 'ma_deal_desk' },
@@ -502,9 +502,9 @@ export default function App() {
         {/* Capabilities Section */}
         <section id="capabilities" className="max-w-7xl mx-auto px-4 py-24">
           <div className="mb-12 flex flex-col md:flex-row md:items-end justify-between gap-8">
-            <div className="max-w-2xl">
+            <div className="flex-1">
               <p className="text-[10px] font-bold text-solarAmber tracking-widest uppercase mb-4">Capabilities</p>
-              <h2 className="display-serif text-4xl md:text-5xl mb-4">Off-the-Shelf Digital &amp; AI Capabilities.</h2>
+              <h3 className="display-serif text-4xl md:text-5xl mb-4">Off-the-Shelf Digital &amp; AI <span className="underline">Capabilities.</span></h3>
               <p className="text-gray-600 leading-relaxed text-lg">
                 We deploy our proprietary, battle-tested AI and Digital capabilities directly into Main Street businesses, ensuring rapid margin expansion and immediate market dominance.
               </p>
@@ -561,7 +561,7 @@ export default function App() {
         <section id="getintouch" className="bg-darkGraphite text-white py-32 px-4 text-center">
           <div className="max-w-6xl mx-auto">
             <h2 className="display-serif text-4xl md:text-6xl mb-16 leading-tight">
-              Explore Asymmetric Returns in the <span className="text-solarAmber italic">Digital &amp; AI Economy</span>
+              Explore Asymmetric Returns<br /> in the <span className="text-solarAmber italic">Digital &amp; AI Economy</span>
             </h2>
             <div className="grid md:grid-cols-2 gap-8 text-left">
               {/* Card 1: Capital Partners */}

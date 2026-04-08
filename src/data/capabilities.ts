@@ -20,8 +20,8 @@ export const capabilities = [
     title: "AI Factory",
     category: "Intelligence Orchestration",
     description: "Our AI platform engineered to continuously build, train, deploy, and manage Gen AI and Agentic AI systems at scale. Utilizes MLOps, model gateways (frontier + edge) and optimized inference engines to convert raw legacy data into AI enabled Applications.",
-    imageUrl: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?q=80&w=1000&auto=format&fit=crop",
-    altText: "AI and machine learning neural network visualization representing MLOps and generative AI orchestration"
+    imageUrl: "https://images.unsplash.com/photo-1573164713988-8665fc963095?q=80&w=1000&auto=format&fit=crop",
+    altText: "Large-scale data centre server infrastructure representing AI factory computing lifecycle management"
   },
   {
     id: 4,
