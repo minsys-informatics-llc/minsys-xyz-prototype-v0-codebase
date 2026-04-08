@@ -59,13 +59,13 @@
   <!-- twitter:site — add once @handle is registered, e.g.: <meta name="twitter:site" content="@minsys_xyz" /> -->
   <!-- Note: export /assets/og-image.svg to a 1200x630 PNG saved as /assets/og-image.png for full Twitter/X card support -->
 
-  <!-- Google Analytics 4 (GA4) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-0Y2RRCTB7J"></script>
+  <!-- Google Analytics 4 (GA4) — ID injected from VITE_GA_MEASUREMENT_ID at build time -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=%VITE_GA_MEASUREMENT_ID%"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag() { dataLayer.push(arguments); }
     gtag('js', new Date());
-    gtag('config', 'G-0Y2RRCTB7J');
+    gtag('config', '%VITE_GA_MEASUREMENT_ID%');
   </script>
 
   <!-- Schema.org JSON-LD: Person (Founder) -->
