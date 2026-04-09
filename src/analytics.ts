@@ -10,7 +10,11 @@ declare global {
 
 function currentPage(): string {
   if (typeof window === 'undefined') return 'landing';
-  return window.location.pathname === '/talent' ? 'talent' : 'landing';
+  const p = window.location.pathname;
+  if (p === '/talent') return 'talent';
+  if (p === '/privacy-policy') return 'privacy-policy';
+  if (p === '/terms-of-service') return 'terms-of-service';
+  return 'landing';
 }
 
 export function trackEvent(name: string, params: Record<string, unknown> = {}): void {
