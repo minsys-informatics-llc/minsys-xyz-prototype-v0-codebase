@@ -32,6 +32,10 @@
   ],
   "rewrites": [
     { "source": "/talent", "destination": "/index.html" },
-    { "source": "/talent/", "destination": "/index.html" }
+    { "source": "/talent/", "destination": "/index.html" },
+    { "source": "/privacy-policy", "destination": "/index.html" },
+    { "source": "/privacy-policy/", "destination": "/index.html" },
+    { "source": "/terms-of-service", "destination": "/index.html" },
+    { "source": "/terms-of-service/", "destination": "/index.html" }
   ]
 }

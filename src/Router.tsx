@@ -10,17 +10,21 @@
 import React, { useEffect, useState } from 'react';
 import { trackPageView } from './analytics';
 
-export function getRoute(pathname: string): 'talent' | 'home' {
+export function getRoute(pathname: string): 'talent' | 'home' | 'privacy-policy' | 'terms-of-service' {
   if (pathname === '/talent' || pathname === '/talent/') return 'talent';
+  if (pathname === '/privacy-policy' || pathname === '/privacy-policy/') return 'privacy-policy';
+  if (pathname === '/terms-of-service' || pathname === '/terms-of-service/') return 'terms-of-service';
   return 'home';
 }
 
 interface Props {
   home: React.ReactNode;
   talent: React.ReactNode;
+  privacyPolicy: React.ReactNode;
+  termsOfService: React.ReactNode;
 }
 
-export function Router({ home, talent }: Props) {
+export function Router({ home, talent, privacyPolicy, termsOfService }: Props) {
   const [path, setPath] = useState<string>(
     typeof window !== 'undefined' ? window.location.pathname : '/',
   );
@@ -77,5 +81,6 @@ export function Router({ home, talent }: Props) {
     };
   }, []);
 
-  return <>{getRoute(path) === 'talent' ? talent : home}</>;
+  const routeMap = { home, talent, 'privacy-policy': privacyPolicy, 'terms-of-service': termsOfService };
+  return <>{routeMap[getRoute(path)]}</>;
 }
