@@ -33,7 +33,7 @@ export function LegalLayout({ title, lastUpdated, children }: LegalLayoutProps) 
       <main className="flex-1 max-w-[64ch] mx-auto px-6 py-16 w-full">
         <h1 className="text-4xl font-bold text-white mb-2">{title}</h1>
         <p className="text-white/40 text-sm mb-12">
-          Minsys Holdings, LLC &nbsp;|&nbsp; Last updated: {lastUpdated}
+          Minsys Informatics LLC &nbsp;|&nbsp; Last updated: {lastUpdated}
         </p>
         {children}
       </main>

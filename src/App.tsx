@@ -611,7 +611,7 @@ export default function App() {
           <div className="text-center text-sm md:text-base leading-relaxed text-white/80 flex-1">
             Minsys | Venture Building Micro-PE Group<br />
             Augmentation over Automation<br />
-            © 2026 <span className="italic">Minsys Holdings, LLC.</span> All rights reserved.
+            © 2026 <span className="italic">Minsys Holdings LLC.</span> All rights reserved. Website operated by Minsys Informatics LLC.
           </div>
           <div className="flex gap-6 text-[10px] font-bold tracking-[0.2em] uppercase flex-1 justify-end">
             <a className="hover:text-white transition-colors" href="/privacy-policy" onClick={() => trackEvent('nav_click', { link_text: 'Privacy Policy', link_url: '/privacy-policy', link_location: 'footer' })}>Privacy Policy</a>

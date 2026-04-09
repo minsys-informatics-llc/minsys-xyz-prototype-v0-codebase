@@ -23,7 +23,7 @@ export function TermsOfServicePage() {
       </p>
 
       <p className="text-white/75 mb-4 leading-relaxed">
-        <strong>Parent Entity:</strong> Minsys Holdings LLC, a New Mexico limited liability company (the "Parent"), is the sole or majority owner of the Operator.
+        <strong>Parent Entity:</strong> Minsys Holdings LLC (the "Parent"), is the sole owner of the Operator.
       </p>
 
       <p className="text-white/75 mb-4 leading-relaxed">

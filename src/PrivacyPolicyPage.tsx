@@ -9,7 +9,7 @@ export function PrivacyPolicyPage() {
   return (
     <LegalLayout title="Privacy Policy" lastUpdated="April 9, 2026">
       <p className="text-white/75 mb-4 leading-relaxed">
-        Minsys Holdings, LLC, together with its operating pillars — The Nexus, The Venture Studio, The MVP Factory, and M&A Deal Desk (collectively, "we", "us", or "our") — operates the website at <a href="https://minsys.xyz" className="text-solarAmber hover:underline">https://minsys.xyz</a>. This Privacy Policy explains how we collect, use, disclose, and protect information when you visit our website.
+        Minsys Informatics LLC operates the website at <a href="https://minsys.xyz" className="text-solarAmber hover:underline">https://minsys.xyz</a>. This Privacy Policy explains how we collect, use, disclose, and protect information when you visit our website.
       </p>
 
       <h2 className="text-solarAmber uppercase tracking-widest text-sm font-bold mt-10 mb-3">1. Information We Collect</h2>
@@ -78,7 +78,7 @@ export function PrivacyPolicyPage() {
       <h2 className="text-solarAmber uppercase tracking-widest text-sm font-bold mt-10 mb-3">10. Contact</h2>
       <p className="text-white/75 mb-4 leading-relaxed">If you have questions about this Privacy Policy, please contact us:</p>
       <p className="text-white/75 mb-4 leading-relaxed">
-        <strong>Minsys Holdings, LLC</strong><br />
+        <strong>Minsys Informatics LLC</strong><br />
         Email: <a href="mailto:contact@minsys.xyz" className="text-solarAmber hover:underline">contact@minsys.xyz</a><br />
         Website: <a href="https://minsys.xyz" className="text-solarAmber hover:underline">https://minsys.xyz</a>
       </p>
