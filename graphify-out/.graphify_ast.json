@@ -1,0 +1,938 @@
+{
+  "nodes": [
+    {
+      "id": "vite_config_ts",
+      "label": "vite.config.ts",
+      "file_type": "code",
+      "source_file": "/workspace/minsys-storefront-xyz-codebases/minsys-xyz-prototype-v0-codebase/vite.config.ts",
+      "source_location": "L1"
+    },
+    {
+      "id": "tests_talent_run_ts",
+      "label": "run.ts",
+      "file_type": "code",
+      "source_file": "/workspace/minsys-storefront-xyz-codebases/minsys-xyz-prototype-v0-codebase/tests/talent/run.ts",
+      "source_location": "L1"
+    },
+    {
+      "id": "src_hero_tsx",
+      "label": "Hero.tsx",
+      "file_type": "code",
+      "source_file": "/workspace/minsys-storefront-xyz-codebases/minsys-xyz-prototype-v0-codebase/src/Hero.tsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "hero_hero",
+      "label": "Hero()",
+      "file_type": "code",
+      "source_file": "/workspace/minsys-storefront-xyz-codebases/minsys-xyz-prototype-v0-codebase/src/Hero.tsx",
+      "source_location": "L6"
+    },
+    {
+      "id": "src_app_tsx",
+      "label": "App.tsx",
+      "file_type": "code",
+      "source_file": "/workspace/minsys-storefront-xyz-codebases/minsys-xyz-prototype-v0-codebase/src/App.tsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "app_onkey",
+      "label": "onKey()",
+      "file_type": "code",
+      "source_file": "/workspace/minsys-storefront-xyz-codebases/minsys-xyz-prototype-v0-codebase/src/App.tsx",
+      "source_location": "L68"
+    },
+    {
+      "id": "app_handlefieldchange",
+      "label": "handleFieldChange()",
+      "file_type": "code",
+      "source_file": "/workspace/minsys-storefront-xyz-codebases/minsys-xyz-prototype-v0-codebase/src/App.tsx",
+      "source_location": "L73"
+    },
+    {
+      "id": "app_handleretry",
+      "label": "handleRetry()",
+      "file_type": "code",
+      "source_file": "/workspace/minsys-storefront-xyz-codebases/minsys-xyz-prototype-v0-codebase/src/App.tsx",
+      "source_location": "L84"
+    },
+    {
+      "id": "app_handlesubmit",
+      "label": "handleSubmit()",
+      "file_type": "code",
+      "source_file": "/workspace/minsys-storefront-xyz-codebases/minsys-xyz-prototype-v0-codebase/src/App.tsx",
+      "source_location": "L90"
+    },
+    {
+      "id": "app_scrollcarousel",
+      "label": "scrollCarousel()",
+      "file_type": "code",
+      "source_file": "/workspace/minsys-storefront-xyz-codebases/minsys-xyz-prototype-v0-codebase/src/App.tsx",
+      "source_location": "L293"
+    },
+    {
+      "id": "app_openpartnermodal",
+      "label": "openPartnerModal()",
+      "file_type": "code",
+      "source_file": "/workspace/minsys-storefront-xyz-codebases/minsys-xyz-prototype-v0-codebase/src/App.tsx",
+      "source_location": "L298"
+    },
+    {
+      "id": "src_main_tsx",
+      "label": "main.tsx",
+      "file_type": "code",
+      "source_file": "/workspace/minsys-storefront-xyz-codebases/minsys-xyz-prototype-v0-codebase/src/main.tsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "src_legallayout_tsx",
+      "label": "LegalLayout.tsx",
+      "file_type": "code",
+      "source_file": "/workspace/minsys-storefront-xyz-codebases/minsys-xyz-prototype-v0-codebase/src/LegalLayout.tsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "legallayout_legallayout",
+      "label": "LegalLayout()",
+      "file_type": "code",
+      "source_file": "/workspace/minsys-storefront-xyz-codebases/minsys-xyz-prototype-v0-codebase/src/LegalLayout.tsx",
+      "source_location": "L10"
+    },
+    {
+      "id": "src_privacypolicypage_tsx",
+      "label": "PrivacyPolicyPage.tsx",
+      "file_type": "code",
+      "source_file": "/workspace/minsys-storefront-xyz-codebases/minsys-xyz-prototype-v0-codebase/src/PrivacyPolicyPage.tsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "privacypolicypage_privacypolicypage",
+      "label": "PrivacyPolicyPage()",
+      "file_type": "code",
+      "source_file": "/workspace/minsys-storefront-xyz-codebases/minsys-xyz-prototype-v0-codebase/src/PrivacyPolicyPage.tsx",
+      "source_location": "L4"
+    },
+    {
+      "id": "src_analytics_ts",
+      "label": "analytics.ts",
+      "file_type": "code",
+      "source_file": "/workspace/minsys-storefront-xyz-codebases/minsys-xyz-prototype-v0-codebase/src/analytics.ts",
+      "source_location": "L1"
+    },
+    {
+      "id": "analytics_currentpage",
+      "label": "currentPage()",
+      "file_type": "code",
+      "source_file": "/workspace/minsys-storefront-xyz-codebases/minsys-xyz-prototype-v0-codebase/src/analytics.ts",
+      "source_location": "L11"
+    },
+    {
+      "id": "analytics_trackevent",
+      "label": "trackEvent()",
+      "file_type": "code",
+      "source_file": "/workspace/minsys-storefront-xyz-codebases/minsys-xyz-prototype-v0-codebase/src/analytics.ts",
+      "source_location": "L20"
+    },
+    {
+      "id": "analytics_trackpageview",
+      "label": "trackPageView()",
+      "file_type": "code",
+      "source_file": "/workspace/minsys-storefront-xyz-codebases/minsys-xyz-prototype-v0-codebase/src/analytics.ts",
+      "source_location": "L25"
+    },
+    {
+      "id": "analytics_initanalytics",
+      "label": "initAnalytics()",
+      "file_type": "code",
+      "source_file": "/workspace/minsys-storefront-xyz-codebases/minsys-xyz-prototype-v0-codebase/src/analytics.ts",
+      "source_location": "L34"
+    },
+    {
+      "id": "src_termsofservicepage_tsx",
+      "label": "TermsOfServicePage.tsx",
+      "file_type": "code",
+      "source_file": "/workspace/minsys-storefront-xyz-codebases/minsys-xyz-prototype-v0-codebase/src/TermsOfServicePage.tsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "termsofservicepage_termsofservicepage",
+      "label": "TermsOfServicePage()",
+      "file_type": "code",
+      "source_file": "/workspace/minsys-storefront-xyz-codebases/minsys-xyz-prototype-v0-codebase/src/TermsOfServicePage.tsx",
+      "source_location": "L4"
+    },
+    {
+      "id": "src_router_tsx",
+      "label": "Router.tsx",
+      "file_type": "code",
+      "source_file": "/workspace/minsys-storefront-xyz-codebases/minsys-xyz-prototype-v0-codebase/src/Router.tsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "router_getroute",
+      "label": "getRoute()",
+      "file_type": "code",
+      "source_file": "/workspace/minsys-storefront-xyz-codebases/minsys-xyz-prototype-v0-codebase/src/Router.tsx",
+      "source_location": "L13"
+    },
+    {
+      "id": "router_router",
+      "label": "Router()",
+      "file_type": "code",
+      "source_file": "/workspace/minsys-storefront-xyz-codebases/minsys-xyz-prototype-v0-codebase/src/Router.tsx",
+      "source_location": "L27"
+    },
+    {
+      "id": "src_talentpage_tsx",
+      "label": "TalentPage.tsx",
+      "file_type": "code",
+      "source_file": "/workspace/minsys-storefront-xyz-codebases/minsys-xyz-prototype-v0-codebase/src/TalentPage.tsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "talentpage_injectjobpostingjsonld",
+      "label": "injectJobPostingJsonLd()",
+      "file_type": "code",
+      "source_file": "/workspace/minsys-storefront-xyz-codebases/minsys-xyz-prototype-v0-codebase/src/TalentPage.tsx",
+      "source_location": "L23"
+    },
+    {
+      "id": "talentpage_rolecard",
+      "label": "RoleCard()",
+      "file_type": "code",
+      "source_file": "/workspace/minsys-storefront-xyz-codebases/minsys-xyz-prototype-v0-codebase/src/TalentPage.tsx",
+      "source_location": "L77"
+    },
+    {
+      "id": "talentpage_handleformfocus",
+      "label": "handleFormFocus()",
+      "file_type": "code",
+      "source_file": "/workspace/minsys-storefront-xyz-codebases/minsys-xyz-prototype-v0-codebase/src/TalentPage.tsx",
+      "source_location": "L371"
+    },
+    {
+      "id": "talentpage_submit",
+      "label": "submit()",
+      "file_type": "code",
+      "source_file": "/workspace/minsys-storefront-xyz-codebases/minsys-xyz-prototype-v0-codebase/src/TalentPage.tsx",
+      "source_location": "L377"
+    },
+    {
+      "id": "talentpage_togglerole",
+      "label": "toggleRole()",
+      "file_type": "code",
+      "source_file": "/workspace/minsys-storefront-xyz-codebases/minsys-xyz-prototype-v0-codebase/src/TalentPage.tsx",
+      "source_location": "L592"
+    },
+    {
+      "id": "src_data_talent_ts",
+      "label": "talent.ts",
+      "file_type": "code",
+      "source_file": "/workspace/minsys-storefront-xyz-codebases/minsys-xyz-prototype-v0-codebase/src/data/talent.ts",
+      "source_location": "L1"
+    },
+    {
+      "id": "talent_buildrolepayload",
+      "label": "buildRolePayload()",
+      "file_type": "code",
+      "source_file": "/workspace/minsys-storefront-xyz-codebases/minsys-xyz-prototype-v0-codebase/src/data/talent.ts",
+      "source_location": "L188"
+    },
+    {
+      "id": "talent_buildgeneralpayload",
+      "label": "buildGeneralPayload()",
+      "file_type": "code",
+      "source_file": "/workspace/minsys-storefront-xyz-codebases/minsys-xyz-prototype-v0-codebase/src/data/talent.ts",
+      "source_location": "L203"
+    },
+    {
+      "id": "talent_buildpartnerpayload",
+      "label": "buildPartnerPayload()",
+      "file_type": "code",
+      "source_file": "/workspace/minsys-storefront-xyz-codebases/minsys-xyz-prototype-v0-codebase/src/data/talent.ts",
+      "source_location": "L216"
+    },
+    {
+      "id": "talent_countwords",
+      "label": "countWords()",
+      "file_type": "code",
+      "source_file": "/workspace/minsys-storefront-xyz-codebases/minsys-xyz-prototype-v0-codebase/src/data/talent.ts",
+      "source_location": "L232"
+    },
+    {
+      "id": "talent_clamptowordlimit",
+      "label": "clampToWordLimit()",
+      "file_type": "code",
+      "source_file": "/workspace/minsys-storefront-xyz-codebases/minsys-xyz-prototype-v0-codebase/src/data/talent.ts",
+      "source_location": "L238"
+    },
+    {
+      "id": "src_data_capabilities_ts",
+      "label": "capabilities.ts",
+      "file_type": "code",
+      "source_file": "/workspace/minsys-storefront-xyz-codebases/minsys-xyz-prototype-v0-codebase/src/data/capabilities.ts",
+      "source_location": "L1"
+    }
+  ],
+  "edges": [
+    {
+      "source": "vite_config_ts",
+      "target": "vite",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "/workspace/minsys-storefront-xyz-codebases/minsys-xyz-prototype-v0-codebase/vite.config.ts",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "vite_config_ts",
+      "target": "plugin_react",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "/workspace/minsys-storefront-xyz-codebases/minsys-xyz-prototype-v0-codebase/vite.config.ts",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "vite_config_ts",
+      "target": "path",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "/workspace/minsys-storefront-xyz-codebases/minsys-xyz-prototype-v0-codebase/vite.config.ts",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "vite_config_ts",
+      "target": "vite",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "/workspace/minsys-storefront-xyz-codebases/minsys-xyz-prototype-v0-codebase/vite.config.ts",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_talent_run_ts",
+      "target": "node_test",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "/workspace/minsys-storefront-xyz-codebases/minsys-xyz-prototype-v0-codebase/tests/talent/run.ts",
+      "source_location": "L11",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_talent_run_ts",
+      "target": "strict",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "/workspace/minsys-storefront-xyz-codebases/minsys-xyz-prototype-v0-codebase/tests/talent/run.ts",
+      "source_location": "L12",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_talent_run_ts",
+      "target": "src_data_talent_ts",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "/workspace/minsys-storefront-xyz-codebases/minsys-xyz-prototype-v0-codebase/tests/talent/run.ts",
+      "source_location": "L14",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_talent_run_ts",
+      "target": "src_router_tsx",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "/workspace/minsys-storefront-xyz-codebases/minsys-xyz-prototype-v0-codebase/tests/talent/run.ts",
+      "source_location": "L23",
+      "weight": 1.0
+    },
+    {
+      "source": "src_hero_tsx",
+      "target": "react",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "/workspace/minsys-storefront-xyz-codebases/minsys-xyz-prototype-v0-codebase/src/Hero.tsx",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "src_hero_tsx",
+      "target": "three",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "/workspace/minsys-storefront-xyz-codebases/minsys-xyz-prototype-v0-codebase/src/Hero.tsx",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "src_hero_tsx",
+      "target": "vanta_net_min",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "/workspace/minsys-storefront-xyz-codebases/minsys-xyz-prototype-v0-codebase/src/Hero.tsx",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "src_hero_tsx",
+      "target": "hero_hero",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "/workspace/minsys-storefront-xyz-codebases/minsys-xyz-prototype-v0-codebase/src/Hero.tsx",
+      "source_location": "L6",
+      "weight": 1.0
+    },
+    {
+      "source": "src_app_tsx",
+      "target": "react",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "/workspace/minsys-storefront-xyz-codebases/minsys-xyz-prototype-v0-codebase/src/App.tsx",
+      "source_location": "L6",
+      "weight": 1.0
+    },
+    {
+      "source": "src_app_tsx",
+      "target": "workspace_minsys_storefront_xyz_codebases_minsys_xyz_prototype_v0_codebase_src_analytics",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "/workspace/minsys-storefront-xyz-codebases/minsys-xyz-prototype-v0-codebase/src/App.tsx",
+      "source_location": "L7",
+      "weight": 1.0
+    },
+    {
+      "source": "src_app_tsx",
+      "target": "workspace_minsys_storefront_xyz_codebases_minsys_xyz_prototype_v0_codebase_src_data_capabilities",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "/workspace/minsys-storefront-xyz-codebases/minsys-xyz-prototype-v0-codebase/src/App.tsx",
+      "source_location": "L8",
+      "weight": 1.0
+    },
+    {
+      "source": "src_app_tsx",
+      "target": "workspace_minsys_storefront_xyz_codebases_minsys_xyz_prototype_v0_codebase_src_data_talent",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "/workspace/minsys-storefront-xyz-codebases/minsys-xyz-prototype-v0-codebase/src/App.tsx",
+      "source_location": "L9",
+      "weight": 1.0
+    },
+    {
+      "source": "src_app_tsx",
+      "target": "workspace_minsys_storefront_xyz_codebases_minsys_xyz_prototype_v0_codebase_src_hero",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "/workspace/minsys-storefront-xyz-codebases/minsys-xyz-prototype-v0-codebase/src/App.tsx",
+      "source_location": "L17",
+      "weight": 1.0
+    },
+    {
+      "source": "src_app_tsx",
+      "target": "app_onkey",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "/workspace/minsys-storefront-xyz-codebases/minsys-xyz-prototype-v0-codebase/src/App.tsx",
+      "source_location": "L68",
+      "weight": 1.0
+    },
+    {
+      "source": "src_app_tsx",
+      "target": "app_handlefieldchange",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "/workspace/minsys-storefront-xyz-codebases/minsys-xyz-prototype-v0-codebase/src/App.tsx",
+      "source_location": "L73",
+      "weight": 1.0
+    },
+    {
+      "source": "src_app_tsx",
+      "target": "app_handleretry",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "/workspace/minsys-storefront-xyz-codebases/minsys-xyz-prototype-v0-codebase/src/App.tsx",
+      "source_location": "L84",
+      "weight": 1.0
+    },
+    {
+      "source": "src_app_tsx",
+      "target": "app_handlesubmit",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "/workspace/minsys-storefront-xyz-codebases/minsys-xyz-prototype-v0-codebase/src/App.tsx",
+      "source_location": "L90",
+      "weight": 1.0
+    },
+    {
+      "source": "src_app_tsx",
+      "target": "app_scrollcarousel",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "/workspace/minsys-storefront-xyz-codebases/minsys-xyz-prototype-v0-codebase/src/App.tsx",
+      "source_location": "L293",
+      "weight": 1.0
+    },
+    {
+      "source": "src_app_tsx",
+      "target": "app_openpartnermodal",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "/workspace/minsys-storefront-xyz-codebases/minsys-xyz-prototype-v0-codebase/src/App.tsx",
+      "source_location": "L298",
+      "weight": 1.0
+    },
+    {
+      "source": "src_main_tsx",
+      "target": "react",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "/workspace/minsys-storefront-xyz-codebases/minsys-xyz-prototype-v0-codebase/src/main.tsx",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "src_main_tsx",
+      "target": "client",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "/workspace/minsys-storefront-xyz-codebases/minsys-xyz-prototype-v0-codebase/src/main.tsx",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "src_main_tsx",
+      "target": "src_app_tsx",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "/workspace/minsys-storefront-xyz-codebases/minsys-xyz-prototype-v0-codebase/src/main.tsx",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "src_main_tsx",
+      "target": "src_talentpage_tsx",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "/workspace/minsys-storefront-xyz-codebases/minsys-xyz-prototype-v0-codebase/src/main.tsx",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "src_main_tsx",
+      "target": "src_privacypolicypage_tsx",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "/workspace/minsys-storefront-xyz-codebases/minsys-xyz-prototype-v0-codebase/src/main.tsx",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "src_main_tsx",
+      "target": "src_termsofservicepage_tsx",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "/workspace/minsys-storefront-xyz-codebases/minsys-xyz-prototype-v0-codebase/src/main.tsx",
+      "source_location": "L6",
+      "weight": 1.0
+    },
+    {
+      "source": "src_main_tsx",
+      "target": "src_router_tsx",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "/workspace/minsys-storefront-xyz-codebases/minsys-xyz-prototype-v0-codebase/src/main.tsx",
+      "source_location": "L7",
+      "weight": 1.0
+    },
+    {
+      "source": "src_main_tsx",
+      "target": "workspace_minsys_storefront_xyz_codebases_minsys_xyz_prototype_v0_codebase_src_index_css",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "/workspace/minsys-storefront-xyz-codebases/minsys-xyz-prototype-v0-codebase/src/main.tsx",
+      "source_location": "L8",
+      "weight": 1.0
+    },
+    {
+      "source": "src_legallayout_tsx",
+      "target": "react",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "/workspace/minsys-storefront-xyz-codebases/minsys-xyz-prototype-v0-codebase/src/LegalLayout.tsx",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "src_legallayout_tsx",
+      "target": "workspace_minsys_storefront_xyz_codebases_minsys_xyz_prototype_v0_codebase_src_analytics",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "/workspace/minsys-storefront-xyz-codebases/minsys-xyz-prototype-v0-codebase/src/LegalLayout.tsx",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "src_legallayout_tsx",
+      "target": "legallayout_legallayout",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "/workspace/minsys-storefront-xyz-codebases/minsys-xyz-prototype-v0-codebase/src/LegalLayout.tsx",
+      "source_location": "L10",
+      "weight": 1.0
+    },
+    {
+      "source": "src_privacypolicypage_tsx",
+      "target": "react",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "/workspace/minsys-storefront-xyz-codebases/minsys-xyz-prototype-v0-codebase/src/PrivacyPolicyPage.tsx",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "src_privacypolicypage_tsx",
+      "target": "workspace_minsys_storefront_xyz_codebases_minsys_xyz_prototype_v0_codebase_src_legallayout",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "/workspace/minsys-storefront-xyz-codebases/minsys-xyz-prototype-v0-codebase/src/PrivacyPolicyPage.tsx",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "src_privacypolicypage_tsx",
+      "target": "privacypolicypage_privacypolicypage",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "/workspace/minsys-storefront-xyz-codebases/minsys-xyz-prototype-v0-codebase/src/PrivacyPolicyPage.tsx",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "src_analytics_ts",
+      "target": "analytics_currentpage",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "/workspace/minsys-storefront-xyz-codebases/minsys-xyz-prototype-v0-codebase/src/analytics.ts",
+      "source_location": "L11",
+      "weight": 1.0
+    },
+    {
+      "source": "src_analytics_ts",
+      "target": "analytics_trackevent",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "/workspace/minsys-storefront-xyz-codebases/minsys-xyz-prototype-v0-codebase/src/analytics.ts",
+      "source_location": "L20",
+      "weight": 1.0
+    },
+    {
+      "source": "src_analytics_ts",
+      "target": "analytics_trackpageview",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "/workspace/minsys-storefront-xyz-codebases/minsys-xyz-prototype-v0-codebase/src/analytics.ts",
+      "source_location": "L25",
+      "weight": 1.0
+    },
+    {
+      "source": "src_analytics_ts",
+      "target": "analytics_initanalytics",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "/workspace/minsys-storefront-xyz-codebases/minsys-xyz-prototype-v0-codebase/src/analytics.ts",
+      "source_location": "L34",
+      "weight": 1.0
+    },
+    {
+      "source": "analytics_trackevent",
+      "target": "analytics_currentpage",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "/workspace/minsys-storefront-xyz-codebases/minsys-xyz-prototype-v0-codebase/src/analytics.ts",
+      "source_location": "L22",
+      "weight": 1.0
+    },
+    {
+      "source": "src_termsofservicepage_tsx",
+      "target": "react",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "/workspace/minsys-storefront-xyz-codebases/minsys-xyz-prototype-v0-codebase/src/TermsOfServicePage.tsx",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "src_termsofservicepage_tsx",
+      "target": "workspace_minsys_storefront_xyz_codebases_minsys_xyz_prototype_v0_codebase_src_legallayout",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "/workspace/minsys-storefront-xyz-codebases/minsys-xyz-prototype-v0-codebase/src/TermsOfServicePage.tsx",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "src_termsofservicepage_tsx",
+      "target": "termsofservicepage_termsofservicepage",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "/workspace/minsys-storefront-xyz-codebases/minsys-xyz-prototype-v0-codebase/src/TermsOfServicePage.tsx",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "src_router_tsx",
+      "target": "react",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "/workspace/minsys-storefront-xyz-codebases/minsys-xyz-prototype-v0-codebase/src/Router.tsx",
+      "source_location": "L10",
+      "weight": 1.0
+    },
+    {
+      "source": "src_router_tsx",
+      "target": "workspace_minsys_storefront_xyz_codebases_minsys_xyz_prototype_v0_codebase_src_analytics",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "/workspace/minsys-storefront-xyz-codebases/minsys-xyz-prototype-v0-codebase/src/Router.tsx",
+      "source_location": "L11",
+      "weight": 1.0
+    },
+    {
+      "source": "src_router_tsx",
+      "target": "router_getroute",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "/workspace/minsys-storefront-xyz-codebases/minsys-xyz-prototype-v0-codebase/src/Router.tsx",
+      "source_location": "L13",
+      "weight": 1.0
+    },
+    {
+      "source": "src_router_tsx",
+      "target": "router_router",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "/workspace/minsys-storefront-xyz-codebases/minsys-xyz-prototype-v0-codebase/src/Router.tsx",
+      "source_location": "L27",
+      "weight": 1.0
+    },
+    {
+      "source": "router_router",
+      "target": "router_getroute",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "/workspace/minsys-storefront-xyz-codebases/minsys-xyz-prototype-v0-codebase/src/Router.tsx",
+      "source_location": "L85",
+      "weight": 1.0
+    },
+    {
+      "source": "src_talentpage_tsx",
+      "target": "react",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "/workspace/minsys-storefront-xyz-codebases/minsys-xyz-prototype-v0-codebase/src/TalentPage.tsx",
+      "source_location": "L6",
+      "weight": 1.0
+    },
+    {
+      "source": "src_talentpage_tsx",
+      "target": "workspace_minsys_storefront_xyz_codebases_minsys_xyz_prototype_v0_codebase_src_analytics",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "/workspace/minsys-storefront-xyz-codebases/minsys-xyz-prototype-v0-codebase/src/TalentPage.tsx",
+      "source_location": "L7",
+      "weight": 1.0
+    },
+    {
+      "source": "src_talentpage_tsx",
+      "target": "workspace_minsys_storefront_xyz_codebases_minsys_xyz_prototype_v0_codebase_src_data_talent",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "/workspace/minsys-storefront-xyz-codebases/minsys-xyz-prototype-v0-codebase/src/TalentPage.tsx",
+      "source_location": "L8",
+      "weight": 1.0
+    },
+    {
+      "source": "src_talentpage_tsx",
+      "target": "talentpage_injectjobpostingjsonld",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "/workspace/minsys-storefront-xyz-codebases/minsys-xyz-prototype-v0-codebase/src/TalentPage.tsx",
+      "source_location": "L23",
+      "weight": 1.0
+    },
+    {
+      "source": "src_talentpage_tsx",
+      "target": "talentpage_rolecard",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "/workspace/minsys-storefront-xyz-codebases/minsys-xyz-prototype-v0-codebase/src/TalentPage.tsx",
+      "source_location": "L77",
+      "weight": 1.0
+    },
+    {
+      "source": "src_talentpage_tsx",
+      "target": "talentpage_handleformfocus",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "/workspace/minsys-storefront-xyz-codebases/minsys-xyz-prototype-v0-codebase/src/TalentPage.tsx",
+      "source_location": "L371",
+      "weight": 1.0
+    },
+    {
+      "source": "src_talentpage_tsx",
+      "target": "talentpage_submit",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "/workspace/minsys-storefront-xyz-codebases/minsys-xyz-prototype-v0-codebase/src/TalentPage.tsx",
+      "source_location": "L377",
+      "weight": 1.0
+    },
+    {
+      "source": "src_talentpage_tsx",
+      "target": "talentpage_togglerole",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "/workspace/minsys-storefront-xyz-codebases/minsys-xyz-prototype-v0-codebase/src/TalentPage.tsx",
+      "source_location": "L592",
+      "weight": 1.0
+    },
+    {
+      "source": "src_data_talent_ts",
+      "target": "talent_buildrolepayload",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "/workspace/minsys-storefront-xyz-codebases/minsys-xyz-prototype-v0-codebase/src/data/talent.ts",
+      "source_location": "L188",
+      "weight": 1.0
+    },
+    {
+      "source": "src_data_talent_ts",
+      "target": "talent_buildgeneralpayload",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "/workspace/minsys-storefront-xyz-codebases/minsys-xyz-prototype-v0-codebase/src/data/talent.ts",
+      "source_location": "L203",
+      "weight": 1.0
+    },
+    {
+      "source": "src_data_talent_ts",
+      "target": "talent_buildpartnerpayload",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "/workspace/minsys-storefront-xyz-codebases/minsys-xyz-prototype-v0-codebase/src/data/talent.ts",
+      "source_location": "L216",
+      "weight": 1.0
+    },
+    {
+      "source": "src_data_talent_ts",
+      "target": "talent_countwords",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "/workspace/minsys-storefront-xyz-codebases/minsys-xyz-prototype-v0-codebase/src/data/talent.ts",
+      "source_location": "L232",
+      "weight": 1.0
+    },
+    {
+      "source": "src_data_talent_ts",
+      "target": "talent_clamptowordlimit",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "/workspace/minsys-storefront-xyz-codebases/minsys-xyz-prototype-v0-codebase/src/data/talent.ts",
+      "source_location": "L238",
+      "weight": 1.0
+    },
+    {
+      "source": "app_handlefieldchange",
+      "target": "analytics_trackevent",
+      "relation": "calls",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "/workspace/minsys-storefront-xyz-codebases/minsys-xyz-prototype-v0-codebase/src/App.tsx",
+      "source_location": "L78",
+      "weight": 1.0
+    },
+    {
+      "source": "app_handlesubmit",
+      "target": "talent_buildpartnerpayload",
+      "relation": "calls",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "/workspace/minsys-storefront-xyz-codebases/minsys-xyz-prototype-v0-codebase/src/App.tsx",
+      "source_location": "L95",
+      "weight": 1.0
+    },
+    {
+      "source": "app_handlesubmit",
+      "target": "analytics_trackevent",
+      "relation": "calls",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "/workspace/minsys-storefront-xyz-codebases/minsys-xyz-prototype-v0-codebase/src/App.tsx",
+      "source_location": "L104",
+      "weight": 1.0
+    },
+    {
+      "source": "app_scrollcarousel",
+      "target": "analytics_trackevent",
+      "relation": "calls",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "/workspace/minsys-storefront-xyz-codebases/minsys-xyz-prototype-v0-codebase/src/App.tsx",
+      "source_location": "L294",
+      "weight": 1.0
+    },
+    {
+      "source": "app_openpartnermodal",
+      "target": "analytics_trackevent",
+      "relation": "calls",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "/workspace/minsys-storefront-xyz-codebases/minsys-xyz-prototype-v0-codebase/src/App.tsx",
+      "source_location": "L299",
+      "weight": 1.0
+    },
+    {
+      "source": "talentpage_rolecard",
+      "target": "talent_countwords",
+      "relation": "calls",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "/workspace/minsys-storefront-xyz-codebases/minsys-xyz-prototype-v0-codebase/src/TalentPage.tsx",
+      "source_location": "L96",
+      "weight": 1.0
+    },
+    {
+      "source": "talentpage_handleformfocus",
+      "target": "analytics_trackevent",
+      "relation": "calls",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "/workspace/minsys-storefront-xyz-codebases/minsys-xyz-prototype-v0-codebase/src/TalentPage.tsx",
+      "source_location": "L374",
+      "weight": 1.0
+    },
+    {
+      "source": "talentpage_submit",
+      "target": "talent_buildgeneralpayload",
+      "relation": "calls",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "/workspace/minsys-storefront-xyz-codebases/minsys-xyz-prototype-v0-codebase/src/TalentPage.tsx",
+      "source_location": "L382",
+      "weight": 1.0
+    },
+    {
+      "source": "talentpage_submit",
+      "target": "analytics_trackevent",
+      "relation": "calls",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "/workspace/minsys-storefront-xyz-codebases/minsys-xyz-prototype-v0-codebase/src/TalentPage.tsx",
+      "source_location": "L391",
+      "weight": 1.0
+    }
+  ],
+  "input_tokens": 0,
+  "output_tokens": 0
+}
