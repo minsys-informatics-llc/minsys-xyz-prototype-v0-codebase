@@ -41,8 +41,8 @@ export const Hero = () => {
           style={{ backgroundColor: '#1A1A17' }}
         ></div>
         <h3 className="text-solarAmber font-bold tracking-[0.3em] uppercase text-xs mb-8">A Venture Building Micro-PE Group</h3>
-        <h1 className="display-serif text-4xl md:text-4xl lg:text-5xl text-white font-black leading-tight mb-6">Ultimately, We Bootstrap Ventures<br /><span className="text-solarAmber italic"> for Main Street</span></h1>
-        <h2 className="text-[#F8F9FA] max-w-xl mx-auto mb-10 leading-tight font-light text-xl md:text-2xl">
+        <h1 className="display-serif text-4xl md:text-4xl lg:text-5xl text-white font-black leading-tight mb-1">Ultimately, We Bootstrap Ventures<br /><span className="text-solarAmber italic"> for Main Street</span></h1>
+        <h2 className="text-[#F8F9FA] max-w-xl mx-auto mb-10 leading-tight font-light text-xl md:text-2xl text-center">
           <strong>Unlocking Main Street's hidden Value<br />by spinning-off<span className="text-solarAmber font-bold"> Digital &amp; AI Ventures</span></strong>
         </h2>
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
